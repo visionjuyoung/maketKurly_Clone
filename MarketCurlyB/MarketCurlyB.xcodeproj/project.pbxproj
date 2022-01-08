@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		4B70683127893A4E006BB008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70683027893A4E006BB008 /* AppDelegate.swift */; };
 		4B70683327893A4E006BB008 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70683227893A4E006BB008 /* SceneDelegate.swift */; };
-		4B70683527893A4E006BB008 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70683427893A4E006BB008 /* ViewController.swift */; };
 		4B70683827893A4E006BB008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B70683627893A4E006BB008 /* Main.storyboard */; };
 		4B70683A27893A4F006BB008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B70683927893A4F006BB008 /* Assets.xcassets */; };
 		4B70683D27893A4F006BB008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B70683B27893A4F006BB008 /* LaunchScreen.storyboard */; };
+		4B70A6D32789406F006EB01A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6D22789406F006EB01A /* HomeViewController.swift */; };
+		4B70A6D527895C3E006EB01A /* firstHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6D427895C3E006EB01A /* firstHomeViewController.swift */; };
+		4B70A6D727895C48006EB01A /* secondHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6D627895C48006EB01A /* secondHomeViewController.swift */; };
+		4B70A6D927895C53006EB01A /* thirdHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6D827895C53006EB01A /* thirdHomeViewController.swift */; };
+		4B70A6DB27895C60006EB01A /* firthHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6DA27895C60006EB01A /* firthHomeViewController.swift */; };
+		4B70A6DD27895C7B006EB01A /* fifthHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6DC27895C7B006EB01A /* fifthHomeViewController.swift */; };
+		4B70A6E327897630006EB01A /* categoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6E227897630006EB01A /* categoryViewController.swift */; };
+		4B70A6E627897841006EB01A /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6E527897841006EB01A /* searchViewController.swift */; };
+		4B70A6E9278978CB006EB01A /* myKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6E8278978CB006EB01A /* myKurlyViewController.swift */; };
+		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D992575EAF94027198493CD /* Pods-MarketCurlyB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.debug.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.debug.xcconfig"; sourceTree = "<group>"; };
+		3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketCurlyB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B70682D27893A4E006BB008 /* MarketCurlyB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketCurlyB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B70683027893A4E006BB008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B70683227893A4E006BB008 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4B70683427893A4E006BB008 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B70683727893A4E006BB008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B70683927893A4F006BB008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B70683C27893A4F006BB008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B70683E27893A4F006BB008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B70A6D22789406F006EB01A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4B70A6D427895C3E006EB01A /* firstHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstHomeViewController.swift; sourceTree = "<group>"; };
+		4B70A6D627895C48006EB01A /* secondHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondHomeViewController.swift; sourceTree = "<group>"; };
+		4B70A6D827895C53006EB01A /* thirdHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdHomeViewController.swift; sourceTree = "<group>"; };
+		4B70A6DA27895C60006EB01A /* firthHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firthHomeViewController.swift; sourceTree = "<group>"; };
+		4B70A6DC27895C7B006EB01A /* fifthHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifthHomeViewController.swift; sourceTree = "<group>"; };
+		4B70A6E227897630006EB01A /* categoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryViewController.swift; sourceTree = "<group>"; };
+		4B70A6E527897841006EB01A /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		4B70A6E8278978CB006EB01A /* myKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myKurlyViewController.swift; sourceTree = "<group>"; };
+		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		314D7407E400922A03589C8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4B70682427893A4E006BB008 = {
 			isa = PBXGroup;
 			children = (
 				4B70682F27893A4E006BB008 /* MarketCurlyB */,
 				4B70682E27893A4E006BB008 /* Products */,
+				95635DBE9288994EFF6278B3 /* Pods */,
+				314D7407E400922A03589C8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +87,88 @@
 		4B70682F27893A4E006BB008 /* MarketCurlyB */ = {
 			isa = PBXGroup;
 			children = (
-				4B70683027893A4E006BB008 /* AppDelegate.swift */,
-				4B70683227893A4E006BB008 /* SceneDelegate.swift */,
-				4B70683427893A4E006BB008 /* ViewController.swift */,
+				4B70A6EB27897AB7006EB01A /* Model */,
+				4B70A6EA278979AC006EB01A /* Delegate */,
+				4B70A6DE278975EF006EB01A /* viewController */,
 				4B70683627893A4E006BB008 /* Main.storyboard */,
-				4B70683927893A4F006BB008 /* Assets.xcassets */,
 				4B70683B27893A4F006BB008 /* LaunchScreen.storyboard */,
+				4B70683927893A4F006BB008 /* Assets.xcassets */,
 				4B70683E27893A4F006BB008 /* Info.plist */,
 			);
 			path = MarketCurlyB;
+			sourceTree = "<group>";
+		};
+		4B70A6DE278975EF006EB01A /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B70A6E7278978AA006EB01A /* myKurlyViewController */,
+				4B70A6E42789782C006EB01A /* searchViewController */,
+				4B70A6E12789761D006EB01A /* categoryViewController */,
+				4B70A6DF278975FF006EB01A /* HomeViewcontroller */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		4B70A6DF278975FF006EB01A /* HomeViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				4B70A6D22789406F006EB01A /* HomeViewController.swift */,
+				4B70A6D427895C3E006EB01A /* firstHomeViewController.swift */,
+				4B70A6D627895C48006EB01A /* secondHomeViewController.swift */,
+				4B70A6D827895C53006EB01A /* thirdHomeViewController.swift */,
+				4B70A6DA27895C60006EB01A /* firthHomeViewController.swift */,
+				4B70A6DC27895C7B006EB01A /* fifthHomeViewController.swift */,
+			);
+			path = HomeViewcontroller;
+			sourceTree = "<group>";
+		};
+		4B70A6E12789761D006EB01A /* categoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B70A6E227897630006EB01A /* categoryViewController.swift */,
+			);
+			path = categoryViewController;
+			sourceTree = "<group>";
+		};
+		4B70A6E42789782C006EB01A /* searchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B70A6E527897841006EB01A /* searchViewController.swift */,
+			);
+			path = searchViewController;
+			sourceTree = "<group>";
+		};
+		4B70A6E7278978AA006EB01A /* myKurlyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B70A6E8278978CB006EB01A /* myKurlyViewController.swift */,
+			);
+			path = myKurlyViewController;
+			sourceTree = "<group>";
+		};
+		4B70A6EA278979AC006EB01A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4B70683027893A4E006BB008 /* AppDelegate.swift */,
+				4B70683227893A4E006BB008 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		4B70A6EB27897AB7006EB01A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95635DBE9288994EFF6278B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D992575EAF94027198493CD /* Pods-MarketCurlyB.debug.xcconfig */,
+				F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B70684127893A4F006BB008 /* Build configuration list for PBXNativeTarget "MarketCurlyB" */;
 			buildPhases = (
+				8E52FF59D9C4127FDBB48E69 /* [CP] Check Pods Manifest.lock */,
 				4B70682927893A4E006BB008 /* Sources */,
 				4B70682A27893A4E006BB008 /* Frameworks */,
 				4B70682B27893A4E006BB008 /* Resources */,
+				4190AE983339AC4FD791434E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +239,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4190AE983339AC4FD791434E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E52FF59D9C4127FDBB48E69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarketCurlyB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B70682927893A4E006BB008 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B70683527893A4E006BB008 /* ViewController.swift in Sources */,
+				4B70A6D527895C3E006EB01A /* firstHomeViewController.swift in Sources */,
+				4B70A6E327897630006EB01A /* categoryViewController.swift in Sources */,
+				4B70A6DD27895C7B006EB01A /* fifthHomeViewController.swift in Sources */,
+				4B70A6D727895C48006EB01A /* secondHomeViewController.swift in Sources */,
+				4B70A6DB27895C60006EB01A /* firthHomeViewController.swift in Sources */,
 				4B70683127893A4E006BB008 /* AppDelegate.swift in Sources */,
+				4B70A6E9278978CB006EB01A /* myKurlyViewController.swift in Sources */,
+				4B70A6E627897841006EB01A /* searchViewController.swift in Sources */,
+				4B70A6D927895C53006EB01A /* thirdHomeViewController.swift in Sources */,
 				4B70683327893A4E006BB008 /* SceneDelegate.swift in Sources */,
+				4B70A6D32789406F006EB01A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +440,7 @@
 		};
 		4B70684227893A4F006BB008 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D992575EAF94027198493CD /* Pods-MarketCurlyB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +468,7 @@
 		};
 		4B70684327893A4F006BB008 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

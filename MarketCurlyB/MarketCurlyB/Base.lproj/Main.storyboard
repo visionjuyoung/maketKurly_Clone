@@ -1,24 +1,459 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XDI-2i-AKN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--홈-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdO-rc-LBY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" name="KurlyColor"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqQ-Im-wnM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" name="KurlyColor"/>
+                                <items>
+                                    <navigationItem title="Title" id="AZK-9f-ngE">
+                                        <leftBarButtonItems>
+                                            <barButtonItem image="square.and.arrow.up" catalog="system" id="NqP-iI-Sbo">
+                                                <color key="tintColor" name="KurlyColor"/>
+                                            </barButtonItem>
+                                            <barButtonItem image="square.and.arrow.up" catalog="system" id="7XW-cP-u9c">
+                                                <color key="tintColor" name="KurlyColor"/>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Item" style="plain" id="4xG-SU-dcx">
+                                                <imageReference key="image" image="cart" catalog="system" symbolScale="medium"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" style="plain" id="kmK-cG-fhP">
+                                                <imageReference key="image" image="location" catalog="system" symbolScale="medium"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dji-xw-n7w">
+                                <rect key="frame" x="10" y="88" width="394" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paY-eo-DHa">
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="paY-eo-DHa" firstAttribute="top" secondItem="dji-xw-n7w" secondAttribute="bottom" id="7r8-tW-wca"/>
+                            <constraint firstItem="gdO-rc-LBY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AeD-Ta-Bn0"/>
+                            <constraint firstItem="dji-xw-n7w" firstAttribute="top" secondItem="EqQ-Im-wnM" secondAttribute="bottom" id="EzV-Mr-Bk4"/>
+                            <constraint firstItem="gdO-rc-LBY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MkF-Iq-uPd"/>
+                            <constraint firstItem="gdO-rc-LBY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qq4-0W-Y90"/>
+                            <constraint firstItem="EqQ-Im-wnM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RDl-cZ-6ae"/>
+                            <constraint firstItem="gdO-rc-LBY" firstAttribute="bottom" secondItem="EqQ-Im-wnM" secondAttribute="bottom" id="bKw-eK-eWK"/>
+                            <constraint firstItem="paY-eo-DHa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dhj-Lf-V5I"/>
+                            <constraint firstItem="dji-xw-n7w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="hjS-06-LHS"/>
+                            <constraint firstItem="dji-xw-n7w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="hou-ej-xaT"/>
+                            <constraint firstItem="EqQ-Im-wnM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iix-aK-bVB"/>
+                            <constraint firstItem="paY-eo-DHa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ln0-0q-UpY"/>
+                            <constraint firstItem="paY-eo-DHa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mFL-CG-TK8"/>
+                            <constraint firstItem="dji-xw-n7w" firstAttribute="height" secondItem="EqQ-Im-wnM" secondAttribute="height" id="nid-nk-mRR"/>
+                            <constraint firstItem="EqQ-Im-wnM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z20-d7-Xt7"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="house.fill" catalog="system" id="l3p-OB-vsW"/>
+                    <connections>
+                        <outlet property="leftBarBtn" destination="NqP-iI-Sbo" id="rdC-6t-P1H"/>
+                        <outlet property="leftBarBtn2" destination="7XW-cP-u9c" id="0UV-wv-oMj"/>
+                        <outlet property="naviItem" destination="AZK-9f-ngE" id="1Bm-27-WVv"/>
+                        <outlet property="tabmanView" destination="dji-xw-n7w" id="09j-C9-mCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--First Home View Controller-->
+        <scene sceneID="Gkv-LM-dyg">
+            <objects>
+                <viewController storyboardIdentifier="firstHomeViewController" id="ha2-Po-dio" customClass="firstHomeViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cbx-QU-Flx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-fk-yOo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="daE-5P-tjQ"/>
+                        <color key="backgroundColor" name="KurlyColor"/>
+                        <constraints>
+                            <constraint firstItem="oW4-fk-yOo" firstAttribute="leading" secondItem="daE-5P-tjQ" secondAttribute="leading" id="JKg-hO-Y3z"/>
+                            <constraint firstItem="daE-5P-tjQ" firstAttribute="trailing" secondItem="oW4-fk-yOo" secondAttribute="trailing" id="gwy-xR-FMr"/>
+                            <constraint firstItem="daE-5P-tjQ" firstAttribute="bottom" secondItem="oW4-fk-yOo" secondAttribute="bottom" id="vw4-Tg-R52"/>
+                            <constraint firstItem="oW4-fk-yOo" firstAttribute="top" secondItem="daE-5P-tjQ" secondAttribute="top" id="w99-Bw-STn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tk6-az-F4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="885"/>
+        </scene>
+        <!--Second Home View Controller-->
+        <scene sceneID="9Ew-sd-zv3">
+            <objects>
+                <viewController storyboardIdentifier="secondHomeViewController" id="4jr-fU-Vor" customClass="secondHomeViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fwb-YD-kOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-GA-01B">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z1n-vm-0Xl"/>
+                        <color key="backgroundColor" name="KurlyColor"/>
+                        <constraints>
+                            <constraint firstItem="z1n-vm-0Xl" firstAttribute="bottom" secondItem="ELo-GA-01B" secondAttribute="bottom" id="1CJ-8j-day"/>
+                            <constraint firstItem="ELo-GA-01B" firstAttribute="leading" secondItem="z1n-vm-0Xl" secondAttribute="leading" id="LXX-j8-8oh"/>
+                            <constraint firstItem="ELo-GA-01B" firstAttribute="top" secondItem="z1n-vm-0Xl" secondAttribute="top" id="QtT-bl-qg7"/>
+                            <constraint firstItem="z1n-vm-0Xl" firstAttribute="trailing" secondItem="ELo-GA-01B" secondAttribute="trailing" id="sud-34-yVe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4t-Du-ACN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393" y="885"/>
+        </scene>
+        <!--Third Home View Controller-->
+        <scene sceneID="idi-tV-gzU">
+            <objects>
+                <viewController storyboardIdentifier="thirdHomeViewController" id="WPb-31-5rt" customClass="thirdHomeViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zma-SB-jsP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lyn-No-S50">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N7w-i8-1As"/>
+                        <color key="backgroundColor" name="KurlyColor"/>
+                        <constraints>
+                            <constraint firstItem="Lyn-No-S50" firstAttribute="top" secondItem="N7w-i8-1As" secondAttribute="top" id="AHo-C6-VAQ"/>
+                            <constraint firstItem="N7w-i8-1As" firstAttribute="trailing" secondItem="Lyn-No-S50" secondAttribute="trailing" id="a5Q-PG-7Do"/>
+                            <constraint firstItem="Lyn-No-S50" firstAttribute="leading" secondItem="N7w-i8-1As" secondAttribute="leading" id="hWD-Nt-YNW"/>
+                            <constraint firstItem="N7w-i8-1As" firstAttribute="bottom" secondItem="Lyn-No-S50" secondAttribute="bottom" id="oe2-Wv-al1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysT-rm-GZA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048" y="885"/>
+        </scene>
+        <!--Firth Home View Controller-->
+        <scene sceneID="mZ8-Z2-Qxj">
+            <objects>
+                <viewController storyboardIdentifier="firthHomeViewController" id="3tP-T2-6tA" customClass="firthHomeViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dZi-nk-sdt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czt-PL-RgP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S3K-x7-Nd9"/>
+                        <color key="backgroundColor" name="KurlyColor"/>
+                        <constraints>
+                            <constraint firstItem="S3K-x7-Nd9" firstAttribute="bottom" secondItem="czt-PL-RgP" secondAttribute="bottom" id="LTi-CK-LiH"/>
+                            <constraint firstItem="S3K-x7-Nd9" firstAttribute="trailing" secondItem="czt-PL-RgP" secondAttribute="trailing" id="NCx-rw-BSl"/>
+                            <constraint firstItem="czt-PL-RgP" firstAttribute="leading" secondItem="S3K-x7-Nd9" secondAttribute="leading" id="QKP-CD-Jov"/>
+                            <constraint firstItem="czt-PL-RgP" firstAttribute="top" secondItem="S3K-x7-Nd9" secondAttribute="top" id="mad-yM-BI4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3v-1p-viu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2732" y="885"/>
+        </scene>
+        <!--Fifth Home View Controller-->
+        <scene sceneID="FY6-Ff-yIj">
+            <objects>
+                <viewController storyboardIdentifier="fifthHomeViewController" id="e6d-6B-Jgz" customClass="fifthHomeViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bKB-iX-nRn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWG-qq-ia1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Itu-BF-Pu3"/>
+                        <color key="backgroundColor" name="KurlyColor"/>
+                        <constraints>
+                            <constraint firstItem="xWG-qq-ia1" firstAttribute="top" secondItem="Itu-BF-Pu3" secondAttribute="top" id="72s-dO-P34"/>
+                            <constraint firstItem="Itu-BF-Pu3" firstAttribute="trailing" secondItem="xWG-qq-ia1" secondAttribute="trailing" id="LZd-GY-r9k"/>
+                            <constraint firstItem="xWG-qq-ia1" firstAttribute="leading" secondItem="Itu-BF-Pu3" secondAttribute="leading" id="g6e-OB-rtf"/>
+                            <constraint firstItem="Itu-BF-Pu3" firstAttribute="bottom" secondItem="xWG-qq-ia1" secondAttribute="bottom" id="xj2-ca-4Oz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIr-18-c8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3388" y="885"/>
+        </scene>
+        <!--카테고리-->
+        <scene sceneID="GaQ-wO-rFM">
+            <objects>
+                <viewController storyboardIdentifier="categoryViewController" id="OPZ-8p-SvK" customClass="categoryViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LVj-wf-ABg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84j-OE-kQo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" name="KurlyColor"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDg-sp-E8P">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" name="KurlyColor"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="카테고리" id="CB2-9k-bCv">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="Item" id="Tzn-fv-bmF">
+                                                <color key="tintColor" name="KurlyColor"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" id="uSb-nl-8EI">
+                                                <color key="tintColor" name="KurlyColor"/>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <rightBarButtonItems>
+                                            <barButtonItem id="GtS-Z6-QEF">
+                                                <imageReference key="image" image="cart" catalog="system" symbolScale="medium"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem id="d4f-5B-OkK">
+                                                <imageReference key="image" image="location" catalog="system" symbolScale="medium"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XCq-OP-HVP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JDg-sp-E8P" firstAttribute="trailing" secondItem="XCq-OP-HVP" secondAttribute="trailing" id="2mC-Rs-9vF"/>
+                            <constraint firstItem="84j-OE-kQo" firstAttribute="bottom" secondItem="JDg-sp-E8P" secondAttribute="bottom" id="Fvc-53-cK5"/>
+                            <constraint firstItem="JDg-sp-E8P" firstAttribute="leading" secondItem="XCq-OP-HVP" secondAttribute="leading" id="I7f-Q6-0dQ"/>
+                            <constraint firstItem="84j-OE-kQo" firstAttribute="leading" secondItem="XCq-OP-HVP" secondAttribute="leading" id="M72-oH-OTg"/>
+                            <constraint firstItem="JDg-sp-E8P" firstAttribute="top" secondItem="XCq-OP-HVP" secondAttribute="top" id="PCy-8S-eXd"/>
+                            <constraint firstItem="84j-OE-kQo" firstAttribute="top" secondItem="LVj-wf-ABg" secondAttribute="top" id="Swm-wo-2up"/>
+                            <constraint firstItem="84j-OE-kQo" firstAttribute="trailing" secondItem="XCq-OP-HVP" secondAttribute="trailing" id="kgO-WV-Lc4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="카테고리" image="line.3.horizontal" catalog="system" id="JPJ-09-58x"/>
+                    <connections>
+                        <outlet property="leftBarBtn" destination="Tzn-fv-bmF" id="DCu-J8-vjH"/>
+                        <outlet property="leftBarBtn2" destination="uSb-nl-8EI" id="wkm-6n-c6W"/>
+                        <outlet property="naviItem" destination="CB2-9k-bCv" id="nAz-4W-NOn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsk-kk-uaV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913.0434782608697" y="118.52678571428571"/>
+        </scene>
+        <!--검색-->
+        <scene sceneID="2Ui-80-2u9">
+            <objects>
+                <viewController storyboardIdentifier="searchViewController" id="mM8-0w-KAB" customClass="searchViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hdT-0P-arX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l5-mp-VPz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" name="KurlyColor"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-uw-Fan">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" name="KurlyColor"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="검색" id="VqA-sl-bM3">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="Item" id="3l5-H1-Ezs">
+                                                <color key="tintColor" name="KurlyColor"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" id="hcR-98-bPh">
+                                                <color key="tintColor" name="KurlyColor"/>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <rightBarButtonItems>
+                                            <barButtonItem id="So0-MF-fdw">
+                                                <imageReference key="image" image="cart" catalog="system" symbolScale="medium"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem id="cPI-3V-oxw">
+                                                <imageReference key="image" image="location" catalog="system" symbolScale="medium"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JnF-Xv-OZv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0l5-mp-VPz" firstAttribute="top" secondItem="hdT-0P-arX" secondAttribute="top" id="B6W-XN-vfQ"/>
+                            <constraint firstItem="0l5-mp-VPz" firstAttribute="trailing" secondItem="JnF-Xv-OZv" secondAttribute="trailing" id="F1h-9B-Hb1"/>
+                            <constraint firstItem="0l5-mp-VPz" firstAttribute="leading" secondItem="JnF-Xv-OZv" secondAttribute="leading" id="ZRd-St-SN5"/>
+                            <constraint firstItem="3dK-uw-Fan" firstAttribute="trailing" secondItem="JnF-Xv-OZv" secondAttribute="trailing" id="c8m-fD-h75"/>
+                            <constraint firstItem="3dK-uw-Fan" firstAttribute="top" secondItem="JnF-Xv-OZv" secondAttribute="top" id="coW-Ox-EBc"/>
+                            <constraint firstItem="0l5-mp-VPz" firstAttribute="bottom" secondItem="3dK-uw-Fan" secondAttribute="bottom" id="dXb-Gr-5ZA"/>
+                            <constraint firstItem="3dK-uw-Fan" firstAttribute="leading" secondItem="JnF-Xv-OZv" secondAttribute="leading" id="j5R-ug-9gA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass" catalog="system" id="3Be-P9-MdH"/>
+                    <connections>
+                        <outlet property="leftBarBtn" destination="3l5-H1-Ezs" id="nXb-NJ-7vh"/>
+                        <outlet property="leftBarBtn2" destination="hcR-98-bPh" id="Bno-vW-eLX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAI-F4-in1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2773.913043478261" y="118.52678571428571"/>
+        </scene>
+        <!--마이컬리-->
+        <scene sceneID="ZQo-AQ-Z0B">
+            <objects>
+                <viewController storyboardIdentifier="myKurlyViewController" id="Xqf-bp-Kwr" customClass="myKurlyViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="faw-dG-PjZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aH6-tA-8xp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" name="KurlyColor"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-4W-8Ip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" name="KurlyColor"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="마이컬리" id="69k-1O-ext">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="Item" id="BQQ-x3-ZKJ">
+                                                <color key="tintColor" name="KurlyColor"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" id="vI9-Jf-Uni">
+                                                <color key="tintColor" name="KurlyColor"/>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <rightBarButtonItems>
+                                            <barButtonItem id="mr7-fJ-6Wf">
+                                                <imageReference key="image" image="cart" catalog="system" symbolScale="medium"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem id="qoK-Ys-QUC">
+                                                <imageReference key="image" image="location" catalog="system" symbolScale="medium"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gdp-YL-NQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gv9-4W-8Ip" firstAttribute="top" secondItem="Gdp-YL-NQc" secondAttribute="top" id="0P1-Ed-YmQ"/>
+                            <constraint firstItem="aH6-tA-8xp" firstAttribute="trailing" secondItem="Gdp-YL-NQc" secondAttribute="trailing" id="4rE-II-Fao"/>
+                            <constraint firstItem="aH6-tA-8xp" firstAttribute="top" secondItem="faw-dG-PjZ" secondAttribute="top" id="5oc-UN-3MQ"/>
+                            <constraint firstItem="aH6-tA-8xp" firstAttribute="bottom" secondItem="gv9-4W-8Ip" secondAttribute="bottom" id="637-2a-0yc"/>
+                            <constraint firstItem="gv9-4W-8Ip" firstAttribute="leading" secondItem="Gdp-YL-NQc" secondAttribute="leading" id="YAQ-p4-a5j"/>
+                            <constraint firstItem="gv9-4W-8Ip" firstAttribute="trailing" secondItem="Gdp-YL-NQc" secondAttribute="trailing" id="in3-AJ-nMt"/>
+                            <constraint firstItem="aH6-tA-8xp" firstAttribute="leading" secondItem="Gdp-YL-NQc" secondAttribute="leading" id="zJZ-TI-0By"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="마이컬리" image="person.fill" catalog="system" id="3Qd-Gl-D1b"/>
+                    <connections>
+                        <outlet property="leftBarBtn" destination="BQQ-x3-ZKJ" id="DfA-Rx-5Hz"/>
+                        <outlet property="leftBarBtn2" destination="vI9-Jf-Uni" id="TB4-D8-xCY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kq6-OB-UT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3586.9565217391305" y="124.55357142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="k9u-DD-fzw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XDI-2i-AKN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w9n-ce-zjw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="KurlyColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="90n-zP-DAZ"/>
+                        <segue destination="OPZ-8p-SvK" kind="relationship" relationship="viewControllers" id="nil-m9-dtu"/>
+                        <segue destination="mM8-0w-KAB" kind="relationship" relationship="viewControllers" id="lKh-j7-xRO"/>
+                        <segue destination="Xqf-bp-Kwr" kind="relationship" relationship="viewControllers" id="H1U-pC-vgT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bw-Yp-pWE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <namedColor name="KurlyColor">
+            <color red="0.33899998664855957" green="0.043000001460313797" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
