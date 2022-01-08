@@ -6,6 +6,7 @@ target 'MarketCurlyB' do
   use_frameworks!
 
   pod 'Tabman', '~> 2.11'
+  pod 'ExpyTableView'
   # Pods for MarketCurlyB
 
 end

@@ -1,20 +1,24 @@
 PODS:
+  - ExpyTableView (1.2.1)
   - Pageboy (3.6.2)
   - Tabman (2.11.1):
     - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
+  - ExpyTableView
   - Tabman (~> 2.11)
 
 SPEC REPOS:
   trunk:
+    - ExpyTableView
     - Pageboy
     - Tabman
 
 SPEC CHECKSUMS:
+  ExpyTableView: 19cf224c2ff04b1ec215ec52bc4ba6f81fa809ed
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: 1a9b7ffca1e309a6e37ea64ac519e751b67066f1
+PODFILE CHECKSUM: bcd0de6abd6b6ea128203886f4d8b7405930e428
 
 COCOAPODS: 1.11.2
