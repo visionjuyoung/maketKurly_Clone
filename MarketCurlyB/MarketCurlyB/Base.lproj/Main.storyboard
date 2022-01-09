@@ -774,6 +774,9 @@
                                 <color key="tintColor" name="KurlyColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
+                                <connections>
+                                    <action selector="makeIdButton:" destination="Vpj-5w-q0R" eventType="touchUpInside" id="ZhC-EJ-wVU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qch-KE-eOZ"/>
@@ -810,7 +813,7 @@
         <!--Make Id View Controller-->
         <scene sceneID="E1u-2G-qQL">
             <objects>
-                <viewController id="pgO-5S-wT5" customClass="makeIdViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="makeIdViewController" modalPresentationStyle="fullScreen" id="pgO-5S-wT5" customClass="makeIdViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b4M-ut-8bZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -828,6 +831,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="default"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="closeButton:" destination="pgO-5S-wT5" eventType="touchUpInside" id="lCg-x0-WYx"/>
                                     <action selector="closeButton:" destination="Vpj-5w-q0R" eventType="touchUpInside" id="vnu-nY-ReA"/>
                                 </connections>
                             </button>

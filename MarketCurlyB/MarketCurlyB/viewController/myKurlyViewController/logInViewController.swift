@@ -30,4 +30,10 @@ class logInViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func makeIdButton(_ sender: UIButton) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "makeIdViewController") as? makeIdViewController else {
+            return
+        }
+        present(vc, animated: true, completion: nil)
+    }
 }
