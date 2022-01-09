@@ -160,13 +160,23 @@ extension categoryViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.layer.borderColor = UIColor.systemGray6.cgColor
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "reusableCell", for: indexPath)
+            return headerView
+        default:
+            assert(false)
+        }
+    }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemSpacing: CGFloat = 10
-        let textAreaHeight: CGFloat = 5
-            
+        let itemSpacing: CGFloat = 20
+        //let textAreaHeight: CGFloat = 10
+
         let width: CGFloat = (collectionView.bounds.width - itemSpacing)/2
-        let height: CGFloat = width + textAreaHeight
+        let height: CGFloat = width
         return CGSize(width: width, height: height)
     }
 }
