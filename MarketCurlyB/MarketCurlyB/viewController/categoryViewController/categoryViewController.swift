@@ -15,6 +15,7 @@ class categoryViewController: UIViewController {
     @IBOutlet weak var naviItem: UINavigationItem!
     @IBOutlet weak var expandableTableView: ExpyTableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: ExpyTableView!
     
     let categoryListModel: CategotyList = CategotyList()
     let categoryViewModel = CategoryCollectionModel()
@@ -22,6 +23,7 @@ class categoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.register(UINib(nibName: "categoryTableViewCell", bundle: nil), forCellReuseIdentifier: "categoryTableViewCell")
         expandableTableView.delegate = self
         expandableTableView.dataSource = self
         collectionView.dataSource = self
@@ -43,48 +45,53 @@ extension categoryViewController: ExpyTableViewDataSource, ExpyTableViewDelegate
     }
     
     func tableView(_ tableView: ExpyTableView, expandableCellForSection section: Int) -> UITableViewCell {
-        let cell = categoryTableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell") as? categoryTableViewCell else {
+            return UITableViewCell()
+        }
         cell.selectionStyle = .none
         
         if section == 0 {
-            cell.textLabel?.text = "설 선물세트"
+            cell.setData(data: categoryListModel.arrayList[0])
         } else if section == 1 {
-            cell.textLabel?.text = "채소"
+            cell.setData(data: categoryListModel.arrayList[1])
         }else if section == 2 {
-            cell.textLabel?.text = "과일·견과·쌀"
+            cell.setData(data: categoryListModel.arrayList[2])
         }else if section == 3 {
-            cell.textLabel?.text = "수산·해산·건어물"
+            cell.setData(data: categoryListModel.arrayList[3])
         }else if section == 4 {
-            cell.textLabel?.text = "정육·계란"
+            cell.setData(data: categoryListModel.arrayList[4])
         }else if section == 5 {
-            cell.textLabel?.text = "국·반찬·메인요리"
+            cell.setData(data: categoryListModel.arrayList[5])
         }else if section == 6 {
-            cell.textLabel?.text = "샐러드·간편식"
+            cell.setData(data: categoryListModel.arrayList[6])
         }else if section == 7 {
-            cell.textLabel?.text = "면·양념·오일"
+            cell.setData(data: categoryListModel.arrayList[7])
         }else if section == 8 {
-            cell.textLabel?.text = "생수·음료·우유·커피"
+            cell.setData(data: categoryListModel.arrayList[8])
         }else if section == 9 {
-            cell.textLabel?.text = "간식·과자·떡"
+            cell.setData(data: categoryListModel.arrayList[9])
         }else if section == 10 {
-            cell.textLabel?.text = "베이커리·치즈·델리"
+            cell.setData(data: categoryListModel.arrayList[10])
         }else if section == 11 {
-            cell.textLabel?.text = "건강식품"
+            cell.setData(data: categoryListModel.arrayList[11])
         }else if section == 12 {
-            cell.textLabel?.text = "전통주"
+            cell.setData(data: categoryListModel.arrayList[12])
         }else if section == 13 {
-            cell.textLabel?.text = "생활용품·리빙·캠핑"
+            cell.setData(data: categoryListModel.arrayList[13])
         }else if section == 14 {
-            cell.textLabel?.text = "스킨케어·메이크업"
+            cell.setData(data: categoryListModel.arrayList[14])
         }else if section == 15 {
-            cell.textLabel?.text = "헤어·바디·구강"
+            cell.setData(data: categoryListModel.arrayList[15])
         }else if section == 16 {
-            cell.textLabel?.text = "주방용품"
+            cell.setData(data: categoryListModel.arrayList[16])
         }else if section == 17 {
-            cell.textLabel?.text = "가전제품"
+            cell.setData(data: categoryListModel.arrayList[17])
         }else if section == 18 {
-            cell.textLabel?.text = "베이비·키즈·완구"
+            cell.setData(data: categoryListModel.arrayList[18])
+        }else if section == 19 {
+            cell.setData(data: categoryListModel.arrayList[19])
         }
+        
         return cell
     }
     
@@ -128,7 +135,7 @@ extension categoryViewController: ExpyTableViewDataSource, ExpyTableViewDelegate
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 19
+        return 20
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -175,7 +182,7 @@ extension categoryViewController: UICollectionViewDataSource, UICollectionViewDe
         let itemSpacing: CGFloat = 20
         //let textAreaHeight: CGFloat = 10
 
-        let width: CGFloat = (collectionView.bounds.width - itemSpacing)/2
+        let width: CGFloat = (collectionView.bounds.width - itemSpacing - 40)/2
         let height: CGFloat = width
         return CGSize(width: width, height: height)
     }

@@ -21,11 +21,11 @@
 		4B70A6E327897630006EB01A /* categoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6E227897630006EB01A /* categoryViewController.swift */; };
 		4B70A6E627897841006EB01A /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6E527897841006EB01A /* searchViewController.swift */; };
 		4B70A6E9278978CB006EB01A /* myKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6E8278978CB006EB01A /* myKurlyViewController.swift */; };
-		4B70A6EE278981E2006EB01A /* categoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6EC278981E2006EB01A /* categoryTableViewCell.swift */; };
-		4B70A6EF278981E2006EB01A /* categoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B70A6ED278981E2006EB01A /* categoryTableViewCell.xib */; };
 		4B70A6F12789C6AE006EB01A /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6F02789C6AE006EB01A /* CategoryList.swift */; };
 		4B70A6F72789CC70006EB01A /* CategoryCollectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6F62789CC70006EB01A /* CategoryCollectionInfo.swift */; };
 		4B70A6F92789CF26006EB01A /* CategoryColletionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6F82789CF25006EB01A /* CategoryColletionModel.swift */; };
+		4B70A6FC278B1550006EB01A /* categoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70A6FA278B1550006EB01A /* categoryTableViewCell.swift */; };
+		4B70A6FD278B1550006EB01A /* categoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B70A6FB278B1550006EB01A /* categoryTableViewCell.xib */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,11 +48,11 @@
 		4B70A6E227897630006EB01A /* categoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryViewController.swift; sourceTree = "<group>"; };
 		4B70A6E527897841006EB01A /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		4B70A6E8278978CB006EB01A /* myKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myKurlyViewController.swift; sourceTree = "<group>"; };
-		4B70A6EC278981E2006EB01A /* categoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryTableViewCell.swift; sourceTree = "<group>"; };
-		4B70A6ED278981E2006EB01A /* categoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = categoryTableViewCell.xib; sourceTree = "<group>"; };
 		4B70A6F02789C6AE006EB01A /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		4B70A6F62789CC70006EB01A /* CategoryCollectionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionInfo.swift; sourceTree = "<group>"; };
 		4B70A6F82789CF25006EB01A /* CategoryColletionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryColletionModel.swift; sourceTree = "<group>"; };
+		4B70A6FA278B1550006EB01A /* categoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryTableViewCell.swift; sourceTree = "<group>"; };
+		4B70A6FB278B1550006EB01A /* categoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = categoryTableViewCell.xib; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +104,8 @@
 				4B70683B27893A4F006BB008 /* LaunchScreen.storyboard */,
 				4B70683927893A4F006BB008 /* Assets.xcassets */,
 				4B70683E27893A4F006BB008 /* Info.plist */,
-				4B70A6EC278981E2006EB01A /* categoryTableViewCell.swift */,
-				4B70A6ED278981E2006EB01A /* categoryTableViewCell.xib */,
+				4B70A6FA278B1550006EB01A /* categoryTableViewCell.swift */,
+				4B70A6FB278B1550006EB01A /* categoryTableViewCell.xib */,
 			);
 			path = MarketCurlyB;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 				4B70683D27893A4F006BB008 /* LaunchScreen.storyboard in Resources */,
 				4B70683A27893A4F006BB008 /* Assets.xcassets in Resources */,
 				4B70683827893A4E006BB008 /* Main.storyboard in Resources */,
-				4B70A6EF278981E2006EB01A /* categoryTableViewCell.xib in Resources */,
+				4B70A6FD278B1550006EB01A /* categoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +304,7 @@
 			files = (
 				4B70A6D527895C3E006EB01A /* firstHomeViewController.swift in Sources */,
 				4B70A6E327897630006EB01A /* categoryViewController.swift in Sources */,
+				4B70A6FC278B1550006EB01A /* categoryTableViewCell.swift in Sources */,
 				4B70A6DD27895C7B006EB01A /* fifthHomeViewController.swift in Sources */,
 				4B70A6D727895C48006EB01A /* secondHomeViewController.swift in Sources */,
 				4B70A6DB27895C60006EB01A /* firthHomeViewController.swift in Sources */,
@@ -315,7 +316,6 @@
 				4B70683327893A4E006BB008 /* SceneDelegate.swift in Sources */,
 				4B70A6D32789406F006EB01A /* HomeViewController.swift in Sources */,
 				4B70A6F72789CC70006EB01A /* CategoryCollectionInfo.swift in Sources */,
-				4B70A6EE278981E2006EB01A /* categoryTableViewCell.swift in Sources */,
 				4B70A6F92789CF26006EB01A /* CategoryColletionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

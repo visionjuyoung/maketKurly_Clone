@@ -2,15 +2,15 @@
 //  categoryTableViewCell.swift
 //  MarketCurlyB
 //
-//  Created by 김주영 on 2022/01/08.
+//  Created by 김주영 on 2022/01/09.
 //
 
 import UIKit
 
 class categoryTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var categotyImageView: UIImageView!
-    @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +23,8 @@ class categoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(data: String) {
-        categoryNameLabel.text = data
+    func setData(data: String) {
+        nameLabel.text = data
+        imgView.image = UIImage(named: data)
     }
 }
