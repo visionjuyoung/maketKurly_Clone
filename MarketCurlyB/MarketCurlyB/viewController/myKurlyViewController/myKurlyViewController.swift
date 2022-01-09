@@ -11,11 +11,19 @@ class myKurlyViewController: UIViewController {
 
     @IBOutlet weak var leftBarBtn: UIBarButtonItem!
     @IBOutlet weak var leftBarBtn2: UIBarButtonItem!
+    @IBOutlet weak var testView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    @IBAction func PressIdButton(_ sender: UIButton) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "logInViewController") as? logInViewController else {
+            return
+        }
+        present(vc, animated: true, completion: nil)
     }
 }
 
