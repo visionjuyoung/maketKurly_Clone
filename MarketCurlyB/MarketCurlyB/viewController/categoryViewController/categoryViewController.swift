@@ -26,6 +26,7 @@ class categoryViewController: UIViewController {
         tableView.register(UINib(nibName: "categoryTableViewCell", bundle: nil), forCellReuseIdentifier: "categoryTableViewCell")
         expandableTableView.delegate = self
         expandableTableView.dataSource = self
+        tableView.separatorStyle = .none
         collectionView.dataSource = self
         collectionView.delegate = self
         setNavigatonBar()
@@ -138,9 +139,18 @@ extension categoryViewController: ExpyTableViewDataSource, ExpyTableViewDelegate
         return 20
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as? detailViewController else {
+            return
+        }
+        vc.section = indexPath.section
+        vc.row = indexPath.row
+        print(indexPath.section)
+        print(indexPath.row)
+        if indexPath.row != 0 {
+            present(vc, animated: true, completion: nil)
+        }
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
            if indexPath.row == 0 {

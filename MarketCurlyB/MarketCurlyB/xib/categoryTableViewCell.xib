@@ -28,12 +28,21 @@
                             <constraint firstAttribute="width" secondItem="Tbw-bc-RE9" secondAttribute="height" multiplier="1:1" id="cKs-7z-U4t"/>
                         </constraints>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Sk-wH-uXQ">
+                        <rect key="frame" x="280" y="17" width="20" height="10.5"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2Sk-wH-uXQ" secondAttribute="height" multiplier="1:1" id="TJv-Ka-PjE"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Tbw-bc-RE9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="H3s-uP-21S"/>
                     <constraint firstItem="7Pl-NF-yQL" firstAttribute="leading" secondItem="Tbw-bc-RE9" secondAttribute="trailing" constant="20" id="Kux-e5-BXr"/>
                     <constraint firstAttribute="trailing" secondItem="7Pl-NF-yQL" secondAttribute="trailing" constant="20" id="NOc-nD-JXn"/>
                     <constraint firstItem="7Pl-NF-yQL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Tfl-B7-85c"/>
+                    <constraint firstItem="2Sk-wH-uXQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UWP-0S-zMP"/>
+                    <constraint firstAttribute="trailing" secondItem="2Sk-wH-uXQ" secondAttribute="trailing" constant="20" id="VyR-7m-6e2"/>
                     <constraint firstAttribute="bottom" secondItem="Tbw-bc-RE9" secondAttribute="bottom" constant="6" id="gHx-hK-thI"/>
                     <constraint firstItem="Tbw-bc-RE9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="m9h-iS-Sfh"/>
                 </constraints>
@@ -42,8 +51,12 @@
             <connections>
                 <outlet property="imgView" destination="Tbw-bc-RE9" id="aJQ-HV-P1P"/>
                 <outlet property="nameLabel" destination="7Pl-NF-yQL" id="fJ7-gT-H3M"/>
+                <outlet property="upDownImg" destination="2Sk-wH-uXQ" id="YsL-i7-RII"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+    </resources>
 </document>
