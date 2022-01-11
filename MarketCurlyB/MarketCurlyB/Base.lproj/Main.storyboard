@@ -810,23 +810,87 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-9q-pJg">
+                                <rect key="frame" x="20" y="103" width="374" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwK-Sd-pLn">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxV-OY-YRH">
+                                                <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstItem="uxV-OY-YRH" firstAttribute="top" secondItem="cwK-Sd-pLn" secondAttribute="top" constant="5" id="5H4-R0-Sy3"/>
+                                            <constraint firstAttribute="bottom" secondItem="uxV-OY-YRH" secondAttribute="bottom" constant="5" id="Jb1-wS-mis"/>
+                                            <constraint firstAttribute="trailing" secondItem="uxV-OY-YRH" secondAttribute="trailing" constant="5" id="RRO-K1-t2I"/>
+                                            <constraint firstAttribute="width" secondItem="cwK-Sd-pLn" secondAttribute="height" multiplier="1:1" id="jKL-xG-0bl"/>
+                                            <constraint firstItem="uxV-OY-YRH" firstAttribute="leading" secondItem="cwK-Sd-pLn" secondAttribute="leading" constant="5" id="ndY-Rp-hLV"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="검색어를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34S-Xg-cW7">
+                                        <rect key="frame" x="50" y="0.0" width="324" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="touchDown:" destination="mM8-0w-KAB" eventType="touchDown" id="fCn-YP-eYT"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gN4-Aa-4tS"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxZ-1a-NwA">
+                                <rect key="frame" x="404" y="103" width="48.5" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                <connections>
+                                    <action selector="cancleButton:" destination="mM8-0w-KAB" eventType="touchUpInside" id="wgW-q2-drS"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sqI-kl-lcF">
+                                <rect key="frame" x="0.0" y="183" width="414" height="630"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JnF-Xv-OZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lxZ-1a-NwA" firstAttribute="top" secondItem="fNI-9q-pJg" secondAttribute="top" id="4Qe-Rx-1dm"/>
+                            <constraint firstItem="JnF-Xv-OZv" firstAttribute="trailing" secondItem="sqI-kl-lcF" secondAttribute="trailing" id="6w2-s1-nXj"/>
+                            <constraint firstItem="JnF-Xv-OZv" firstAttribute="bottom" secondItem="sqI-kl-lcF" secondAttribute="bottom" id="A3n-Mm-Qzj"/>
                             <constraint firstItem="0l5-mp-VPz" firstAttribute="top" secondItem="hdT-0P-arX" secondAttribute="top" id="B6W-XN-vfQ"/>
                             <constraint firstItem="0l5-mp-VPz" firstAttribute="trailing" secondItem="JnF-Xv-OZv" secondAttribute="trailing" id="F1h-9B-Hb1"/>
+                            <constraint firstItem="JnF-Xv-OZv" firstAttribute="trailing" secondItem="fNI-9q-pJg" secondAttribute="trailing" constant="20" id="Jgo-Bi-9rb"/>
                             <constraint firstItem="0l5-mp-VPz" firstAttribute="leading" secondItem="JnF-Xv-OZv" secondAttribute="leading" id="ZRd-St-SN5"/>
+                            <constraint firstItem="sqI-kl-lcF" firstAttribute="top" secondItem="fNI-9q-pJg" secondAttribute="bottom" constant="30" id="bak-cj-AmW"/>
                             <constraint firstItem="3dK-uw-Fan" firstAttribute="trailing" secondItem="JnF-Xv-OZv" secondAttribute="trailing" id="c8m-fD-h75"/>
+                            <constraint firstItem="lxZ-1a-NwA" firstAttribute="leading" secondItem="34S-Xg-cW7" secondAttribute="trailing" constant="10" id="cBW-6P-t7x"/>
                             <constraint firstItem="3dK-uw-Fan" firstAttribute="top" secondItem="JnF-Xv-OZv" secondAttribute="top" id="coW-Ox-EBc"/>
                             <constraint firstItem="0l5-mp-VPz" firstAttribute="bottom" secondItem="3dK-uw-Fan" secondAttribute="bottom" id="dXb-Gr-5ZA"/>
                             <constraint firstItem="3dK-uw-Fan" firstAttribute="leading" secondItem="JnF-Xv-OZv" secondAttribute="leading" id="j5R-ug-9gA"/>
+                            <constraint firstItem="sqI-kl-lcF" firstAttribute="leading" secondItem="JnF-Xv-OZv" secondAttribute="leading" id="lkE-yo-EbP"/>
+                            <constraint firstItem="lxZ-1a-NwA" firstAttribute="bottom" secondItem="fNI-9q-pJg" secondAttribute="bottom" id="rNr-Np-hmd"/>
+                            <constraint firstItem="fNI-9q-pJg" firstAttribute="top" secondItem="0l5-mp-VPz" secondAttribute="bottom" constant="15" id="taS-07-Qyg"/>
+                            <constraint firstItem="fNI-9q-pJg" firstAttribute="leading" secondItem="JnF-Xv-OZv" secondAttribute="leading" constant="20" id="wwp-Ha-3oe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass" catalog="system" id="3Be-P9-MdH"/>
                     <connections>
                         <outlet property="leftBarBtn" destination="3l5-H1-Ezs" id="nXb-NJ-7vh"/>
                         <outlet property="leftBarBtn2" destination="hcR-98-bPh" id="Bno-vW-eLX"/>
+                        <outlet property="leftConstraint" destination="Jgo-Bi-9rb" id="Yvv-Wi-xVV"/>
+                        <outlet property="searchTextField" destination="34S-Xg-cW7" id="CoX-ho-Zl8"/>
+                        <outlet property="tableView" destination="sqI-kl-lcF" id="vdi-Tl-gcm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAI-F4-in1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1855,6 +1919,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
