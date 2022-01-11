@@ -148,7 +148,7 @@ extension categoryViewController: ExpyTableViewDataSource, ExpyTableViewDelegate
         print(indexPath.section)
         print(indexPath.row)
         if indexPath.row != 0 {
-            present(vc, animated: true, completion: nil)
+            present(vc, animated: false, completion: nil)
         }
     }
     
