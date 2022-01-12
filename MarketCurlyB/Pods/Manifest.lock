@@ -1,24 +1,28 @@
 PODS:
+  - Alamofire (5.5.0)
   - ExpyTableView (1.2.1)
   - Pageboy (3.6.2)
   - Tabman (2.11.1):
     - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.5)
   - ExpyTableView
   - Tabman (~> 2.11)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - ExpyTableView
     - Pageboy
     - Tabman
 
 SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   ExpyTableView: 19cf224c2ff04b1ec215ec52bc4ba6f81fa809ed
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: bcd0de6abd6b6ea128203886f4d8b7405930e428
+PODFILE CHECKSUM: befa6560d96615749d6db9c72ade196334d75342
 
 COCOAPODS: 1.11.2

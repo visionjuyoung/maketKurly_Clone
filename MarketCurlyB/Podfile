@@ -7,6 +7,7 @@ target 'MarketCurlyB' do
 
   pod 'Tabman', '~> 2.11'
   pod 'ExpyTableView'
+  pod 'Alamofire', "~> 5.5"
   # Pods for MarketCurlyB
 
 end

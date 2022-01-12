@@ -112,6 +112,4 @@ extension HomeViewController: PageboyViewControllerDataSource, TMBarDataSource {
             return TMBarItem(title: "")
         }
     }
-    
-    
 }
