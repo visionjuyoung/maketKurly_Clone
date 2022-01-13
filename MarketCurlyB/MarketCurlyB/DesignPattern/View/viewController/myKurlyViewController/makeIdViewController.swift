@@ -10,6 +10,7 @@ import UIKit
 class makeIdViewController: UIViewController {
     
     lazy var dataManager: SignInDataManager = SignInDataManager()
+    lazy var checkIdDataManager: CheckIdDataManager = CheckIdDataManager()
     
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -42,6 +43,20 @@ class makeIdViewController: UIViewController {
     @IBOutlet weak var agree5Btn: UIButton!
     @IBOutlet weak var smsBtn: UIButton!
     @IBOutlet weak var emailBtn: UIButton!
+    
+    var birthDate: String?
+    var genderValue: String?
+    var addValue1: String?
+    var addValue2: String?
+    var smsAgree: String = "N"
+    var emailAgree: String = "N"
+    var agree1: String = "N"
+    var agree2: String = "N"
+    var agree3: String = "N"
+    var agree4: String = "N"
+    var agree5: String = "N"
+    
+    var message: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,145 +118,179 @@ class makeIdViewController: UIViewController {
         checkSexButton()
         sender.backgroundColor = .purple
         sender.isSelected = true
+        if sender.tag == 100 {
+            genderValue = "F"
+        } else if sender.tag == 101 {
+            genderValue = "M"
+        } else if sender.tag == 102 {
+            genderValue = nil
+        }
+    }
+    
+    @IBAction func pressCheckId(_ sender: UIButton) {
+        checkIdDataManager.checkId(parameters: idTextField.text!, delegate: self)
     }
     
     @IBAction func pressAddButton(_ sender: UIButton) {
         setAddInfoButton()
         sender.backgroundColor = .purple
         sender.isSelected = true
+        
+        if sender.tag == 104 {
+            addValue1 = "aaaa1234"
+            addValue2 = nil
+        } else if sender.tag == 105 {
+            addValue1 = nil
+            addValue2 = "이벤트"
+        }
     }
     
     @IBAction func pressAgreeButton(_ sender: UIButton) {
         if sender.isSelected {
             sender.backgroundColor = .white
             sender.isSelected = false
+            if sender.tag == 106{
+                agree1 = "N"
+            } else if sender.tag == 107 {
+                agree2 = "N"
+            } else if sender.tag == 108 {
+                agree3 = "N"
+            } else if sender.tag == 109 {
+                smsBtn.isSelected = false
+                emailBtn.isSelected = false
+                smsBtn.backgroundColor = .white
+                emailBtn.backgroundColor = .white
+                smsAgree = "N"
+                emailAgree = "N"
+            } else if sender.tag == 110 {
+                smsAgree = "N"
+            } else if sender.tag == 111 {
+                smsAgree = "N"
+            } else if sender.tag == 112 {
+                agree5 = "N"
+            }
         } else {
             sender.backgroundColor = .purple
             sender.isSelected = true
+            if sender.tag == 106{
+                agree1 = "Y"
+            } else if sender.tag == 107 {
+                agree2 = "Y"
+            } else if sender.tag == 108 {
+                agree3 = "Y"
+            } else if sender.tag == 109 {
+                smsBtn.isSelected = true
+                emailBtn.isSelected = true
+                smsBtn.backgroundColor = .purple
+                emailBtn.backgroundColor = .purple
+                smsAgree = "Y"
+                emailAgree = "Y"
+            } else if sender.tag == 110 {
+                smsAgree = "Y"
+            } else if sender.tag == 111 {
+                smsAgree = "Y"
+            } else if sender.tag == 112 {
+                agree5 = "Y"
+            }
         }
     }
     
     @IBAction func pressAllButton(_ sender: UIButton) {
         if sender.isSelected == true {
             setAgreeButton()
+            agree1 = "N"
+            agree2 = "N"
+            agree3 = "N"
+            smsAgree = "N"
+            emailAgree = "N"
+            agree5 = "N"
         } else {
             var buttons: [UIButton] = [allAgree, agree1Btn, agree2Btn,agree3Btn,agree4Btn,agree5Btn, smsBtn, emailBtn]
             for button in buttons {
                 button.backgroundColor = .purple
                 button.isSelected = true
             }
-        }
-    }
-    
-    @IBAction func pressSignInButton(_ sender: UIButton) {
-        
-        var genderValue: String = ""
-        var addValue1: String?
-        var addValue2: String?
-        var agree1: String = ""
-        var agree2: String = ""
-        var agree3: String = ""
-        var agree4: String = ""
-        var agree5: String = ""
-        var smsAgree: String = ""
-        var emailAgree: String = ""
-        
-        guard let id = idTextField.text, id != "" else {
-            return
-        }
-        
-        guard let password = passwordTextField.text, password != "" else {
-            return
-        }
-        
-        guard let checkPassword = checkPasswordTextField.text, checkPassword != password else {
-            return
-        }
-        
-        guard let name = nameTextField.text, name != "" else {
-            return
-        }
-        
-        guard let email = emailTextField.text, email != "" else {
-            return
-        }
-        
-        guard let telNum = telNumTextField.text, telNum != "" else {
-            return
-        }
-        
-        guard let year = yearTextField.text, year != "" else {
-            return
-        }
-        
-        guard let month = monthTextField.text, month != "" else {
-            return
-        }
-        
-        guard let date = dateTextField.text, date != "" else {
-            return
-        }
-        
-        if boyBtn.isSelected {
-            genderValue = "F"
-        } else if girlBtn.isSelected {
-            genderValue = "M"
-        } else {
-            genderValue = ""
-        }
-        
-        if recommendId.isSelected {
-            addValue1 = "aaa111"
-        } else if eventName.isSelected {
-            addValue2 = "-이벤트"
-        } else {
-            
-        }
-        
-        if allAgree.isSelected {
             agree1 = "Y"
             agree2 = "Y"
             agree3 = "Y"
             smsAgree = "Y"
             emailAgree = "Y"
             agree5 = "Y"
-        } else {
-            if agree1Btn.isSelected {
-                agree1 = "Y"
-            } else {
-                agree1 = "N"
-            }
-            
-            if agree2Btn.isSelected {
-                agree2 = "Y"
-            } else {
-                agree2 = "N"
-            }
-            
-            if agree3Btn.isSelected {
-                agree3 = "Y"
-            } else {
-                agree3 = "N"
-            }
-            
-            if agree4Btn.isSelected {
-                smsAgree = "Y"
-                emailAgree = "Y"
-            } else {
-                smsAgree = "N"
-                emailAgree = "N"
-            }
-            
-            if agree5Btn.isSelected {
-                agree5 = "Y"
-            } else {
-                agree5 = "N"
-            }
         }
-        let input = SignInRequest(name: name, id: id, pwd: password, email: email, phone: telNum, adress: "", exraAdress: "", birthDate: "\(year)\(month)\(date)", gender: genderValue, recommender: addValue1, eventName: addValue2, isTermsOfUseAgree: agree1, isPersonalInfoCollectAgree: agree2, isPersonalInfoUsageAgree: agree3, isSmsReceiveAgree: smsAgree, isEmailReceiveAgree: emailAgree, isAgeAboveForteen: agree5)
-        dataManager.postLogIn(input, delegate: self)
     }
     
+    @IBAction func pressSignInButton(_ sender: UIButton) {
+        guard let id = idTextField.text, id != "" else {
+            print("id")
+            return
+        }
+        
+        guard let password = passwordTextField.text, password != "" else {
+            print("password")
+            return
+        }
+        
+        guard let checkPassword = checkPasswordTextField.text, password == checkPassword else {
+            print("passwordcheck")
+            return
+        }
+        
+        guard let name = nameTextField.text, name != "" else {
+            print("name")
+            return
+        }
+        
+        guard let email = emailTextField.text, email != "" else {
+            print("email")
+            return
+        }
+        
+        guard let telNum = telNumTextField.text, telNum != "" else {
+            print("tel")
+            return
+        }
+        
+        guard let year = yearTextField.text, year != "" else {
+            print("yy")
+            return
+        }
+        
+        guard let month = monthTextField.text, month != "" else {
+            print("mm")
+            return
+        }
+        
+        guard let date = dateTextField.text, date != "" else {
+            print("dd")
+            return
+        }
+        birthDate = "\(year)-\(month)-\(date)"
+
+        guard let birth: String = birthDate else {
+            return
+        }
+        
+        print("----")
+        print(name)
+        print(id)
+        print(password)
+        print(email)
+        print(telNum)
+        print(birth)
+        print(genderValue)
+        print(addValue1)
+        print(addValue2)
+        print(agree1)
+        print(agree2)
+        print(agree3)
+        print(smsAgree)
+        print(emailAgree)
+        print(agree5)
+        
+        let input = SignInRequest(name: name, id: id, pwd: password, email: email, phone: telNum, adress: "서울시", extraAdress: "개포동", birthDate: birth, gender: genderValue, recommender: addValue1, eventName: addValue2, isTermsOfUseAgree: agree1, isPersonalInfoCollectAgree: agree2, isPersonalInfoUsageAgree: agree3, isSmsReceiveAgree: smsAgree, isEmailReceiveAgree: emailAgree, isAgeAboveForteen: agree5)
+        dataManager.postSignIn(input, delegate: self)
+        print("터치됨")
+    }
     
     @IBAction func closeButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -249,11 +298,26 @@ class makeIdViewController: UIViewController {
 }
 
 extension makeIdViewController {
-    func didSuccess(_ result: SignInResult) {
-        print("회원가입 성공")
+    func SignIndidSuccess(_ result: SignInResult) {
+        print(result)
     }
     
-    func faliedRequest() {
+    func checkIdMessage(result: SignInResult) {
+        print(result)
+    }
+    
+    func SignInfaliedRequest() {
+        print("실패")
+    }
+}
+
+extension makeIdViewController {
+    func checkIdSuccess(result: String) {
+        message = result
+        print(message)
+    }
+    
+    func checkIdFail(){
         print("실패")
     }
 }

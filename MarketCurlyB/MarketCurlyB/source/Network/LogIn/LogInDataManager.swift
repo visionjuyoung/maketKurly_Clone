@@ -10,7 +10,7 @@ import Alamofire
 
 class LogInDataManager {
     func postLogIn(_ parameters: LoginRequest, delegate: logInViewController) {
-        AF.download("https://prod.kaydenserver.shop/api/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil).validate()
+        AF.request("https://prod.kaydenserver.shop/api/users/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil).validate()
             .responseDecodable(of: LoginResponse.self) { response in
                 switch response.result {
                 case .success(let response):

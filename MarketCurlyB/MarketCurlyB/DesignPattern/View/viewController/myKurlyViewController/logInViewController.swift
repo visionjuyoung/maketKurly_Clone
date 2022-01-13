@@ -64,7 +64,12 @@ class logInViewController: UIViewController {
 
 extension logInViewController {
     func didsuccessLogIn(_ result: LogInResult) {
+        let state = LoginState.shared
+        state.Idx = result.userIdx
+        state.jwt = result.jwt
+        state.state = true
         print("로그인 성공")
+        dismiss(animated: false, completion: nil)
     }
     
     func failedToRequest(message: String) {

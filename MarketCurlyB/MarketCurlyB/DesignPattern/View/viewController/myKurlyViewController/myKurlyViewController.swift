@@ -12,11 +12,28 @@ class myKurlyViewController: UIViewController {
     @IBOutlet weak var leftBarBtn: UIBarButtonItem!
     @IBOutlet weak var leftBarBtn2: UIBarButtonItem!
     @IBOutlet weak var testView: UIView!
+    @IBOutlet weak var gradeButton: UILabel!
+    @IBOutlet weak var nextGradeButton: UILabel!
+    
+    let state = LoginState.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setButton()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if state.state {
+            testView.isHidden = true
+        } else {
+            testView.isHidden = false
+        }
+    }
+    
+    func setButton() {
+        gradeButton.layer.cornerRadius = 10
+        nextGradeButton.layer.cornerRadius = 10
     }
 
     @IBAction func PressIdButton(_ sender: UIButton) {
