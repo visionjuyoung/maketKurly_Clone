@@ -11,6 +11,7 @@ class makeIdViewController: UIViewController {
     
     lazy var dataManager: SignInDataManager = SignInDataManager()
     lazy var checkIdDataManager: CheckIdDataManager = CheckIdDataManager()
+    lazy var checkPhoneDateManager: CheckPhoneDataManager = CheckPhoneDataManager()
     
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -24,6 +25,7 @@ class makeIdViewController: UIViewController {
     
     
 
+    @IBOutlet weak var certCheckButton: UIButton!
     @IBOutlet weak var addressButton: UIButton!
     @IBOutlet weak var checkId: UIButton!
     @IBOutlet weak var messageBtn: UIButton!
@@ -43,6 +45,10 @@ class makeIdViewController: UIViewController {
     @IBOutlet weak var agree5Btn: UIButton!
     @IBOutlet weak var smsBtn: UIButton!
     @IBOutlet weak var emailBtn: UIButton!
+    @IBOutlet weak var certAuthTextField: UITextField!
+    
+    
+    @IBOutlet weak var phoneTopLayer: NSLayoutConstraint!
     
     var birthDate: String?
     var genderValue: String?
@@ -55,13 +61,14 @@ class makeIdViewController: UIViewController {
     var agree3: String = "N"
     var agree4: String = "N"
     var agree5: String = "N"
+    var cert: Bool = false
+    var certmessage: String = ""
     
     var message: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setInit()
-        
     }
     
     func setInit() {
@@ -71,9 +78,14 @@ class makeIdViewController: UIViewController {
         messageBtn.layer.borderWidth = 1
         messageBtn.layer.borderColor = UIColor.systemGray4.cgColor
         messageBtn.layer.cornerRadius = 5
+        certCheckButton.layer.borderWidth = 1
+        certCheckButton.layer.borderColor = UIColor.systemGray4.cgColor
+        certCheckButton.layer.cornerRadius = 5
         birtyhStack.layer.borderWidth = 1
         birtyhStack.layer.borderColor = UIColor.systemGray5.cgColor
         birtyhStack.layer.cornerRadius = 5
+        certAuthTextField.isHidden = true
+        certCheckButton.isHidden = true
         checkSexButton()
         setAddInfoButton()
         setAgreeButton()
@@ -127,8 +139,35 @@ class makeIdViewController: UIViewController {
         }
     }
     
+    @IBAction func pressTelButton(_ sender: UITextField) {
+        UIView.animate(withDuration: 0.1) {
+            self.messageBtn.tintColor = .purple
+            self.messageBtn.layer.borderColor = UIColor.black.cgColor
+        }
+    }
+    
     @IBAction func pressCheckId(_ sender: UIButton) {
         checkIdDataManager.checkId(data: idTextField.text!, delegate: self)
+    }
+    
+    @IBAction func pressGetCert(_ sender: UIButton) {
+        checkPhoneDateManager.getCert(data: telNumTextField.text!, delegate: self)
+        let spacing: CGFloat = 75.0
+        phoneTopLayer.constant = spacing
+//        UIView.animate(withDuration: 0.5, animations: ) {
+//            self.view.layoutIfNeeded()
+//        }
+        UIView.animate(withDuration: 0.1) {
+            self.view.layoutIfNeeded()
+        }
+        certCheckButton.isHidden = false
+        certAuthTextField.isHidden = false
+    }
+    
+    @IBAction func pressCheckCert(_ sender: UIButton) {
+        if certmessage == certAuthTextField.text {
+            cert = true
+        }
     }
     
     @IBAction func pressAddButton(_ sender: UIButton) {
@@ -255,6 +294,11 @@ class makeIdViewController: UIViewController {
             return
         }
         
+        guard cert != false else {
+            loadAlert(notion: "번호인증 오류", message: "인증번호를 확인해주세요")
+            return
+        }
+        
         guard let year = yearTextField.text, year != "" else {
             print("yy")
             return
@@ -316,7 +360,12 @@ extension makeIdViewController {
 }
 
 extension makeIdViewController {
-    
+    func SuccessGetCertMessage(result: CheckPhoneResults?) {
+        guard let certNum = result else {
+            return
+        }
+        certmessage = certNum.certNum
+    }
 }
 
 extension makeIdViewController {

@@ -1738,6 +1738,9 @@
                                                 <color key="tintColor" systemColor="systemGray4Color"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="인증번호 받기"/>
+                                                <connections>
+                                                    <action selector="pressGetCert:" destination="pgO-5S-wT5" eventType="touchUpInside" id="uHY-cf-iG8"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DD9-rh-3DP">
                                                 <rect key="frame" x="329" y="589" width="50" height="25"/>
@@ -2148,6 +2151,23 @@
                                                     <constraint firstItem="ZU6-Kh-Npq" firstAttribute="leading" secondItem="cEL-2A-VK4" secondAttribute="trailing" constant="25" id="yvV-1s-vh9"/>
                                                 </constraints>
                                             </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ja-oV-O4W">
+                                                <rect key="frame" x="25" y="551" width="223" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="pressTelButton:" destination="pgO-5S-wT5" eventType="touchDown" id="WAC-xj-ynW"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EL-Zx-tMs">
+                                                <rect key="frame" x="258" y="551" width="131" height="50"/>
+                                                <color key="tintColor" systemColor="systemGray4Color"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="인증번호 확인"/>
+                                                <connections>
+                                                    <action selector="pressCheckCert:" destination="pgO-5S-wT5" eventType="touchUpInside" id="0uc-BW-zQV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -2166,9 +2186,14 @@
                                             <constraint firstItem="XYj-bi-nky" firstAttribute="bottom" secondItem="GW8-Sp-luQ" secondAttribute="bottom" id="60e-X5-3Ve"/>
                                             <constraint firstItem="0JW-zr-oyL" firstAttribute="leading" secondItem="EsL-Kt-eci" secondAttribute="trailing" id="65D-uA-lPx"/>
                                             <constraint firstItem="yP3-We-qN6" firstAttribute="height" secondItem="LNy-xG-NgO" secondAttribute="height" id="6jh-bZ-fqY"/>
+                                            <constraint firstItem="3EL-Zx-tMs" firstAttribute="height" secondItem="eYe-33-GUn" secondAttribute="height" id="7Ww-5V-m8M"/>
+                                            <constraint firstItem="3EL-Zx-tMs" firstAttribute="trailing" secondItem="eYe-33-GUn" secondAttribute="trailing" id="7Xu-nw-Ffb"/>
                                             <constraint firstItem="7Xu-TY-OnD" firstAttribute="width" secondItem="7Xu-TY-OnD" secondAttribute="height" multiplier="1:1" id="7bL-2B-qUX"/>
                                             <constraint firstItem="gCQ-zL-c9S" firstAttribute="leading" secondItem="weB-58-hmw" secondAttribute="trailing" constant="20" id="7hm-I5-N27"/>
+                                            <constraint firstItem="3EL-Zx-tMs" firstAttribute="centerY" secondItem="0ja-oV-O4W" secondAttribute="centerY" id="89s-2h-otB"/>
                                             <constraint firstItem="eYe-33-GUn" firstAttribute="leading" secondItem="xVU-c9-PHl" secondAttribute="trailing" constant="10" id="8bs-NP-wYW"/>
+                                            <constraint firstItem="0ja-oV-O4W" firstAttribute="trailing" secondItem="xVU-c9-PHl" secondAttribute="trailing" id="A4x-DZ-594"/>
+                                            <constraint firstItem="3EL-Zx-tMs" firstAttribute="leading" secondItem="eYe-33-GUn" secondAttribute="leading" id="Ax8-fv-leu"/>
                                             <constraint firstItem="VmP-DT-tH7" firstAttribute="centerY" secondItem="1CP-Do-yg9" secondAttribute="centerY" id="BCl-wb-vTa"/>
                                             <constraint firstItem="fND-Jw-Wna" firstAttribute="leading" secondItem="EiX-Ei-EFt" secondAttribute="leading" constant="20" id="BlZ-Ml-aAH"/>
                                             <constraint firstItem="TmU-od-x4f" firstAttribute="top" secondItem="RwJ-EK-2Nl" secondAttribute="bottom" constant="15" id="BmK-yp-xpJ"/>
@@ -2210,6 +2235,7 @@
                                             <constraint firstItem="yP3-We-qN6" firstAttribute="top" secondItem="LNy-xG-NgO" secondAttribute="bottom" constant="15" id="SE7-tk-C8g"/>
                                             <constraint firstItem="7Xu-TY-OnD" firstAttribute="leading" secondItem="EiX-Ei-EFt" secondAttribute="leading" constant="25" id="TB5-1c-jDC"/>
                                             <constraint firstItem="DmD-tg-xu6" firstAttribute="centerY" secondItem="vuB-yB-uqt" secondAttribute="centerY" id="TEG-cS-BUC"/>
+                                            <constraint firstItem="0ja-oV-O4W" firstAttribute="top" secondItem="xVU-c9-PHl" secondAttribute="bottom" constant="15" id="TbW-b5-pz3"/>
                                             <constraint firstItem="tp6-BL-DdG" firstAttribute="top" secondItem="vuB-yB-uqt" secondAttribute="bottom" constant="15" id="TkB-SU-Jgz"/>
                                             <constraint firstItem="EJd-Id-J06" firstAttribute="leading" secondItem="EiX-Ei-EFt" secondAttribute="leading" constant="25" id="Tuy-Na-BRE"/>
                                             <constraint firstItem="XYj-bi-nky" firstAttribute="top" secondItem="1CP-Do-yg9" secondAttribute="bottom" constant="5" id="U4k-cd-LrD"/>
@@ -2222,6 +2248,7 @@
                                             <constraint firstItem="vuB-yB-uqt" firstAttribute="leading" secondItem="EiX-Ei-EFt" secondAttribute="leading" constant="25" id="Xmu-jF-PAv"/>
                                             <constraint firstItem="a0s-CR-w1X" firstAttribute="centerY" secondItem="7Xu-TY-OnD" secondAttribute="centerY" id="YA4-5D-jQ8"/>
                                             <constraint firstItem="VmP-DT-tH7" firstAttribute="leading" secondItem="1CP-Do-yg9" secondAttribute="trailing" id="ZHv-3R-SO5"/>
+                                            <constraint firstItem="0ja-oV-O4W" firstAttribute="height" secondItem="xVU-c9-PHl" secondAttribute="height" id="ZgH-42-PcZ"/>
                                             <constraint firstItem="xVU-c9-PHl" firstAttribute="leading" secondItem="EiX-Ei-EFt" secondAttribute="leading" constant="25" id="Zv3-Zu-KVn"/>
                                             <constraint firstItem="N3y-kc-WUH" firstAttribute="top" secondItem="TmU-od-x4f" secondAttribute="bottom" constant="5" id="ay8-p1-UMh"/>
                                             <constraint firstAttribute="trailing" secondItem="eYe-33-GUn" secondAttribute="trailing" constant="25" id="b5p-DM-H0I"/>
@@ -2261,6 +2288,7 @@
                                             <constraint firstItem="vTu-sk-cKg" firstAttribute="leading" secondItem="tp6-BL-DdG" secondAttribute="trailing" id="tSG-rJ-CEZ"/>
                                             <constraint firstItem="DmD-tg-xu6" firstAttribute="height" secondItem="vuB-yB-uqt" secondAttribute="height" id="u6w-kX-UFz"/>
                                             <constraint firstItem="xVU-c9-PHl" firstAttribute="height" secondItem="N3y-kc-WUH" secondAttribute="height" id="uRL-0I-fGw"/>
+                                            <constraint firstItem="0ja-oV-O4W" firstAttribute="leading" secondItem="xVU-c9-PHl" secondAttribute="leading" id="ufY-Sn-9b8"/>
                                             <constraint firstItem="UWC-2A-ucx" firstAttribute="leading" secondItem="MED-lI-Ke4" secondAttribute="trailing" constant="20" id="vBV-nV-VWG"/>
                                             <constraint firstItem="MPV-xF-iOG" firstAttribute="centerY" secondItem="pp4-tc-Jht" secondAttribute="centerY" id="vqS-lt-u41"/>
                                             <constraint firstAttribute="trailing" secondItem="EJd-Id-J06" secondAttribute="trailing" constant="25" id="wVy-hi-g6t"/>
@@ -2309,6 +2337,8 @@
                         <outlet property="allAgree" destination="ymr-9r-8Gs" id="ndW-UI-IqT"/>
                         <outlet property="birtyhStack" destination="1xR-NR-zgA" id="4Sk-28-qfw"/>
                         <outlet property="boyBtn" destination="yP3-We-qN6" id="6Ts-Pi-T7B"/>
+                        <outlet property="certAuthTextField" destination="0ja-oV-O4W" id="meX-U7-cCL"/>
+                        <outlet property="certCheckButton" destination="3EL-Zx-tMs" id="QxM-mp-EnF"/>
                         <outlet property="checkId" destination="DmD-tg-xu6" id="vUf-cW-Wsh"/>
                         <outlet property="checkPasswordTextField" destination="EJd-Id-J06" id="xOt-4a-hwI"/>
                         <outlet property="dateTextField" destination="vBM-Z2-oIU" id="iE8-pF-J8t"/>
@@ -2322,6 +2352,7 @@
                         <outlet property="nameTextField" destination="RwJ-EK-2Nl" id="iJh-4F-z8p"/>
                         <outlet property="noSelectBtn" destination="TtB-we-Ipv" id="f53-Qu-jkC"/>
                         <outlet property="passwordTextField" destination="uO9-CE-9iz" id="NRa-JG-5Uv"/>
+                        <outlet property="phoneTopLayer" destination="nUx-fL-ZJK" id="dlp-8M-Kos"/>
                         <outlet property="recommendId" destination="weB-58-hmw" id="acC-RS-eB8"/>
                         <outlet property="smsBtn" destination="CTR-in-lP7" id="S4R-79-iFb"/>
                         <outlet property="telNumTextField" destination="xVU-c9-PHl" id="R2Z-OZ-o4t"/>
