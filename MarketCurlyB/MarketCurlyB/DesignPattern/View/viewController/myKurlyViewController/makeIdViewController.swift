@@ -128,7 +128,7 @@ class makeIdViewController: UIViewController {
     }
     
     @IBAction func pressCheckId(_ sender: UIButton) {
-        checkIdDataManager.checkId(parameters: idTextField.text!, delegate: self)
+        checkIdDataManager.checkId(data: idTextField.text!, delegate: self)
     }
     
     @IBAction func pressAddButton(_ sender: UIButton) {
@@ -221,32 +221,37 @@ class makeIdViewController: UIViewController {
     
     @IBAction func pressSignInButton(_ sender: UIButton) {
         guard let id = idTextField.text, id != "" else {
-            print("id")
+            loadAlert(notion: "아이디 오류", message: "아이디를 입력해주세요")
+            return
+        }
+        
+        guard id.count > 9 else {
+            loadAlert(notion: "아이디 오류", message: "영문, 숫자 포함 10자 이상으로 만들어주세요")
             return
         }
         
         guard let password = passwordTextField.text, password != "" else {
-            print("password")
+            loadAlert(notion: "비밀번호 오류", message: "비밀번호를 입력해주세요")
             return
         }
         
         guard let checkPassword = checkPasswordTextField.text, password == checkPassword else {
-            print("passwordcheck")
+            loadAlert(notion: "비밀번호 오류", message: "비밀번호가 틀렸습니다")
             return
         }
         
         guard let name = nameTextField.text, name != "" else {
-            print("name")
+            loadAlert(notion: "이름 오류", message: "이름을 입력해주세요")
             return
         }
         
         guard let email = emailTextField.text, email != "" else {
-            print("email")
+            loadAlert(notion: "email 오류", message: "이메일을 입력해주세요")
             return
         }
         
         guard let telNum = telNumTextField.text, telNum != "" else {
-            print("tel")
+            loadAlert(notion: "전화번호 오류", message: "전화번호를 입력해주세요")
             return
         }
         
@@ -270,27 +275,11 @@ class makeIdViewController: UIViewController {
             return
         }
         
-        print("----")
-        print(name)
-        print(id)
-        print(password)
-        print(email)
-        print(telNum)
-        print(birth)
-        print(genderValue)
-        print(addValue1)
-        print(addValue2)
-        print(agree1)
-        print(agree2)
-        print(agree3)
-        print(smsAgree)
-        print(emailAgree)
-        print(agree5)
-        
         let input = SignInRequest(name: name, id: id, pwd: password, email: email, phone: telNum, adress: "서울시", extraAdress: "개포동", birthDate: birth, gender: genderValue, recommender: addValue1, eventName: addValue2, isTermsOfUseAgree: agree1, isPersonalInfoCollectAgree: agree2, isPersonalInfoUsageAgree: agree3, isSmsReceiveAgree: smsAgree, isEmailReceiveAgree: emailAgree, isAgeAboveForteen: agree5)
         dataManager.postSignIn(input, delegate: self)
         print("터치됨")
     }
+    
     
     @IBAction func closeButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -300,6 +289,7 @@ class makeIdViewController: UIViewController {
 extension makeIdViewController {
     func SignIndidSuccess(_ result: SignInResult) {
         print(result)
+        dismiss(animated: false, completion: nil)
     }
     
     func checkIdMessage(result: SignInResult) {
@@ -312,13 +302,25 @@ extension makeIdViewController {
 }
 
 extension makeIdViewController {
-    func checkIdSuccess(result: String) {
-        message = result
-        print(message)
+    func checkIdSuccess(result: CheckIdResults?) {
+        guard let value = result else {
+            loadAlert(notion: "아이디 오류", message: "중복된 아이디가 존재합니다")
+            return
+        }
+        loadAlert(notion: "아이디 생성 가능", message: "")
     }
     
     func checkIdFail(){
         print("실패")
+    }
+}
+
+extension makeIdViewController {
+    func loadAlert(notion: String, message: String) {
+        let alert = UIAlertController(title: "\(notion)", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default, handler: .none)
+        alert.addAction(action)
+        present(alert, animated: false, completion: nil)
     }
 }
 

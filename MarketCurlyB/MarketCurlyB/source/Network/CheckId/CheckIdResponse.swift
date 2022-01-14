@@ -11,7 +11,7 @@ struct CheckIdResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: CheckIdResults
+    var result: CheckIdResults?
 }
 
 struct CheckIdResults: Decodable {

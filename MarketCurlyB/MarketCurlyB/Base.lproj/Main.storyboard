@@ -1609,7 +1609,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="중복확인"/>
                                                 <connections>
-                                                    <action selector="pressCheckId:" destination="pgO-5S-wT5" eventType="touchUpInside" id="h5U-3d-otw"/>
+                                                    <action selector="pressCheckId:" destination="pgO-5S-wT5" eventType="touchUpInside" id="A5i-UZ-neG"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efQ-tB-u0E">
