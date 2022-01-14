@@ -26,32 +26,39 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mSe-Em-ss2">
                         <rect key="frame" x="20" y="48" width="264" height="65"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DIB-L9-LHv">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DIB-L9-LHv">
                                 <rect key="frame" x="0.0" y="0.0" width="264" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlp-SP-sWl">
-                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
                                         <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" name="KurlyColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-gh-pbL">
-                                        <rect key="frame" x="63.5" y="0.0" width="54" height="30"/>
+                                        <rect key="frame" x="57" y="0.0" width="36.5" height="30"/>
                                         <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" name="KurlyColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZb-qz-Lz4">
-                                        <rect key="frame" x="127.5" y="0.0" width="53.5" height="30"/>
+                                        <rect key="frame" x="113.5" y="0.0" width="37" height="30"/>
                                         <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" name="KurlyColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwQ-iP-03w">
-                                        <rect key="frame" x="191" y="0.0" width="73" height="30"/>
+                                        <rect key="frame" x="170.5" y="0.0" width="36.5" height="30"/>
+                                        <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                        <color key="textColor" name="KurlyColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-rs-bW5">
+                                        <rect key="frame" x="227" y="0.0" width="37" height="30"/>
                                         <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" name="KurlyColor"/>
@@ -59,35 +66,42 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UuT-Tn-lPW">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UuT-Tn-lPW">
                                 <rect key="frame" x="0.0" y="35" width="264" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgm-QO-XKF">
-                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
                                         <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" name="KurlyColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jv1-u1-hKS">
-                                        <rect key="frame" x="63.5" y="0.0" width="54" height="30"/>
+                                        <rect key="frame" x="57" y="0.0" width="36.5" height="30"/>
                                         <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" name="KurlyColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-eE-lCl">
-                                        <rect key="frame" x="127.5" y="0.0" width="53.5" height="30"/>
+                                        <rect key="frame" x="113.5" y="0.0" width="37" height="30"/>
                                         <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" name="KurlyColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hee-NA-ao9">
-                                        <rect key="frame" x="191" y="0.0" width="73" height="30"/>
+                                        <rect key="frame" x="170.5" y="0.0" width="36.5" height="30"/>
                                         <color key="backgroundColor" red="0.97272092099999996" green="0.94809871909999999" blue="0.99608439209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" name="KurlyColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHH-ba-u0S">
+                                        <rect key="frame" x="227" y="0.0" width="37" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -116,6 +130,7 @@
                 <outlet property="label6" destination="Jv1-u1-hKS" id="CBB-t7-H1U"/>
                 <outlet property="label7" destination="aDr-eE-lCl" id="4Zo-M9-WMv"/>
                 <outlet property="label8" destination="hee-NA-ao9" id="GBo-im-eLU"/>
+                <outlet property="label9" destination="fG0-rs-bW5" id="CGV-ko-ANi"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="169.41964285714286"/>
         </tableViewCell>

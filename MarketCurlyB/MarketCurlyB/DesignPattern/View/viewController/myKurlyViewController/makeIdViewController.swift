@@ -316,6 +316,10 @@ extension makeIdViewController {
 }
 
 extension makeIdViewController {
+    
+}
+
+extension makeIdViewController {
     func loadAlert(notion: String, message: String) {
         let alert = UIAlertController(title: "\(notion)", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "확인", style: .default, handler: .none)

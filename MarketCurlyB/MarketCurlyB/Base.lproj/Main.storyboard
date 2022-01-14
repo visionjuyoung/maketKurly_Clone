@@ -905,8 +905,8 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09D-Jp-YMP">
-                                                                            <rect key="frame" x="10" y="144" width="150" height="20.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <rect key="frame" x="10" y="144" width="150" height="18"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -1322,7 +1322,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="hra-oP-rHy"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwn-eA-n0o">
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwn-eA-n0o">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원 가입하고 다양한 혜택을 받아보세요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gya-fa-esp">
@@ -1426,6 +1426,7 @@
                         <outlet property="gradeButton" destination="OkZ-k2-PWO" id="heX-XI-Pfk"/>
                         <outlet property="leftBarBtn" destination="BQQ-x3-ZKJ" id="DfA-Rx-5Hz"/>
                         <outlet property="leftBarBtn2" destination="vI9-Jf-Uni" id="TB4-D8-xCY"/>
+                        <outlet property="nameLabel" destination="Id1-Yu-wHv" id="u9V-en-LAc"/>
                         <outlet property="nextGradeButton" destination="dVp-bd-l7q" id="yat-Mm-Pxj"/>
                         <outlet property="testView" destination="iwn-eA-n0o" id="CTn-nf-Lm6"/>
                     </connections>

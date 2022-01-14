@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtx-R6-lwH">
-                        <rect key="frame" x="5.5" y="11.5" width="21" height="21"/>
+                        <rect key="frame" x="5" y="11.5" width="21.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="KurlyColor"/>
                         <nil key="highlightedColor"/>
@@ -34,11 +34,16 @@
                     <constraint firstAttribute="trailing" secondItem="cF7-Pf-fmX" secondAttribute="trailing" constant="20" id="HJw-Sl-eXh"/>
                     <constraint firstItem="cF7-Pf-fmX" firstAttribute="leading" secondItem="gtx-R6-lwH" secondAttribute="trailing" constant="8" symbolic="YES" id="KMf-ia-bb8"/>
                     <constraint firstItem="cF7-Pf-fmX" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.83" id="NQO-nX-EYW"/>
+                    <constraint firstItem="gtx-R6-lwH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="VBK-P0-L2b"/>
                     <constraint firstItem="cF7-Pf-fmX" firstAttribute="centerY" secondItem="gtx-R6-lwH" secondAttribute="centerY" id="f8Q-cN-DV8"/>
                     <constraint firstItem="cF7-Pf-fmX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wlR-aB-md0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="numLabel" destination="gtx-R6-lwH" id="KCV-EY-Rda"/>
+                <outlet property="recentProductTextLabel" destination="cF7-Pf-fmX" id="iEp-hz-dyu"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </tableViewCell>
     </objects>

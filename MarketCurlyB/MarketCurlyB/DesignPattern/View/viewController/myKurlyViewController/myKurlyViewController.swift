@@ -14,6 +14,7 @@ class myKurlyViewController: UIViewController {
     @IBOutlet weak var testView: UIView!
     @IBOutlet weak var gradeButton: UILabel!
     @IBOutlet weak var nextGradeButton: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     let state = LoginState.shared
     
@@ -29,6 +30,8 @@ class myKurlyViewController: UIViewController {
         } else {
             testView.isHidden = false
         }
+        print("\(state.name) 2")
+        nameLabel.text = state.name
     }
     
     func setButton() {

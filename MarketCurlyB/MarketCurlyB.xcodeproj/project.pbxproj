@@ -61,6 +61,10 @@
 		4BBAED8F278FE88F0063FFDA /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAED8E278FE88F0063FFDA /* LoginState.swift */; };
 		4BBAED93279045A70063FFDA /* CheckIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAED92279045A70063FFDA /* CheckIdResponse.swift */; };
 		4BBAED95279045E70063FFDA /* CheckIdDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAED94279045E70063FFDA /* CheckIdDataManager.swift */; };
+		4BBAED97279189AA0063FFDA /* CheckPhoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAED96279189AA0063FFDA /* CheckPhoneResponse.swift */; };
+		4BBAED99279189B90063FFDA /* CheckPhoneDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAED98279189B90063FFDA /* CheckPhoneDataManager.swift */; };
+		4BBAED9C279190740063FFDA /* LoadUserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAED9B279190740063FFDA /* LoadUserInfoResponse.swift */; };
+		4BBAED9E279190880063FFDA /* LoadUserInfoDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAED9D279190880063FFDA /* LoadUserInfoDataManger.swift */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +127,10 @@
 		4BBAED8E278FE88F0063FFDA /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		4BBAED92279045A70063FFDA /* CheckIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIdResponse.swift; sourceTree = "<group>"; };
 		4BBAED94279045E70063FFDA /* CheckIdDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIdDataManager.swift; sourceTree = "<group>"; };
+		4BBAED96279189AA0063FFDA /* CheckPhoneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneResponse.swift; sourceTree = "<group>"; };
+		4BBAED98279189B90063FFDA /* CheckPhoneDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneDataManager.swift; sourceTree = "<group>"; };
+		4BBAED9B279190740063FFDA /* LoadUserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUserInfoResponse.swift; sourceTree = "<group>"; };
+		4BBAED9D279190880063FFDA /* LoadUserInfoDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUserInfoDataManger.swift; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +305,7 @@
 		4BBAED50278D53480063FFDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4BBAED9A279190500063FFDA /* loadUserIfo */,
 				4BBAED912790457F0063FFDA /* CheckId */,
 				4BBAED90279044630063FFDA /* CheckPhone */,
 				4BBAED80278F08B20063FFDA /* SignIn */,
@@ -381,6 +390,8 @@
 		4BBAED90279044630063FFDA /* CheckPhone */ = {
 			isa = PBXGroup;
 			children = (
+				4BBAED96279189AA0063FFDA /* CheckPhoneResponse.swift */,
+				4BBAED98279189B90063FFDA /* CheckPhoneDataManager.swift */,
 			);
 			path = CheckPhone;
 			sourceTree = "<group>";
@@ -392,6 +403,15 @@
 				4BBAED94279045E70063FFDA /* CheckIdDataManager.swift */,
 			);
 			path = CheckId;
+			sourceTree = "<group>";
+		};
+		4BBAED9A279190500063FFDA /* loadUserIfo */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAED9B279190740063FFDA /* LoadUserInfoResponse.swift */,
+				4BBAED9D279190880063FFDA /* LoadUserInfoDataManger.swift */,
+			);
+			path = loadUserIfo;
 			sourceTree = "<group>";
 		};
 		95635DBE9288994EFF6278B3 /* Pods */ = {
@@ -541,6 +561,8 @@
 				4B70A6E327897630006EB01A /* categoryViewController.swift in Sources */,
 				4B70A702278B230A006EB01A /* makeIdViewController.swift in Sources */,
 				4B70A6FC278B1550006EB01A /* categoryTableViewCell.swift in Sources */,
+				4BBAED97279189AA0063FFDA /* CheckPhoneResponse.swift in Sources */,
+				4BBAED99279189B90063FFDA /* CheckPhoneDataManager.swift in Sources */,
 				4B70A6DD27895C7B006EB01A /* fifthHomeViewController.swift in Sources */,
 				4BBAED6F278EE9260063FFDA /* productViewController.swift in Sources */,
 				4B807FAE278C5D83009650C0 /* kurlyRecommandTableViewCell.swift in Sources */,
@@ -549,9 +571,11 @@
 				4B70A6DB27895C60006EB01A /* firthHomeViewController.swift in Sources */,
 				4BBAED77278EE9E50063FFDA /* askViewController.swift in Sources */,
 				4B70683127893A4E006BB008 /* AppDelegate.swift in Sources */,
+				4BBAED9C279190740063FFDA /* LoadUserInfoResponse.swift in Sources */,
 				4B70A6E9278978CB006EB01A /* myKurlyViewController.swift in Sources */,
 				4B70A6E627897841006EB01A /* searchViewController.swift in Sources */,
 				4BBAED93279045A70063FFDA /* CheckIdResponse.swift in Sources */,
+				4BBAED9E279190880063FFDA /* LoadUserInfoDataManger.swift in Sources */,
 				4BBAED7A278EFD350063FFDA /* LoginResponse.swift in Sources */,
 				4B70A6D927895C53006EB01A /* thirdHomeViewController.swift in Sources */,
 				4BBAED87278F08EC0063FFDA /* SignInDataManager.swift in Sources */,

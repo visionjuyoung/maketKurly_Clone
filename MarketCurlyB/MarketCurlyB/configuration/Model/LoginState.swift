@@ -13,6 +13,7 @@ class LoginState {
     var state: Bool
     var Idx: Int
     var jwt: String
+    var name: String = ""
     
     private init() {
         state = false

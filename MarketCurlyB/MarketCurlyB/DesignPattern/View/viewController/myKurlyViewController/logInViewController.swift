@@ -10,6 +10,9 @@ import UIKit
 class logInViewController: UIViewController {
     
     lazy var dataManager: LogInDataManager = LogInDataManager()
+    lazy var loadDataManager: LoadUserInfoDataManager = LoadUserInfoDataManager()
+    
+    let state = LoginState.shared
 
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -64,15 +67,24 @@ class logInViewController: UIViewController {
 
 extension logInViewController {
     func didsuccessLogIn(_ result: LogInResult) {
-        let state = LoginState.shared
         state.Idx = result.userIdx
         state.jwt = result.jwt
         state.state = true
+        print(state.Idx)
         print("로그인 성공")
-        dismiss(animated: false, completion: nil)
+        let userNum = state.Idx - 1
+        loadDataManager.loadId(userIdx: userNum, delegate: self)
     }
     
     func failedToRequest(message: String) {
         print(message)
+    }
+}
+
+extension logInViewController {
+    func didSuccessLoadId(_ result: LoadInfoResult) {
+        state.name = result.name
+        print(state.name)
+        dismiss(animated: false, completion: nil)
     }
 }

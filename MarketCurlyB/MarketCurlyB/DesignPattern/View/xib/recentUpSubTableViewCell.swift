@@ -9,6 +9,10 @@ import UIKit
 
 class recentUpSubTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var numLabel: UILabel!
+    @IBOutlet weak var recentProductTextLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

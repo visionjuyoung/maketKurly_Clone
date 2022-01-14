@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n0y-O7-ip1">
-                        <rect key="frame" x="16" y="56.5" width="288" height="325.5"/>
+                        <rect key="frame" x="6" y="56.5" width="298" height="325.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
                 </subviews>
@@ -43,7 +43,7 @@
                     <constraint firstItem="pSy-at-8OA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Zl1-Kh-ChE"/>
                     <constraint firstAttribute="bottomMargin" secondItem="n0y-O7-ip1" secondAttribute="bottom" id="c0w-d0-2TV"/>
                     <constraint firstItem="pSy-at-8OA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cwr-AI-bXj"/>
-                    <constraint firstItem="n0y-O7-ip1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="e38-DS-dSN"/>
+                    <constraint firstItem="n0y-O7-ip1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-10" id="e38-DS-dSN"/>
                     <constraint firstItem="n0y-O7-ip1" firstAttribute="top" secondItem="XFh-lx-7rq" secondAttribute="bottom" constant="10" id="rDA-dC-ZYI"/>
                 </constraints>
             </tableViewCellContentView>
