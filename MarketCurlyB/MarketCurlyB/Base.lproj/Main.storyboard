@@ -1271,7 +1271,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="odm-wv-pqF">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="705"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIR-ns-gcI">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -1390,6 +1390,14 @@
                                                     <constraint firstItem="Id1-Yu-wHv" firstAttribute="leading" secondItem="Mpx-EC-HeM" secondAttribute="trailing" constant="20" id="yaG-Cb-lzB"/>
                                                 </constraints>
                                             </view>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" estimatedSectionHeaderHeight="-1" sectionFooterHeight="5" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IH0-In-w8I">
+                                                <rect key="frame" x="0.0" y="205" width="414" height="500"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="500" id="luL-ob-gwy"/>
+                                                </constraints>
+                                                <color key="separatorColor" systemColor="systemGray5Color"/>
+                                            </tableView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -1428,6 +1436,8 @@
                         <outlet property="leftBarBtn2" destination="vI9-Jf-Uni" id="TB4-D8-xCY"/>
                         <outlet property="nameLabel" destination="Id1-Yu-wHv" id="u9V-en-LAc"/>
                         <outlet property="nextGradeButton" destination="dVp-bd-l7q" id="yat-Mm-Pxj"/>
+                        <outlet property="tableView1" destination="IH0-In-w8I" id="G2r-En-Opr"/>
+                        <outlet property="tableViewHeight" destination="luL-ob-gwy" id="hzo-cI-klP"/>
                         <outlet property="testView" destination="iwn-eA-n0o" id="CTn-nf-Lm6"/>
                     </connections>
                 </viewController>

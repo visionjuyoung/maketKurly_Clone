@@ -85,6 +85,9 @@ extension logInViewController {
     func didSuccessLoadId(_ result: LoadInfoResult) {
         state.name = result.name
         print(state.name)
-        dismiss(animated: false, completion: nil)
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "myKurlyViewController") as? myKurlyViewController else {
+            return
+        }
+        present(vc, animated: false, completion: nil)
     }
 }
