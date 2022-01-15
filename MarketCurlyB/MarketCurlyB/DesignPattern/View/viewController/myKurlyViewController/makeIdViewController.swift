@@ -46,6 +46,8 @@ class makeIdViewController: UIViewController {
     @IBOutlet weak var smsBtn: UIButton!
     @IBOutlet weak var emailBtn: UIButton!
     @IBOutlet weak var certAuthTextField: UITextField!
+    @IBOutlet weak var make: UIView!
+    @IBOutlet weak var makeIdViewHeight: NSLayoutConstraint!
     
     
     @IBOutlet weak var phoneTopLayer: NSLayoutConstraint!
@@ -154,9 +156,7 @@ class makeIdViewController: UIViewController {
         checkPhoneDateManager.getCert(data: telNumTextField.text!, delegate: self)
         let spacing: CGFloat = 75.0
         phoneTopLayer.constant = spacing
-//        UIView.animate(withDuration: 0.5, animations: ) {
-//            self.view.layoutIfNeeded()
-//        }
+        makeIdViewHeight.constant += spacing
         UIView.animate(withDuration: 0.1) {
             self.view.layoutIfNeeded()
         }
@@ -167,6 +167,7 @@ class makeIdViewController: UIViewController {
     @IBAction func pressCheckCert(_ sender: UIButton) {
         if certmessage == certAuthTextField.text {
             cert = true
+            loadAlert(notion: "인증번호 확인", message: "인증번호가 확인되었습니다")
         }
     }
     
@@ -365,6 +366,7 @@ extension makeIdViewController {
             return
         }
         certmessage = certNum.certNum
+        print(certmessage)
     }
 }
 

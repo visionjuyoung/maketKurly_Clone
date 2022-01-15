@@ -1229,7 +1229,7 @@
         <!--마이컬리-->
         <scene sceneID="ZQo-AQ-Z0B">
             <objects>
-                <viewController storyboardIdentifier="myKurlyViewController" id="Xqf-bp-Kwr" customClass="myKurlyViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myKurlyViewController" modalPresentationStyle="fullScreen" id="Xqf-bp-Kwr" customClass="myKurlyViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="faw-dG-PjZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2310,7 +2310,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="EiX-Ei-EFt" firstAttribute="top" secondItem="ahm-7M-9Pu" secondAttribute="top" id="2d4-Wc-fbi"/>
                                     <constraint firstItem="EiX-Ei-EFt" firstAttribute="width" secondItem="Wb9-iV-fdk" secondAttribute="width" id="6nQ-bd-7Jg"/>
@@ -2357,6 +2357,8 @@
                         <outlet property="eventName" destination="7Xu-TY-OnD" id="diF-pF-xCM"/>
                         <outlet property="girlBtn" destination="MED-lI-Ke4" id="uWt-8q-LQM"/>
                         <outlet property="idTextField" destination="vuB-yB-uqt" id="lpR-X9-Xv7"/>
+                        <outlet property="make" destination="EiX-Ei-EFt" id="vPz-Pb-cTf"/>
+                        <outlet property="makeIdViewHeight" destination="j1U-Al-aY9" id="32A-T6-K4w"/>
                         <outlet property="messageBtn" destination="eYe-33-GUn" id="bRp-Yf-Sn8"/>
                         <outlet property="monthTextField" destination="XcR-ES-z3u" id="Z7X-GM-jCd"/>
                         <outlet property="nameTextField" destination="RwJ-EK-2Nl" id="iJh-4F-z8p"/>

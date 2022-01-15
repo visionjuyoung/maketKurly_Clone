@@ -18,7 +18,6 @@ class CheckPhoneDataManager {
                     delegate.SuccessGetCertMessage(result: response.result)
                 case .failure(let error):
                     print(error)
-                    //delegate.checkIdFail()
                 }
             }
     }
