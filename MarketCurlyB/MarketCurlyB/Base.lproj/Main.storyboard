@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XDI-2i-AKN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zVj-I8-h9d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -251,7 +251,31 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYh-HP-Pop">
                                 <rect key="frame" x="0.0" y="136" width="414" height="666"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2e-aB-ggS">
+                                        <rect key="frame" x="20" y="10" width="374" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="yh3-mB-LLr"/>
+                                        </constraints>
+                                        <color key="tintColor" name="KurlyColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="후기 쓰기"/>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EhH-Sc-S7j">
+                                        <rect key="frame" x="0.0" y="65" width="414" height="601"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="EhH-Sc-S7j" firstAttribute="leading" secondItem="jYh-HP-Pop" secondAttribute="leading" id="7WZ-JF-9p3"/>
+                                    <constraint firstItem="V2e-aB-ggS" firstAttribute="top" secondItem="jYh-HP-Pop" secondAttribute="top" constant="10" id="CAO-CN-hDX"/>
+                                    <constraint firstItem="EhH-Sc-S7j" firstAttribute="top" secondItem="V2e-aB-ggS" secondAttribute="bottom" constant="10" id="GM9-6V-1tC"/>
+                                    <constraint firstAttribute="trailing" secondItem="EhH-Sc-S7j" secondAttribute="trailing" id="XQi-WS-OzJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="V2e-aB-ggS" secondAttribute="trailing" constant="20" id="bZ5-d9-X6J"/>
+                                    <constraint firstItem="V2e-aB-ggS" firstAttribute="leading" secondItem="jYh-HP-Pop" secondAttribute="leading" constant="20" id="ch4-WF-pc0"/>
+                                    <constraint firstAttribute="bottom" secondItem="EhH-Sc-S7j" secondAttribute="bottom" id="uVi-7s-4Yb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UW1-eq-b66"/>
@@ -263,6 +287,10 @@
                             <constraint firstItem="UW1-eq-b66" firstAttribute="trailing" secondItem="jYh-HP-Pop" secondAttribute="trailing" id="mnS-Ju-DtI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="reviewButton" destination="V2e-aB-ggS" id="3ow-9N-fEi"/>
+                        <outlet property="tableView" destination="EhH-Sc-S7j" id="rXn-Xd-Tx8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sP7-ET-7AE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,7 +306,32 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jp1-Vk-3jj">
                                 <rect key="frame" x="0.0" y="136" width="414" height="666"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iu-4f-bvM">
+                                        <rect key="frame" x="20" y="10" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2Ee-6T-bwz"/>
+                                        </constraints>
+                                        <color key="tintColor" name="KurlyColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="상품 문의하기"/>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZRW-Z6-cnM">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="606"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8iu-4f-bvM" secondAttribute="trailing" constant="20" symbolic="YES" id="17N-DX-6Yy"/>
+                                    <constraint firstItem="8iu-4f-bvM" firstAttribute="centerX" secondItem="Jp1-Vk-3jj" secondAttribute="centerX" id="2dM-Fa-arW"/>
+                                    <constraint firstItem="8iu-4f-bvM" firstAttribute="top" secondItem="Jp1-Vk-3jj" secondAttribute="top" constant="10" id="BSk-MI-GY8"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZRW-Z6-cnM" secondAttribute="trailing" id="GCC-6f-frs"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZRW-Z6-cnM" secondAttribute="bottom" id="SM9-Ob-DMj"/>
+                                    <constraint firstItem="ZRW-Z6-cnM" firstAttribute="leading" secondItem="Jp1-Vk-3jj" secondAttribute="leading" id="TVc-xZ-yUT"/>
+                                    <constraint firstItem="ZRW-Z6-cnM" firstAttribute="top" secondItem="8iu-4f-bvM" secondAttribute="bottom" constant="10" id="faU-We-XNC"/>
+                                    <constraint firstItem="8iu-4f-bvM" firstAttribute="leading" secondItem="Jp1-Vk-3jj" secondAttribute="leading" constant="20" id="hmX-Th-o2o"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D4R-Ud-o7s"/>
@@ -290,6 +343,10 @@
                             <constraint firstItem="D4R-Ud-o7s" firstAttribute="trailing" secondItem="Jp1-Vk-3jj" secondAttribute="trailing" id="wuO-zk-iCo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="productInquiry" destination="8iu-4f-bvM" id="Wwp-zD-fcc"/>
+                        <outlet property="tableView" destination="ZRW-Z6-cnM" id="yBJ-qr-FOq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrc-xA-MKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

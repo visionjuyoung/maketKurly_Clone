@@ -72,6 +72,14 @@
 		4BBAEDAA279304190063FFDA /* myKurlyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEDA8279304190063FFDA /* myKurlyListTableViewCell.xib */; };
 		4BBAEDAE2793095C0063FFDA /* logInedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDAC2793095C0063FFDA /* logInedTableViewCell.swift */; };
 		4BBAEDAF2793095C0063FFDA /* logInedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEDAD2793095C0063FFDA /* logInedTableViewCell.xib */; };
+		4BBAEDB7279444D60063FFDA /* questionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDB5279444D60063FFDA /* questionTableViewCell.swift */; };
+		4BBAEDB8279444D60063FFDA /* questionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEDB6279444D60063FFDA /* questionTableViewCell.xib */; };
+		4BBAEDC027944F0C0063FFDA /* questionTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDBE27944F0C0063FFDA /* questionTableViewTableViewCell.swift */; };
+		4BBAEDC127944F0C0063FFDA /* questionTableViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEDBF27944F0C0063FFDA /* questionTableViewTableViewCell.xib */; };
+		4BBAEDC42794514A0063FFDA /* productReviewOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDC22794514A0063FFDA /* productReviewOneTableViewCell.swift */; };
+		4BBAEDC52794514A0063FFDA /* productReviewOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEDC32794514A0063FFDA /* productReviewOneTableViewCell.xib */; };
+		4BBAEDC82794528F0063FFDA /* productReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDC62794528F0063FFDA /* productReviewsTableViewCell.swift */; };
+		4BBAEDC92794528F0063FFDA /* productReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEDC72794528F0063FFDA /* productReviewsTableViewCell.xib */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +153,14 @@
 		4BBAEDA8279304190063FFDA /* myKurlyListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myKurlyListTableViewCell.xib; sourceTree = "<group>"; };
 		4BBAEDAC2793095C0063FFDA /* logInedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInedTableViewCell.swift; sourceTree = "<group>"; };
 		4BBAEDAD2793095C0063FFDA /* logInedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = logInedTableViewCell.xib; sourceTree = "<group>"; };
+		4BBAEDB5279444D60063FFDA /* questionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionTableViewCell.swift; sourceTree = "<group>"; };
+		4BBAEDB6279444D60063FFDA /* questionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = questionTableViewCell.xib; sourceTree = "<group>"; };
+		4BBAEDBE27944F0C0063FFDA /* questionTableViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionTableViewTableViewCell.swift; sourceTree = "<group>"; };
+		4BBAEDBF27944F0C0063FFDA /* questionTableViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = questionTableViewTableViewCell.xib; sourceTree = "<group>"; };
+		4BBAEDC22794514A0063FFDA /* productReviewOneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productReviewOneTableViewCell.swift; sourceTree = "<group>"; };
+		4BBAEDC32794514A0063FFDA /* productReviewOneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = productReviewOneTableViewCell.xib; sourceTree = "<group>"; };
+		4BBAEDC62794528F0063FFDA /* productReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productReviewsTableViewCell.swift; sourceTree = "<group>"; };
+		4BBAEDC72794528F0063FFDA /* productReviewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = productReviewsTableViewCell.xib; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,23 +294,14 @@
 		4B70A6FE278B17C7006EB01A /* xib */ = {
 			isa = PBXGroup;
 			children = (
+				4BBAEDB4279443650063FFDA /* search */,
+				4BBAEDB3279443400063FFDA /* category */,
+				4BBAEDB2279442050063FFDA /* productDetail */,
+				4BBAEDB1279442030063FFDA /* firstHomeView */,
+				4BBAEDB0279441530063FFDA /* fifthHomeView */,
 				4BBAEDAB2793093C0063FFDA /* myKurlyPage */,
-				4B70A6FA278B1550006EB01A /* categoryTableViewCell.swift */,
-				4B70A6FB278B1550006EB01A /* categoryTableViewCell.xib */,
-				4B807FA2278C233C009650C0 /* benefitTableViewCell.swift */,
-				4B807FA3278C233C009650C0 /* benefitTableViewCell.xib */,
-				4B807FA8278C5CE6009650C0 /* bannerTableViewCell.swift */,
-				4B807FA9278C5CE6009650C0 /* bannerTableViewCell.xib */,
-				4B807FAC278C5D83009650C0 /* kurlyRecommandTableViewCell.swift */,
-				4B807FAD278C5D83009650C0 /* kurlyRecommandTableViewCell.xib */,
 				4B807FB0278C5E65009650C0 /* productCollectionViewCell.swift */,
 				4B807FB1278C5E65009650C0 /* productCollectionViewCell.xib */,
-				4BBAED58278D9F470063FFDA /* eventSearchTableViewCell.swift */,
-				4BBAED59278D9F470063FFDA /* eventSearchTableViewCell.xib */,
-				4BBAED5C278DA2050063FFDA /* recommandSearchTableViewCell.swift */,
-				4BBAED5D278DA2050063FFDA /* recommandSearchTableViewCell.xib */,
-				4BBAED60278DA70A0063FFDA /* recentUpTableViewCell.swift */,
-				4BBAED61278DA70A0063FFDA /* recentUpTableViewCell.xib */,
 				4BBAED64278DA7E00063FFDA /* recentUpSubTableViewCell.swift */,
 				4BBAED65278DA7E00063FFDA /* recentUpSubTableViewCell.xib */,
 			);
@@ -451,6 +458,63 @@
 			path = myKurlyPage;
 			sourceTree = "<group>";
 		};
+		4BBAEDB0279441530063FFDA /* fifthHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				4B807FA2278C233C009650C0 /* benefitTableViewCell.swift */,
+				4B807FA3278C233C009650C0 /* benefitTableViewCell.xib */,
+			);
+			path = fifthHomeView;
+			sourceTree = "<group>";
+		};
+		4BBAEDB1279442030063FFDA /* firstHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				4B807FA8278C5CE6009650C0 /* bannerTableViewCell.swift */,
+				4B807FA9278C5CE6009650C0 /* bannerTableViewCell.xib */,
+				4B807FAC278C5D83009650C0 /* kurlyRecommandTableViewCell.swift */,
+				4B807FAD278C5D83009650C0 /* kurlyRecommandTableViewCell.xib */,
+			);
+			path = firstHomeView;
+			sourceTree = "<group>";
+		};
+		4BBAEDB2279442050063FFDA /* productDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAEDB5279444D60063FFDA /* questionTableViewCell.swift */,
+				4BBAEDB6279444D60063FFDA /* questionTableViewCell.xib */,
+				4BBAEDBE27944F0C0063FFDA /* questionTableViewTableViewCell.swift */,
+				4BBAEDBF27944F0C0063FFDA /* questionTableViewTableViewCell.xib */,
+				4BBAEDC22794514A0063FFDA /* productReviewOneTableViewCell.swift */,
+				4BBAEDC32794514A0063FFDA /* productReviewOneTableViewCell.xib */,
+				4BBAEDC62794528F0063FFDA /* productReviewsTableViewCell.swift */,
+				4BBAEDC72794528F0063FFDA /* productReviewsTableViewCell.xib */,
+			);
+			path = productDetail;
+			sourceTree = "<group>";
+		};
+		4BBAEDB3279443400063FFDA /* category */ = {
+			isa = PBXGroup;
+			children = (
+				4B70A6FA278B1550006EB01A /* categoryTableViewCell.swift */,
+				4B70A6FB278B1550006EB01A /* categoryTableViewCell.xib */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		4BBAEDB4279443650063FFDA /* search */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAED58278D9F470063FFDA /* eventSearchTableViewCell.swift */,
+				4BBAED59278D9F470063FFDA /* eventSearchTableViewCell.xib */,
+				4BBAED5C278DA2050063FFDA /* recommandSearchTableViewCell.swift */,
+				4BBAED5D278DA2050063FFDA /* recommandSearchTableViewCell.xib */,
+				4BBAED60278DA70A0063FFDA /* recentUpTableViewCell.swift */,
+				4BBAED61278DA70A0063FFDA /* recentUpTableViewCell.xib */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
 		95635DBE9288994EFF6278B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,19 +585,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BBAED5B278D9F470063FFDA /* eventSearchTableViewCell.xib in Resources */,
+				4BBAEDC52794514A0063FFDA /* productReviewOneTableViewCell.xib in Resources */,
 				4B70683D27893A4F006BB008 /* LaunchScreen.storyboard in Resources */,
 				4B70683A27893A4F006BB008 /* Assets.xcassets in Resources */,
 				4B70683827893A4E006BB008 /* Main.storyboard in Resources */,
 				4BBAED67278DA7E00063FFDA /* recentUpSubTableViewCell.xib in Resources */,
+				4BBAEDC127944F0C0063FFDA /* questionTableViewTableViewCell.xib in Resources */,
 				4B807FAB278C5CE6009650C0 /* bannerTableViewCell.xib in Resources */,
 				4BBAEDAF2793095C0063FFDA /* logInedTableViewCell.xib in Resources */,
 				4B70A6FD278B1550006EB01A /* categoryTableViewCell.xib in Resources */,
 				4BBAED5F278DA2050063FFDA /* recommandSearchTableViewCell.xib in Resources */,
 				4BBAED63278DA70A0063FFDA /* recentUpTableViewCell.xib in Resources */,
 				4B807FAF278C5D83009650C0 /* kurlyRecommandTableViewCell.xib in Resources */,
+				4BBAEDC92794528F0063FFDA /* productReviewsTableViewCell.xib in Resources */,
 				4B807FB3278C5E65009650C0 /* productCollectionViewCell.xib in Resources */,
 				4B807FA5278C233C009650C0 /* benefitTableViewCell.xib in Resources */,
 				4BBAEDAA279304190063FFDA /* myKurlyListTableViewCell.xib in Resources */,
+				4BBAEDB8279444D60063FFDA /* questionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,9 +660,11 @@
 				4BBAED5A278D9F470063FFDA /* eventSearchTableViewCell.swift in Sources */,
 				4B70A6D527895C3E006EB01A /* firstHomeViewController.swift in Sources */,
 				4BBAED8F278FE88F0063FFDA /* LoginState.swift in Sources */,
+				4BBAEDC42794514A0063FFDA /* productReviewOneTableViewCell.swift in Sources */,
 				4B807FAA278C5CE6009650C0 /* bannerTableViewCell.swift in Sources */,
 				4B807FA7278C2746009650C0 /* detailViewController.swift in Sources */,
 				4BBAED5E278DA2050063FFDA /* recommandSearchTableViewCell.swift in Sources */,
+				4BBAEDC027944F0C0063FFDA /* questionTableViewTableViewCell.swift in Sources */,
 				4BBAED82278F08C70063FFDA /* SignInRequest.swift in Sources */,
 				4BBAEDA32792F1410063FFDA /* LoadProductInfoDataManager.swift in Sources */,
 				4BBAED6C278ED8D40063FFDA /* cartViewController.swift in Sources */,
@@ -603,6 +673,7 @@
 				4B70A702278B230A006EB01A /* makeIdViewController.swift in Sources */,
 				4B70A6FC278B1550006EB01A /* categoryTableViewCell.swift in Sources */,
 				4BBAED97279189AA0063FFDA /* CheckPhoneResponse.swift in Sources */,
+				4BBAEDB7279444D60063FFDA /* questionTableViewCell.swift in Sources */,
 				4BBAED99279189B90063FFDA /* CheckPhoneDataManager.swift in Sources */,
 				4B70A6DD27895C7B006EB01A /* fifthHomeViewController.swift in Sources */,
 				4BBAED6F278EE9260063FFDA /* productViewController.swift in Sources */,
@@ -630,6 +701,7 @@
 				4B70A6D32789406F006EB01A /* HomeViewController.swift in Sources */,
 				4BBAED95279045E70063FFDA /* CheckIdDataManager.swift in Sources */,
 				4B70A6F72789CC70006EB01A /* CategoryCollectionInfo.swift in Sources */,
+				4BBAEDC82794528F0063FFDA /* productReviewsTableViewCell.swift in Sources */,
 				4B70A6F92789CF26006EB01A /* CategoryColletionModel.swift in Sources */,
 				4BBAED8D278FE36E0063FFDA /* Constant.swift in Sources */,
 				4B807FA4278C233C009650C0 /* benefitTableViewCell.swift in Sources */,

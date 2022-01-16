@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="productReviewsTableViewCell" customModule="MarketCurlyB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" BEST " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olC-xT-LRk">
+                        <rect key="frame" x="20" y="10" width="42.5" height="20"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.94901960784313721" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="gwX-jh-pEN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="KurlyColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdE-nK-e6t">
+                        <rect key="frame" x="71" y="10" width="323" height="20"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="라벤더" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJt-Fk-XBy">
+                        <rect key="frame" x="20" y="40" width="42.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" name="KurlyColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김주영" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDb-tl-m4R">
+                        <rect key="frame" x="67.5" y="40" width="34" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raB-xz-zZe">
+                        <rect key="frame" x="109.5" y="39" width="3.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2S-jO-zeb">
+                        <rect key="frame" x="121" y="39.5" width="29" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xDb-tl-m4R" firstAttribute="centerY" secondItem="CJt-Fk-XBy" secondAttribute="centerY" id="3gm-0M-Kka"/>
+                    <constraint firstItem="CJt-Fk-XBy" firstAttribute="height" secondItem="olC-xT-LRk" secondAttribute="height" multiplier="0.8" id="8Gf-qr-O1N"/>
+                    <constraint firstItem="A2S-jO-zeb" firstAttribute="leading" secondItem="raB-xz-zZe" secondAttribute="trailing" constant="8" id="8HV-sV-2PD"/>
+                    <constraint firstItem="CJt-Fk-XBy" firstAttribute="top" secondItem="olC-xT-LRk" secondAttribute="bottom" constant="10" id="Ilc-ef-uTP"/>
+                    <constraint firstItem="EdE-nK-e6t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="MEn-kT-jXf"/>
+                    <constraint firstItem="raB-xz-zZe" firstAttribute="centerY" secondItem="xDb-tl-m4R" secondAttribute="centerY" constant="-1" id="NOC-xn-XGV"/>
+                    <constraint firstItem="CJt-Fk-XBy" firstAttribute="leading" secondItem="olC-xT-LRk" secondAttribute="leading" id="Uip-gb-k8H"/>
+                    <constraint firstItem="xDb-tl-m4R" firstAttribute="leading" secondItem="CJt-Fk-XBy" secondAttribute="trailing" constant="5" id="bEx-Ec-V35"/>
+                    <constraint firstAttribute="trailing" secondItem="EdE-nK-e6t" secondAttribute="trailing" constant="20" symbolic="YES" id="bTC-vJ-jvr"/>
+                    <constraint firstItem="EdE-nK-e6t" firstAttribute="leading" secondItem="olC-xT-LRk" secondAttribute="trailing" constant="8.5" id="eYh-gA-5Vn"/>
+                    <constraint firstItem="olC-xT-LRk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jOO-Ia-tpp"/>
+                    <constraint firstItem="olC-xT-LRk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kZm-Rk-UdP"/>
+                    <constraint firstItem="A2S-jO-zeb" firstAttribute="centerY" secondItem="xDb-tl-m4R" secondAttribute="centerY" id="keQ-jc-uMc"/>
+                    <constraint firstItem="raB-xz-zZe" firstAttribute="leading" secondItem="xDb-tl-m4R" secondAttribute="trailing" constant="8" id="sSt-rG-JPZ"/>
+                    <constraint firstItem="EdE-nK-e6t" firstAttribute="centerY" secondItem="olC-xT-LRk" secondAttribute="centerY" id="ziM-t3-R2h"/>
+                    <constraint firstItem="CJt-Fk-XBy" firstAttribute="trailing" secondItem="olC-xT-LRk" secondAttribute="trailing" id="zyo-Vw-Y7G"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="notionLabel3" destination="CJt-Fk-XBy" id="qye-l9-4B9"/>
+            </connections>
+            <point key="canvasLocation" x="205.79710144927537" y="141.29464285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="KurlyColor">
+            <color red="0.33899998664855957" green="0.043000001460313797" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
