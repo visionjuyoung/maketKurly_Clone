@@ -8,14 +8,21 @@
 import UIKit
 
 class firstHomeViewController: UIViewController {
+    
+    let loadSectionDataManager = LoadSectionDataManager()
 
     let picks: [String] = ["Kurlys Only", "인기 신상품", "마감 세일", "후기 100개 돌파"]
+    
+    var sectionsCount: [Int] = []
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setInit()
+        loadSectionDataManager.loadSectionProduct(section: 1, delegate: self)
+        loadSectionDataManager.loadSectionProduct(section: 2, delegate: self)
+        loadSectionDataManager.loadSectionProduct(section: 3, delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +36,17 @@ class firstHomeViewController: UIViewController {
         tableView.register(UINib(nibName: "bannerTableViewCell", bundle: nil), forCellReuseIdentifier: "bannerTableViewCell")
         tableView.register(UINib(nibName: "kurlyRecommandTableViewCell", bundle: nil), forCellReuseIdentifier: "kurlyRecommandTableViewCell")
         tableView.separatorStyle = .none
+    }
+}
+
+extension firstHomeViewController {
+    func didSuccessLoadAllSection(result: [LoadSectionResult]) {
+        print(result)
+    }
+    
+    func didSuccessLoadSection(result: [LoadSectionResult]) {
+        sectionsCount.append(result.count)
+        print(sectionsCount)
     }
 }
 

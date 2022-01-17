@@ -136,6 +136,74 @@
             </objects>
             <point key="canvasLocation" x="720" y="885"/>
         </scene>
+        <!--Select Amount View Controller-->
+        <scene sceneID="DP8-Tj-Lfg">
+            <objects>
+                <viewController storyboardIdentifier="selectAmountView" id="gnD-Ok-Hwh" customClass="selectAmountViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ho-zQ-ToL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6E-bi-unv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pFd-jX-6wF"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <items>
+                                    <navigationItem title="상품 선택" id="RX6-pT-NM3">
+                                        <barButtonItem key="leftBarButtonItem" id="lWE-ZA-tie">
+                                            <imageReference key="image" image="multiply" catalog="system" symbolScale="medium"/>
+                                            <connections>
+                                                <action selector="close:" destination="gnD-Ok-Hwh" id="WM3-M3-rsV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5l-FT-hOK">
+                                <rect key="frame" x="20" y="758" width="374" height="50"/>
+                                <color key="backgroundColor" name="KurlyColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="x0e-Vm-63r"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="장바구니 담기"/>
+                                <connections>
+                                    <action selector="gotoCart:" destination="gnD-Ok-Hwh" eventType="touchUpInside" id="bbi-vQ-Chg"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uft-fp-WFn">
+                                <rect key="frame" x="0.0" y="50" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ByE-Rg-B1m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y5l-FT-hOK" firstAttribute="bottom" secondItem="ByE-Rg-B1m" secondAttribute="bottom" id="0mk-CK-xnR"/>
+                            <constraint firstItem="Uft-fp-WFn" firstAttribute="top" secondItem="R6E-bi-unv" secondAttribute="bottom" id="2H2-qw-eRm"/>
+                            <constraint firstItem="ByE-Rg-B1m" firstAttribute="trailing" secondItem="Uft-fp-WFn" secondAttribute="trailing" id="DUL-yo-9uP"/>
+                            <constraint firstItem="ByE-Rg-B1m" firstAttribute="trailing" secondItem="Y5l-FT-hOK" secondAttribute="trailing" constant="20" id="Yme-D3-6dJ"/>
+                            <constraint firstItem="R6E-bi-unv" firstAttribute="leading" secondItem="7ho-zQ-ToL" secondAttribute="leading" id="fno-pA-V8s"/>
+                            <constraint firstItem="Y5l-FT-hOK" firstAttribute="top" secondItem="Uft-fp-WFn" secondAttribute="bottom" id="hEW-Zh-mdy"/>
+                            <constraint firstItem="Y5l-FT-hOK" firstAttribute="leading" secondItem="ByE-Rg-B1m" secondAttribute="leading" constant="20" id="ouz-TI-AGr"/>
+                            <constraint firstItem="Uft-fp-WFn" firstAttribute="leading" secondItem="ByE-Rg-B1m" secondAttribute="leading" id="sH1-NZ-bz1"/>
+                            <constraint firstItem="R6E-bi-unv" firstAttribute="top" secondItem="ByE-Rg-B1m" secondAttribute="top" id="vof-bT-HmB"/>
+                            <constraint firstItem="ByE-Rg-B1m" firstAttribute="trailing" secondItem="R6E-bi-unv" secondAttribute="trailing" id="wt6-3a-Hua"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bUn-Hr-VDs"/>
+                    <connections>
+                        <outlet property="cartButton" destination="Y5l-FT-hOK" id="0gX-cL-uG5"/>
+                        <outlet property="tableView" destination="Uft-fp-WFn" id="Wom-7V-lTv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLt-Ie-W92" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-461" y="1613"/>
+        </scene>
         <!--Product View Controller-->
         <scene sceneID="M28-Yw-gJt">
             <objects>
@@ -177,6 +245,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="구매하기"/>
+                                        <connections>
+                                            <action selector="addCart:" destination="zVj-I8-h9d" eventType="touchUpInside" id="Ob7-Fz-QdM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHd-Np-S3u">
                                         <rect key="frame" x="15" y="4.5" width="51" height="51"/>
@@ -227,11 +298,12 @@
                         <outlet property="naviBar" destination="yxZ-xB-TcC" id="GM6-p1-GNH"/>
                         <outlet property="naviItem" destination="kVU-fp-fA8" id="3YG-8P-mSP"/>
                         <outlet property="tempView" destination="mYT-QW-npj" id="6K9-Pa-XXx"/>
+                        <segue destination="gnD-Ok-Hwh" kind="show" identifier="selectSegue" id="77N-72-XpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yH-uD-MhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="1613"/>
+            <point key="canvasLocation" x="541" y="1613"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="6B1-Xw-c76">
@@ -397,7 +469,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaJ-UH-wfw">
                                 <rect key="frame" x="0.0" y="136" width="414" height="666"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Er-iT-g47">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Er-iT-g47">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
                                         <color key="separatorColor" systemColor="systemGray5Color"/>
                                     </tableView>
@@ -1218,7 +1290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8J-YM-9p0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4014" y="-1026"/>
+            <point key="canvasLocation" x="3578" y="-628"/>
         </scene>
         <!--검색-->
         <scene sceneID="2Ui-80-2u9">
@@ -2555,6 +2627,9 @@
         <namedColor name="KurlyColor">
             <color red="0.33899998664855957" green="0.043000001460313797" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

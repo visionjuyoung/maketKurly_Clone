@@ -8,13 +8,24 @@
 import UIKit
 
 class cartViewController: UIViewController {
+    
+    let cartsInDataManager: CartInDataManager = CartInDataManager()
 
     @IBOutlet weak var naviBar: UINavigationBar!
     @IBOutlet weak var orderButton: UIButton!
     
+    let loginState = LoginState.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(loginState.Idx)
+        print(loginState.jwt)
         setInit()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cartsInDataManager.loadCarts(userIdx: loginState.Idx, delegate: self)
     }
     
     func setInit() {
@@ -27,4 +38,14 @@ class cartViewController: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
+}
+
+extension cartViewController {
+    func didSuccessLoadCarts(result: CartsInResult?) {
+        
+    }
+    
+    func didSuccessLoadAddress(result: LoadAddressResult) {
+        
+    }
 }

@@ -8,6 +8,13 @@
 import UIKit
 
 class productExplainTwoTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var deliveryLabel: UILabel!
+    @IBOutlet weak var packTypeLabel: UILabel!
+    @IBOutlet weak var notionLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

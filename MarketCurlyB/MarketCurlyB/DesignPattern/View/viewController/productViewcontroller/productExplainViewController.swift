@@ -19,6 +19,10 @@ class productExplainViewController: UIViewController {
     var subtitle: String = ""
     var price: Int = 0
     var url: String = ""
+    var unit: String = ""
+    var weight: String = ""
+    var delivery: String = ""
+    var pack: String = ""
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -44,6 +48,10 @@ extension productExplainViewController {
         subtitle = result.subTitle
         price = result.price
         url = result.profileImgUrl
+        unit = result.saleUnit
+        weight = result.weight
+        delivery = result.deliveryType
+        pack = result.packagingTypeDto.name
         
         self.tableView.reloadData()
     }
@@ -69,9 +77,14 @@ extension productExplainViewController: UITableViewDataSource, UITableViewDelega
             cell.productExplainTitle.text = nametitle
             cell.productExplainSubTitle.text = subtitle
             cell.productExplainPrice.text = "\(price)"
+            cell.setImage(url: url)
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "productExplainTwoTableViewCell") as? productExplainTwoTableViewCell else { return UITableViewCell() }
+            cell.unitLabel.text = unit
+            cell.weightLabel.text = weight
+            cell.deliveryLabel.text = delivery
+            cell.packTypeLabel.text = pack
             return cell
         default:
             return UITableViewCell()
@@ -82,7 +95,7 @@ extension productExplainViewController: UITableViewDataSource, UITableViewDelega
         if indexPath.section == 0 {
             return 750
         } else {
-            return 500
+            return 300
         }
     }
     

@@ -50,6 +50,11 @@
                 <constraint firstAttribute="trailing" secondItem="zo7-ye-SMS" secondAttribute="trailing" id="lkH-TE-ldJ"/>
             </constraints>
             <size key="customSize" width="166" height="291"/>
+            <connections>
+                <outlet property="img" destination="zo7-ye-SMS" id="bEO-c3-yL3"/>
+                <outlet property="nameLabel" destination="bdE-6p-F7e" id="CWT-u3-iJS"/>
+                <outlet property="priceLabel" destination="y3O-V7-CN9" id="SAM-dG-Qte"/>
+            </connections>
             <point key="canvasLocation" x="297.10144927536237" y="181.80803571428569"/>
         </collectionViewCell>
     </objects>

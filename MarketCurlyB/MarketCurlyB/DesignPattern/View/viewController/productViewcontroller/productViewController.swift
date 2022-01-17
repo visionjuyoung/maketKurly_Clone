@@ -76,6 +76,10 @@ class productViewController: TabmanViewController {
     }
     
     
+    @IBAction func addCart(_ sender: UIButton) {
+        performSegue(withIdentifier: "selectSegue", sender: nil)
+    }
+    
     @IBAction func closeButton(_ sender: UIBarButtonItem) {
         dismiss(animated: false)
     }

@@ -91,6 +91,16 @@
 		4BBAEDDC279569AD0063FFDA /* NewProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDDB279569AD0063FFDA /* NewProducts.swift */; };
 		4BBAEDDE279570550063FFDA /* BestProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDDD279570550063FFDA /* BestProducts.swift */; };
 		4BBAEDE0279578210063FFDA /* ProductViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDDF279578210063FFDA /* ProductViewState.swift */; };
+		4BBAEDE42795A77C0063FFDA /* CartsInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDE32795A77C0063FFDA /* CartsInResponse.swift */; };
+		4BBAEDE62795AB560063FFDA /* CartsInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDE52795AB560063FFDA /* CartsInDataManager.swift */; };
+		4BBAEDE82795B0B20063FFDA /* selectAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDE72795B0B20063FFDA /* selectAmountViewController.swift */; };
+		4BBAEDF22795B9C00063FFDA /* selectAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDF02795B9C00063FFDA /* selectAmountTableViewCell.swift */; };
+		4BBAEDF32795B9C00063FFDA /* selectAmountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEDF12795B9C00063FFDA /* selectAmountTableViewCell.xib */; };
+		4BBAEDFA2795C5750063FFDA /* LoadAddressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDF92795C5750063FFDA /* LoadAddressResponse.swift */; };
+		4BBAEDFC2795C5810063FFDA /* LoadAddressDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDFB2795C5810063FFDA /* LoadAddressDataManager.swift */; };
+		4BBAEDFE2795C7050063FFDA /* LoadAddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEDFD2795C7050063FFDA /* LoadAddressRequest.swift */; };
+		4BBAEE012795CA670063FFDA /* LoadSectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEE002795CA670063FFDA /* LoadSectionResponse.swift */; };
+		4BBAEE032795CA720063FFDA /* LoadSectionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEE022795CA720063FFDA /* LoadSectionDataManager.swift */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -183,6 +193,16 @@
 		4BBAEDDB279569AD0063FFDA /* NewProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProducts.swift; sourceTree = "<group>"; };
 		4BBAEDDD279570550063FFDA /* BestProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestProducts.swift; sourceTree = "<group>"; };
 		4BBAEDDF279578210063FFDA /* ProductViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewState.swift; sourceTree = "<group>"; };
+		4BBAEDE32795A77C0063FFDA /* CartsInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartsInResponse.swift; sourceTree = "<group>"; };
+		4BBAEDE52795AB560063FFDA /* CartsInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartsInDataManager.swift; sourceTree = "<group>"; };
+		4BBAEDE72795B0B20063FFDA /* selectAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectAmountViewController.swift; sourceTree = "<group>"; };
+		4BBAEDF02795B9C00063FFDA /* selectAmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectAmountTableViewCell.swift; sourceTree = "<group>"; };
+		4BBAEDF12795B9C00063FFDA /* selectAmountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = selectAmountTableViewCell.xib; sourceTree = "<group>"; };
+		4BBAEDF92795C5750063FFDA /* LoadAddressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAddressResponse.swift; sourceTree = "<group>"; };
+		4BBAEDFB2795C5810063FFDA /* LoadAddressDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAddressDataManager.swift; sourceTree = "<group>"; };
+		4BBAEDFD2795C7050063FFDA /* LoadAddressRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAddressRequest.swift; sourceTree = "<group>"; };
+		4BBAEE002795CA670063FFDA /* LoadSectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSectionResponse.swift; sourceTree = "<group>"; };
+		4BBAEE022795CA720063FFDA /* LoadSectionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSectionDataManager.swift; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -319,6 +339,7 @@
 		4B70A6FE278B17C7006EB01A /* xib */ = {
 			isa = PBXGroup;
 			children = (
+				4BBAEDE92795B4390063FFDA /* cart */,
 				4BBAEDB4279443650063FFDA /* search */,
 				4BBAEDB3279443400063FFDA /* category */,
 				4BBAEDB2279442050063FFDA /* productDetail */,
@@ -349,6 +370,7 @@
 		4BBAED50278D53480063FFDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4BBAEDE22795A6E40063FFDA /* Cart */,
 				4BBAED9F2792F1120063FFDA /* LoadProductInfo */,
 				4BBAED9A279190500063FFDA /* loadUserIfo */,
 				4BBAED912790457F0063FFDA /* CheckId */,
@@ -380,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				4BBAED6B278ED8D40063FFDA /* cartViewController.swift */,
+				4BBAEDE72795B0B20063FFDA /* selectAmountViewController.swift */,
 			);
 			path = buy;
 			sourceTree = "<group>";
@@ -462,6 +485,7 @@
 		4BBAED9F2792F1120063FFDA /* LoadProductInfo */ = {
 			isa = PBXGroup;
 			children = (
+				4BBAEDFF2795C9D90063FFDA /* LoadSection */,
 				4BBAEDA02792F12E0063FFDA /* LoadProductInfoResponse.swift */,
 				4BBAEDA22792F1410063FFDA /* LoadProductInfoDataManager.swift */,
 			);
@@ -564,6 +588,44 @@
 			path = productExplain;
 			sourceTree = "<group>";
 		};
+		4BBAEDE22795A6E40063FFDA /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAEDF82795C5630063FFDA /* LoadAddress */,
+				4BBAEDE32795A77C0063FFDA /* CartsInResponse.swift */,
+				4BBAEDE52795AB560063FFDA /* CartsInDataManager.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		4BBAEDE92795B4390063FFDA /* cart */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAEDF02795B9C00063FFDA /* selectAmountTableViewCell.swift */,
+				4BBAEDF12795B9C00063FFDA /* selectAmountTableViewCell.xib */,
+			);
+			path = cart;
+			sourceTree = "<group>";
+		};
+		4BBAEDF82795C5630063FFDA /* LoadAddress */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAEDF92795C5750063FFDA /* LoadAddressResponse.swift */,
+				4BBAEDFB2795C5810063FFDA /* LoadAddressDataManager.swift */,
+				4BBAEDFD2795C7050063FFDA /* LoadAddressRequest.swift */,
+			);
+			path = LoadAddress;
+			sourceTree = "<group>";
+		};
+		4BBAEDFF2795C9D90063FFDA /* LoadSection */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAEE002795CA670063FFDA /* LoadSectionResponse.swift */,
+				4BBAEE022795CA720063FFDA /* LoadSectionDataManager.swift */,
+			);
+			path = LoadSection;
+			sourceTree = "<group>";
+		};
 		95635DBE9288994EFF6278B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +697,7 @@
 			files = (
 				4BBAED5B278D9F470063FFDA /* eventSearchTableViewCell.xib in Resources */,
 				4BBAEDC52794514A0063FFDA /* productReviewOneTableViewCell.xib in Resources */,
+				4BBAEDF32795B9C00063FFDA /* selectAmountTableViewCell.xib in Resources */,
 				4BBAEDD12795241F0063FFDA /* productExplainTwoTableViewCell.xib in Resources */,
 				4B70683D27893A4F006BB008 /* LaunchScreen.storyboard in Resources */,
 				4B70683A27893A4F006BB008 /* Assets.xcassets in Resources */,
@@ -712,6 +775,7 @@
 				4BBAED8B278F0BFA0063FFDA /* SignInResponse.swift in Sources */,
 				4BBAED5A278D9F470063FFDA /* eventSearchTableViewCell.swift in Sources */,
 				4B70A6D527895C3E006EB01A /* firstHomeViewController.swift in Sources */,
+				4BBAEE032795CA720063FFDA /* LoadSectionDataManager.swift in Sources */,
 				4BBAED8F278FE88F0063FFDA /* LoginState.swift in Sources */,
 				4BBAEDC42794514A0063FFDA /* productReviewOneTableViewCell.swift in Sources */,
 				4B807FAA278C5CE6009650C0 /* bannerTableViewCell.swift in Sources */,
@@ -730,14 +794,20 @@
 				4BBAED97279189AA0063FFDA /* CheckPhoneResponse.swift in Sources */,
 				4BBAEDB7279444D60063FFDA /* questionTableViewCell.swift in Sources */,
 				4BBAED99279189B90063FFDA /* CheckPhoneDataManager.swift in Sources */,
+				4BBAEDE42795A77C0063FFDA /* CartsInResponse.swift in Sources */,
 				4B70A6DD27895C7B006EB01A /* fifthHomeViewController.swift in Sources */,
 				4BBAED6F278EE9260063FFDA /* productViewController.swift in Sources */,
 				4B807FAE278C5D83009650C0 /* kurlyRecommandTableViewCell.swift in Sources */,
 				4BBAEDE0279578210063FFDA /* ProductViewState.swift in Sources */,
+				4BBAEDE62795AB560063FFDA /* CartsInDataManager.swift in Sources */,
 				4B70A6D727895C48006EB01A /* secondHomeViewController.swift in Sources */,
+				4BBAEDFE2795C7050063FFDA /* LoadAddressRequest.swift in Sources */,
 				4BBAED62278DA70A0063FFDA /* recentUpTableViewCell.swift in Sources */,
+				4BBAEE012795CA670063FFDA /* LoadSectionResponse.swift in Sources */,
 				4B70A6DB27895C60006EB01A /* firthHomeViewController.swift in Sources */,
+				4BBAEDE82795B0B20063FFDA /* selectAmountViewController.swift in Sources */,
 				4BBAED77278EE9E50063FFDA /* askViewController.swift in Sources */,
+				4BBAEDFA2795C5750063FFDA /* LoadAddressResponse.swift in Sources */,
 				4B70683127893A4E006BB008 /* AppDelegate.swift in Sources */,
 				4BBAED9C279190740063FFDA /* LoadUserInfoResponse.swift in Sources */,
 				4B70A6E9278978CB006EB01A /* myKurlyViewController.swift in Sources */,
@@ -755,7 +825,9 @@
 				4BBAED73278EE9C90063FFDA /* productDetailViewController.swift in Sources */,
 				4BBAED66278DA7E00063FFDA /* recentUpSubTableViewCell.swift in Sources */,
 				4BBAEDDC279569AD0063FFDA /* NewProducts.swift in Sources */,
+				4BBAEDF22795B9C00063FFDA /* selectAmountTableViewCell.swift in Sources */,
 				4B70A700278B1EBC006EB01A /* logInViewController.swift in Sources */,
+				4BBAEDFC2795C5810063FFDA /* LoadAddressDataManager.swift in Sources */,
 				4B70A6D32789406F006EB01A /* HomeViewController.swift in Sources */,
 				4BBAED95279045E70063FFDA /* CheckIdDataManager.swift in Sources */,
 				4B70A6F72789CC70006EB01A /* CategoryCollectionInfo.swift in Sources */,
