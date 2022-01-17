@@ -9,6 +9,8 @@ import UIKit
 
 class benefitTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var fifthBannerImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

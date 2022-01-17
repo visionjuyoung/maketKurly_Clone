@@ -10,7 +10,6 @@ import UIKit
 class myKurlyListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var listNameLabel: UILabel!
-    @IBOutlet weak var listImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

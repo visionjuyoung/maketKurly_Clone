@@ -12,6 +12,8 @@ class secondHomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let newProductInfo: NewProducts = NewProducts()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,12 +25,18 @@ class secondHomeViewController: UIViewController {
 extension secondHomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return newProductInfo.name.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell else {
             return UICollectionViewCell()
+        }
+        cell.imgView.image = UIImage(named: "\(newProductInfo.name[indexPath.row])")
+        cell.nameLabel.text = newProductInfo.productName[indexPath.row]
+        cell.priceLabel.text = newProductInfo.price[indexPath.row]
+        if newProductInfo.onlyState[indexPath.row] == false {
+            cell.kurlysOnly.isHidden = true
         }
         return cell
     }
@@ -65,9 +73,6 @@ class ProductCell: UICollectionViewCell {
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var originalPriceLabel: UILabel!
-    
-    
+    @IBOutlet weak var kurlysOnly: UILabel!
 }

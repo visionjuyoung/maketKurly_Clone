@@ -36,7 +36,7 @@ struct LoadProductInfoResult: Decodable {
     var isLimitQuantity: String
     var accumulate: Int
     var origin: String?
-    var allergyDto: AllergyDto?
+    var allergyDto: [AllergyDto]?
     var brandDto: BrandDto?
     var tipContentDto: [TipContentDto]?
     var productGuideDto: [ProductGuideDto]?
@@ -55,7 +55,7 @@ struct AllergyDto: Decodable {
 
 struct BrandDto: Decodable {
     var brandIdx: Int
-    var brandInfo: String
+    var brandInfo: String?
     var contentImageUrl1: String?
     var contentImageUrl2: String?
 }

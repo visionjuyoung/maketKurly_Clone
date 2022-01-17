@@ -31,6 +31,11 @@ class categoryViewController: UIViewController {
         collectionView.delegate = self
         setNavigatonBar()
     }
+    
+    @IBAction func goToCart(_ sender: UIBarButtonItem) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "cartViewController") as? cartViewController else { return }
+        present(vc, animated: false, completion: nil)
+    }
 }
 
 extension categoryViewController {
@@ -148,7 +153,7 @@ extension categoryViewController: ExpyTableViewDataSource, ExpyTableViewDelegate
         print(indexPath.section)
         print(indexPath.row)
         if indexPath.row != 0 {
-            present(vc, animated: false, completion: nil)
+            self.navigationController?.pushViewController(vc, animated: false)
         }
     }
     

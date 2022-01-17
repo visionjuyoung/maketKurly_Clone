@@ -9,11 +9,18 @@ import UIKit
 
 class firstHomeViewController: UIViewController {
 
+    let picks: [String] = ["Kurlys Only", "인기 신상품", "마감 세일", "후기 100개 돌파"]
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setInit()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     func setInit() {
@@ -28,7 +35,7 @@ class firstHomeViewController: UIViewController {
 extension firstHomeViewController: UITableViewDataSource, UITableViewDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,13 +56,14 @@ extension firstHomeViewController: UITableViewDataSource, UITableViewDelegate{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "kurlyRecommandTableViewCell") as? kurlyRecommandTableViewCell else {
                 return UITableViewCell()
             }
+            cell.nameLAbel.text = picks[indexPath.row]
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 414
+            return 350
         } else {
             return 320
         }

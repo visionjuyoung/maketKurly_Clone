@@ -15,6 +15,7 @@ class HomeViewController: TabmanViewController {
     @IBOutlet weak var naviItem: UINavigationItem!
     @IBOutlet weak var leftBarBtn: UIBarButtonItem!
     @IBOutlet weak var leftBarBtn2: UIBarButtonItem!
+    @IBOutlet weak var locationButton: UIBarButtonItem!
     
     private var viewControllers: Array<UIViewController> = []
     
@@ -23,6 +24,11 @@ class HomeViewController: TabmanViewController {
         setViewController()
         setTabManBar()
         setNavi()
+    }
+    
+    @IBAction func goToCart(_ sender: UIBarButtonItem) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "cartViewController") as? cartViewController else { return }
+        present(vc, animated: false, completion: nil)
     }
 }
 
@@ -68,6 +74,8 @@ extension HomeViewController {
         leftBarBtn.isSelected = false
         leftBarBtn2.isSelected = false
     }
+    
+    
 }
 
 extension HomeViewController: PageboyViewControllerDataSource, TMBarDataSource {

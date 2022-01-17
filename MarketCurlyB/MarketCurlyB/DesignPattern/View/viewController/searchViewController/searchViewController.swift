@@ -44,6 +44,12 @@ class searchViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
+    @IBAction func goToCart(_ sender: UIBarButtonItem) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "cartViewController") as? cartViewController else { return }
+        present(vc, animated: false, completion: nil)
+    }
+    
 }
 
 extension searchViewController: UITableViewDataSource, UITableViewDelegate {

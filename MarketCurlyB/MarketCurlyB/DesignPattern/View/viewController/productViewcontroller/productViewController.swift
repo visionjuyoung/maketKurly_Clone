@@ -10,16 +10,23 @@ import Tabman
 import Pageboy
 
 class productViewController: TabmanViewController {
+    
+    let loadProductInfoDataManager = LoadProductDataManager()
 
     @IBOutlet weak var tempView: UIView!
     @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var buyButton: UIButton!
+    @IBOutlet weak var naviItem: UINavigationItem!
+    @IBOutlet weak var naviBar: UINavigationBar!
     
+    var productIdx: Int = 0
+    var productName: String = ""
     
     private var viewControllers: Array<UIViewController> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        naviBar.topItem?.title = productName
         setTabman()
         setTabManBar()
         setButton()
@@ -62,6 +69,17 @@ class productViewController: TabmanViewController {
         
         buyButton.layer.cornerRadius = 5
     }
+    
+    @IBAction func goToCart(_ sender: UIBarButtonItem) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "cartViewController") as? cartViewController else { return }
+        present(vc, animated: false, completion: nil)
+    }
+    
+    
+    @IBAction func closeButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: false)
+    }
+    
 }
 
 extension productViewController: PageboyViewControllerDataSource, TMBarDataSource {

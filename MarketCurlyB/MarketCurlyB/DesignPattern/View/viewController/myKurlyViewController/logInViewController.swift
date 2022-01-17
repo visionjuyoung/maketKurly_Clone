@@ -74,6 +74,9 @@ extension logInViewController {
         print("로그인 성공")
         let userNum = state.Idx - 1
         loadDataManager.loadId(userIdx: userNum, delegate: self)
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "myKurlyViewController") as? myKurlyViewController else { return }
+        //vc.nameLabel.text = state.name
+        dismiss(animated: true, completion: nil)
     }
     
     func failedToRequest(message: String) {
@@ -85,9 +88,5 @@ extension logInViewController {
     func didSuccessLoadId(_ result: LoadInfoResult) {
         state.name = result.name
         print(state.name)
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "myKurlyViewController") as? myKurlyViewController else {
-            return
-        }
-        present(vc, animated: false, completion: nil)
     }
 }

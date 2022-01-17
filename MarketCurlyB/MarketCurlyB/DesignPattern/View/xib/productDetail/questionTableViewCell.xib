@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  공지  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-kT-mqu">
-                        <rect key="frame" x="20" y="6" width="39.5" height="32"/>
+                        <rect key="frame" x="20" y="10" width="39.5" height="24"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
@@ -34,8 +34,8 @@
                 <constraints>
                     <constraint firstItem="VVY-kT-mqu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5eX-sa-Zmu"/>
                     <constraint firstItem="VVY-kT-mqu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="5pZ-A9-q1m"/>
-                    <constraint firstAttribute="bottom" secondItem="VVY-kT-mqu" secondAttribute="bottom" constant="6" id="9NM-p9-tUO"/>
-                    <constraint firstItem="VVY-kT-mqu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="HQa-PX-mQX"/>
+                    <constraint firstAttribute="bottom" secondItem="VVY-kT-mqu" secondAttribute="bottom" constant="10" id="9NM-p9-tUO"/>
+                    <constraint firstItem="VVY-kT-mqu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="HQa-PX-mQX"/>
                     <constraint firstItem="LTa-aq-VIH" firstAttribute="leading" secondItem="VVY-kT-mqu" secondAttribute="trailing" constant="10" id="ZR7-eF-zya"/>
                     <constraint firstItem="LTa-aq-VIH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hd0-h4-PYB"/>
                     <constraint firstAttribute="trailing" secondItem="LTa-aq-VIH" secondAttribute="trailing" constant="10" id="vUw-H5-awe"/>

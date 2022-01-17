@@ -39,6 +39,7 @@ class myKurlyViewController: UIViewController {
         }
         print("\(state.name) 2")
         nameLabel.text = state.name
+        tableView1.reloadData()
     }
     
     func setTableView() {
@@ -58,6 +59,12 @@ class myKurlyViewController: UIViewController {
         }
         present(vc, animated: true, completion: nil)
     }
+    
+    @IBAction func goToCart(_ sender: UIBarButtonItem) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "cartViewController") as? cartViewController else { return }
+        present(vc, animated: false, completion: nil)
+    }
+    
 }
 
 extension myKurlyViewController {
@@ -144,7 +151,6 @@ extension myKurlyViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
     }
-    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 5
     }

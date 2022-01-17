@@ -10,6 +10,7 @@ import UIKit
 class cartViewController: UIViewController {
 
     @IBOutlet weak var naviBar: UINavigationBar!
+    @IBOutlet weak var orderButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +19,12 @@ class cartViewController: UIViewController {
     
     func setInit() {
         naviBar.topItem?.title = "장바구니"
+        orderButton.layer.cornerRadius = 5
+        orderButton.titleLabel?.text = "asd"
     }
+    
+    @IBAction func close(_ sender: UIBarButtonItem) {
+        dismiss(animated: false, completion: nil)
+    }
+    
 }

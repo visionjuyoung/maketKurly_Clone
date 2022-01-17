@@ -8,8 +8,15 @@
 import UIKit
 
 class thirdHomeViewController: UIViewController {
+    
+    let loadProductDataManaget = LoadProductDataManager()
+    
+    let bestProduct: BestProducts = BestProducts()
+    let productInfo = ProductViewState.shared
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +33,18 @@ class thirdHomeViewController: UIViewController {
 extension  thirdHomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return bestProduct.productName.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bestProductCell", for: indexPath) as? bestProductCell else {
             return UICollectionViewCell()
+        }
+        cell.imgView.image = UIImage(named: "\(bestProduct.name[indexPath.row])")
+        cell.nameLabel.text = bestProduct.productName[indexPath.row]
+        cell.priceLabel.text = bestProduct.price[indexPath.row]
+        if bestProduct.onlyState[indexPath.row] == false {
+            cell.markLabel.isHidden = true
         }
         return cell
     }
@@ -52,6 +65,16 @@ extension  thirdHomeViewController: UICollectionViewDataSource, UICollectionView
             default:
                 assert(false)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "productViewController") as? productViewController else {
+             return
+        }
+        vc.productIdx = bestProduct.idx[indexPath.row]
+        vc.productName = bestProduct.productName[indexPath.row]
+        productInfo.Idx = bestProduct.idx[indexPath.row]
+        present(vc, animated: true, completion: nil)
     }
 }
 

@@ -35,4 +35,8 @@ class kurlyRecommandTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
                 
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }

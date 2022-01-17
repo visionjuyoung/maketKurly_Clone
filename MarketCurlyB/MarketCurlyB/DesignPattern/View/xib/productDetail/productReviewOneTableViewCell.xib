@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="  공지  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhy-YJ-dDj">
-                        <rect key="frame" x="20" y="6" width="39.5" height="32"/>
+                        <rect key="frame" x="20" y="10" width="39.5" height="24"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
@@ -36,9 +36,9 @@
                     <constraint firstAttribute="trailing" secondItem="OUD-50-mQq" secondAttribute="trailing" constant="20" id="gXn-CZ-k9T"/>
                     <constraint firstItem="OUD-50-mQq" firstAttribute="leading" secondItem="Dhy-YJ-dDj" secondAttribute="trailing" constant="10" id="jKh-PH-gAx"/>
                     <constraint firstItem="Dhy-YJ-dDj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="l7e-En-OOz"/>
-                    <constraint firstItem="Dhy-YJ-dDj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="pgY-dp-bAT"/>
+                    <constraint firstItem="Dhy-YJ-dDj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pgY-dp-bAT"/>
                     <constraint firstItem="Dhy-YJ-dDj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qGt-Ne-lp7"/>
-                    <constraint firstAttribute="bottom" secondItem="Dhy-YJ-dDj" secondAttribute="bottom" constant="6" id="tZe-HC-bLU"/>
+                    <constraint firstAttribute="bottom" secondItem="Dhy-YJ-dDj" secondAttribute="bottom" constant="10" id="tZe-HC-bLU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
