@@ -52,8 +52,11 @@ extension selectAmountViewController {
         tableView.reloadData()
     }
     
-    func didSuccessAddCart(result: CartsInResult){
-        
+    func didSuccessAddCart(){
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "cartViewController") as? cartViewController else {
+            return
+        }
+        present(vc, animated: true, completion: nil)
     }
 }
 

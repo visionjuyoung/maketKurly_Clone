@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="265" id="KGk-i7-Jjw" customClass="orderFiveTableViewCell" customModule="MarketCurlyB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제수단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loD-Xz-lGu">
+                        <rect key="frame" x="20" y="20" width="52" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEv-JT-nMz">
+                        <rect key="frame" x="364" y="13.5" width="30" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="NbD-SO-MXL"/>
+                        </constraints>
+                        <color key="tintColor" white="0.47660246350000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="chevron.up" catalog="system" symbolScale="small"/>
+                        </buttonConfiguration>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cacaopay" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-w4-I3h">
+                        <rect key="frame" x="20" y="53" width="374" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="LKe-w4-I3h" secondAttribute="height" multiplier="374:53" id="DYd-7q-YDN"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="D7R-V4-RXt">
+                        <rect key="frame" x="20" y="116" width="374" height="53"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCW-50-7sd">
+                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="53"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="신용카드"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7Z-TQ-I0b">
+                                <rect key="frame" x="128.5" y="0.0" width="117" height="53"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="간편결제"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pf-dR-O0h">
+                                <rect key="frame" x="256.5" y="0.0" width="117.5" height="53"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="휴대폰"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-CJ-moN">
+                        <rect key="frame" x="20" y="189" width="30" height="30"/>
+                        <color key="backgroundColor" name="KurlyColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="DLI-CJ-moN" secondAttribute="height" multiplier="1:1" id="1cu-nN-J8I"/>
+                            <constraint firstAttribute="width" constant="30" id="p8T-0g-BGb"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="checkmark" catalog="system" symbolScale="small"/>
+                        </buttonConfiguration>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택한 결제 수단을 다음에도 사용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFb-xy-Yei">
+                        <rect key="frame" x="70" y="195" width="197" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cj-Mw-Jj5">
+                        <rect key="frame" x="0.0" y="255" width="414" height="10"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="y6T-3s-7nA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JEv-JT-nMz" secondAttribute="trailing" constant="20" id="CgU-b6-AVQ"/>
+                    <constraint firstItem="LKe-w4-I3h" firstAttribute="leading" secondItem="loD-Xz-lGu" secondAttribute="leading" id="FWM-g2-HJU"/>
+                    <constraint firstAttribute="bottom" secondItem="4Cj-Mw-Jj5" secondAttribute="bottom" id="FdA-Yh-irB"/>
+                    <constraint firstItem="D7R-V4-RXt" firstAttribute="top" secondItem="LKe-w4-I3h" secondAttribute="bottom" constant="10" id="FlN-Ri-gPo"/>
+                    <constraint firstItem="JEv-JT-nMz" firstAttribute="centerY" secondItem="loD-Xz-lGu" secondAttribute="centerY" id="MEc-Jf-H9K"/>
+                    <constraint firstItem="JEv-JT-nMz" firstAttribute="trailing" secondItem="LKe-w4-I3h" secondAttribute="trailing" id="SRe-tS-L5M"/>
+                    <constraint firstItem="DLI-CJ-moN" firstAttribute="leading" secondItem="LKe-w4-I3h" secondAttribute="leading" id="SnL-94-OKc"/>
+                    <constraint firstItem="4Cj-Mw-Jj5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WP1-eG-wbf"/>
+                    <constraint firstItem="DLI-CJ-moN" firstAttribute="top" secondItem="D7R-V4-RXt" secondAttribute="bottom" constant="20" id="Yjm-E4-JGg"/>
+                    <constraint firstAttribute="trailing" secondItem="4Cj-Mw-Jj5" secondAttribute="trailing" id="Z93-vh-ZhG"/>
+                    <constraint firstItem="D7R-V4-RXt" firstAttribute="leading" secondItem="LKe-w4-I3h" secondAttribute="leading" id="asc-Sc-heP"/>
+                    <constraint firstItem="LKe-w4-I3h" firstAttribute="top" secondItem="loD-Xz-lGu" secondAttribute="bottom" constant="15" id="bQk-I9-CYz"/>
+                    <constraint firstItem="TFb-xy-Yei" firstAttribute="centerY" secondItem="DLI-CJ-moN" secondAttribute="centerY" id="eGz-nJ-xHi"/>
+                    <constraint firstItem="D7R-V4-RXt" firstAttribute="trailing" secondItem="LKe-w4-I3h" secondAttribute="trailing" id="fYy-Bf-9Pe"/>
+                    <constraint firstItem="TFb-xy-Yei" firstAttribute="leading" secondItem="DLI-CJ-moN" secondAttribute="trailing" constant="20" id="i0t-Mt-lZ6"/>
+                    <constraint firstItem="D7R-V4-RXt" firstAttribute="height" secondItem="LKe-w4-I3h" secondAttribute="height" id="nvo-ba-jVN"/>
+                    <constraint firstItem="loD-Xz-lGu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="u3e-ib-cNT"/>
+                    <constraint firstItem="loD-Xz-lGu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="uz7-4D-iKa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="button1" destination="qCW-50-7sd" id="gme-0u-Udx"/>
+                <outlet property="button2" destination="j7Z-TQ-I0b" id="2Kc-UM-IjA"/>
+                <outlet property="button3" destination="8pf-dR-O0h" id="lGJ-BV-N7D"/>
+                <outlet property="checkButton" destination="DLI-CJ-moN" id="Rhz-f8-QLh"/>
+            </connections>
+            <point key="canvasLocation" x="205.79710144927537" y="207.92410714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cacaopay" width="2106" height="288"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="chevron.up" catalog="system" width="128" height="72"/>
+        <namedColor name="KurlyColor">
+            <color red="0.33899998664855957" green="0.043000001460313797" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

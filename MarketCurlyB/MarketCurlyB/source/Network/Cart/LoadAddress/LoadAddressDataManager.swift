@@ -9,5 +9,22 @@ import Foundation
 import Alamofire
 
 struct LoadAddressDataManager {
-    
+    func loadAddress(userIdx: Int, delegate: cartViewController) {
+        let logIndataManager = LoginState.shared
+        
+        let url = "https://prod.kaydenserver.shop/api/delivery-info/\(userIdx)"
+        
+        let headers : HTTPHeaders = ["x-access-token" : logIndataManager.jwt]
+        
+        AF.request(url, method: .get, parameters: nil, headers: headers).responseDecodable(of: LoadAddressResponse.self) { (response) in
+                switch response.result {
+                case .success(let response):
+                    //함수
+                    delegate.didSuccessLoadAddress(result: response.result)
+                    print("")
+                case .failure(let error):
+                    print(error)
+                }
+            }
+    }
 }

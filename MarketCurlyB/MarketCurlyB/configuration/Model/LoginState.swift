@@ -14,10 +14,16 @@ class LoginState {
     var Idx: Int
     var jwt: String
     var name: String = ""
+    var address: String
+    var cartId: Int
+    var phone: String
     
     private init() {
         state = false
         Idx = 0
         jwt = ""
+        address = ""
+        cartId = 0
+        phone = ""
     }
 }

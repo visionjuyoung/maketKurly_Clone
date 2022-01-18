@@ -24,7 +24,7 @@ class myKurlyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(state.state)
+        print(state.jwt)
         setButton()
         setTableView()
     }
@@ -146,6 +146,16 @@ extension myKurlyViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if state.state == true {
+            if indexPath.section == 1 {
+                if indexPath.row == 0 {
+                    
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

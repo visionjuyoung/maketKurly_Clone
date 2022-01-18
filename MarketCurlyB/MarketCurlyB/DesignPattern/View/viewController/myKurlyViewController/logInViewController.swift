@@ -70,6 +70,7 @@ extension logInViewController {
         state.Idx = result.userIdx
         state.jwt = result.jwt
         state.state = true
+        print(state.jwt)
         print(state.Idx)
         print("로그인 성공")
         let userNum = state.Idx - 1
@@ -87,6 +88,7 @@ extension logInViewController {
 extension logInViewController {
     func didSuccessLoadId(_ result: LoadInfoResult) {
         state.name = result.name
+        state.phone = result.phone
         print(state.name)
     }
 }

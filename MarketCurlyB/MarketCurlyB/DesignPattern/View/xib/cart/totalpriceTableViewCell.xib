@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="230" id="KGk-i7-Jjw" customClass="totalpriceTableViewCell" customModule="MarketCurlyB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VO-3K-1CE">
+                        <rect key="frame" x="20" y="40" width="59" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBT-VL-DPG">
+                        <rect key="frame" x="352" y="40" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS2-Dj-NW3">
+                        <rect key="frame" x="364.5" y="112" width="29.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh2-wh-fD8">
+                        <rect key="frame" x="364.5" y="76" width="29.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품할인금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CZ-te-WwA">
+                        <rect key="frame" x="20" y="76" width="88.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배송비" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B7-Vn-rBG">
+                        <rect key="frame" x="20" y="112" width="44.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제예정금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyr-fl-JI9">
+                        <rect key="frame" x="20" y="163" width="88.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15,000 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsf-jK-fIC">
+                        <rect key="frame" x="307.5" y="161.5" width="86.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매 시 735원 적립" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKV-oX-aWD">
+                        <rect key="frame" x="315.5" y="190.5" width="78.5" height="12"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 적립 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xH7-Lf-sHv">
+                        <rect key="frame" x="287" y="190.5" width="23.5" height="12"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿠폰/적립금은 주문서에서 사용 가능합니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-Pi-m5k">
+                        <rect key="frame" x="226.5" y="210" width="167.5" height="12"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UK3-De-iWz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="10"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="mpa-VJ-OeI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hyr-fl-JI9" firstAttribute="leading" secondItem="4VO-3K-1CE" secondAttribute="leading" id="5hi-qt-UyA"/>
+                    <constraint firstItem="Hyr-fl-JI9" firstAttribute="top" secondItem="9B7-Vn-rBG" secondAttribute="bottom" constant="30" id="8IG-Or-E21"/>
+                    <constraint firstItem="FKV-oX-aWD" firstAttribute="leading" secondItem="xH7-Lf-sHv" secondAttribute="trailing" constant="5" id="BnJ-n3-7Ey"/>
+                    <constraint firstItem="4VO-3K-1CE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Dbq-W2-Iwb"/>
+                    <constraint firstItem="MS2-Dj-NW3" firstAttribute="trailing" secondItem="Zh2-wh-fD8" secondAttribute="trailing" id="Eak-aS-OpR"/>
+                    <constraint firstItem="Zh2-wh-fD8" firstAttribute="centerY" secondItem="5CZ-te-WwA" secondAttribute="centerY" id="G9d-K6-ZDV"/>
+                    <constraint firstItem="UK3-De-iWz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HkO-G7-oPv"/>
+                    <constraint firstItem="MS2-Dj-NW3" firstAttribute="centerY" secondItem="9B7-Vn-rBG" secondAttribute="centerY" id="MbT-iL-EED"/>
+                    <constraint firstItem="9B7-Vn-rBG" firstAttribute="leading" secondItem="4VO-3K-1CE" secondAttribute="leading" id="Uf3-t9-BSD"/>
+                    <constraint firstItem="5CZ-te-WwA" firstAttribute="top" secondItem="4VO-3K-1CE" secondAttribute="bottom" constant="15" id="ZDL-MS-AhR"/>
+                    <constraint firstItem="uBT-VL-DPG" firstAttribute="centerY" secondItem="4VO-3K-1CE" secondAttribute="centerY" id="aqK-SS-efI"/>
+                    <constraint firstItem="4VO-3K-1CE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="bAr-wS-HjG"/>
+                    <constraint firstItem="zsf-jK-fIC" firstAttribute="centerY" secondItem="Hyr-fl-JI9" secondAttribute="centerY" id="bba-Qv-vWa"/>
+                    <constraint firstItem="UK3-De-iWz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fXI-zd-aU3"/>
+                    <constraint firstItem="oY1-Pi-m5k" firstAttribute="trailing" secondItem="FKV-oX-aWD" secondAttribute="trailing" id="hwl-G4-mUa"/>
+                    <constraint firstItem="zsf-jK-fIC" firstAttribute="trailing" secondItem="Zh2-wh-fD8" secondAttribute="trailing" id="iP5-8m-jDE"/>
+                    <constraint firstItem="uBT-VL-DPG" firstAttribute="trailing" secondItem="Zh2-wh-fD8" secondAttribute="trailing" id="it5-IG-Gob"/>
+                    <constraint firstItem="FKV-oX-aWD" firstAttribute="trailing" secondItem="zsf-jK-fIC" secondAttribute="trailing" id="kJP-Xf-5xh"/>
+                    <constraint firstAttribute="trailing" secondItem="uBT-VL-DPG" secondAttribute="trailing" constant="20" id="mnw-VY-Ank"/>
+                    <constraint firstItem="5CZ-te-WwA" firstAttribute="leading" secondItem="4VO-3K-1CE" secondAttribute="leading" id="ps0-vh-FLw"/>
+                    <constraint firstItem="FKV-oX-aWD" firstAttribute="centerY" secondItem="xH7-Lf-sHv" secondAttribute="centerY" id="s90-o2-rEb"/>
+                    <constraint firstAttribute="trailing" secondItem="UK3-De-iWz" secondAttribute="trailing" id="vCa-PW-Nbt"/>
+                    <constraint firstItem="oY1-Pi-m5k" firstAttribute="top" secondItem="FKV-oX-aWD" secondAttribute="bottom" constant="7.5" id="vLo-OD-GsL"/>
+                    <constraint firstItem="FKV-oX-aWD" firstAttribute="top" secondItem="zsf-jK-fIC" secondAttribute="bottom" constant="5" id="yEx-La-7iB"/>
+                    <constraint firstItem="9B7-Vn-rBG" firstAttribute="top" secondItem="5CZ-te-WwA" secondAttribute="bottom" constant="15" id="yQ8-Ah-YOc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="pricelab" destination="uBT-VL-DPG" id="CXH-vy-oby"/>
+                <outlet property="qwe" destination="xH7-Lf-sHv" id="Y0C-aY-dha"/>
+                <outlet property="totalPriceLab" destination="zsf-jK-fIC" id="cRn-wx-Up2"/>
+            </connections>
+            <point key="canvasLocation" x="205.79710144927537" y="196.20535714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
