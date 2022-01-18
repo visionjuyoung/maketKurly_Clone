@@ -44,6 +44,9 @@ class orderViewController: UIViewController {
         tableView.register(UINib(nibName: "orderSevenTableViewCell", bundle: nil), forCellReuseIdentifier: "orderSevenTableViewCell")
     }
     
+    @IBAction func close(_ sender: UIBarButtonItem) {
+        dismiss(animated: false, completion: nil)
+    }
 }
 
 extension orderViewController {
