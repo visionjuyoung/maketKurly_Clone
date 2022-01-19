@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="166" height="291"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zo7-ye-SMS">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zo7-ye-SMS">
                         <rect key="frame" x="0.0" y="0.0" width="166" height="218.5"/>
                         <color key="backgroundColor" red="0.82349919790000004" green="0.53884790770000002" blue="0.24614102230000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </imageView>

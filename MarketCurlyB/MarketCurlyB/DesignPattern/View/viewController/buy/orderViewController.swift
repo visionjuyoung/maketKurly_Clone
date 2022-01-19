@@ -27,7 +27,7 @@ class orderViewController: UIViewController {
         print(loginManager.Idx)
         print(loginManager.jwt)
         print(loginManager.address)
-        print(loginManager.cartId)
+        print("\(loginManager.cartId)카트")
         print(loginManager.phone)
         tableView.reloadData()
     }
@@ -134,5 +134,7 @@ extension orderViewController: UITableViewDataSource, UITableViewDelegate {
         print("Button with tag: \(button.tag) clicked in cell!")
         let input = OrderRequest(userIdx: loginManager.Idx, cartIdx: loginManager.cartId, paymentType: 1, couponUserIdx: 1, productPrice: totalPrice, discountPrice: 0, deliveryPrice: 0, couponDiscount: 0, rewardDiscount: 0, amountOfPayment: totalPrice)
         orderManager.didOrder(input, delegate: self)
+        
+        
     }
 }

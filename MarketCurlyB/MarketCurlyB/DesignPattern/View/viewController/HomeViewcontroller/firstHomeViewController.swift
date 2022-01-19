@@ -13,6 +13,8 @@ class firstHomeViewController: UIViewController {
 
     let picks: [String] = ["Kurlys Only", "인기 신상품", "마감 세일", "후기 100개 돌파"]
     
+    let new = NewProducts()
+    
     var sectionsCount: [Int] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -69,6 +71,13 @@ extension firstHomeViewController: UITableViewDataSource, UITableViewDelegate{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "bannerTableViewCell") as? bannerTableViewCell else {
                 return UITableViewCell()
             }
+            
+            return cell
+        } else if indexPath.section == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "kurlyRecommandTableViewCell") as? kurlyRecommandTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.nameLAbel.text = picks[indexPath.row]
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "kurlyRecommandTableViewCell") as? kurlyRecommandTableViewCell else {

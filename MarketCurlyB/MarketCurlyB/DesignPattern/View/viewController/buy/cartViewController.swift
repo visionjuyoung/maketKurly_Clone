@@ -27,6 +27,7 @@ class cartViewController: UIViewController {
     
     var totalPrice = 0
     let loginState = LoginState.shared
+    var amount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class cartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cartsInDataManager.loadCarts(userIdx: loginState.Idx, delegate: self)
+        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
     }
     
     @IBAction func goToOrder(_ sender: UIButton) {
@@ -91,13 +92,13 @@ extension cartViewController {
             return
         }
         names = res.coldProducts[0]!.title
-        loginState.cartId = res.cartIdx
+        print(loginState.cartId = res.cartIdx)
         if res.coldProducts.isEmpty == false {
             num = res.coldProducts.count
             for i in 0...num-1{
                 colds.append(res.coldProducts[i]!)
                 totalPrice += res.coldProducts[i]!.price * res.coldProducts[i]!.productCount
-            }
+                }
             num = 0
         }
         
@@ -151,8 +152,14 @@ extension cartViewController: UITableViewDataSource, UITableViewDelegate {
             cell.priceLabel.text = "\(colds[indexPath.row].price)원"
             cell.setImage(url: colds[indexPath.row].profileImgUrl)
             cell.amountLabel.text = "\(colds[indexPath.row].productCount)"
+            cell.amount = colds[indexPath.row].productCount
+            amount = colds[indexPath.row].productCount
+            cell.cartIdx = loginState.cartId
             cell.userIdx = loginState.Idx
             cell.productIdx = colds[indexPath.row].productIdx
+            cell.minusButton.addTarget(self, action: #selector(pressBtn(_button:)), for: .touchUpInside)
+            cell.deleteAllButton.addTarget(self, action: #selector(pressDeleteAllBtn(_button:)), for: .touchUpInside)
+            
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "totalpriceTableViewCell") as? totalpriceTableViewCell else {
@@ -171,5 +178,15 @@ extension cartViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             return 280
         }
+    }
+    
+    @objc func pressBtn(_button: UIButton) {
+        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
+        self.tableView.reloadData()
+    }
+    
+    @objc func pressDeleteAllBtn(_button: UIButton) {
+        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
+        self.tableView.reloadData()
     }
 }

@@ -26,6 +26,10 @@ class logInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func setButton() {
         makeIdButton.layer.borderWidth = 1
         makeIdButton.layer.borderColor = UIColor.black.cgColor
@@ -80,15 +84,13 @@ extension logInViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    func failedToRequest(message: String) {
-        print(message)
-    }
-}
-
-extension logInViewController {
     func didSuccessLoadId(_ result: LoadInfoResult) {
         state.name = result.name
         state.phone = result.phone
         print(state.name)
+    }
+    
+    func failedToRequest(message: String) {
+        print(message)
     }
 }

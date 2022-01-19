@@ -260,6 +260,9 @@
                                         <buttonConfiguration key="configuration" style="plain">
                                             <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addHeart:" destination="zVj-I8-h9d" eventType="touchUpInside" id="e7j-iC-DlU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -855,6 +858,13 @@
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="customSize" width="170" height="300"/>
+                                                <connections>
+                                                    <outlet property="alddelImage" destination="h4j-rh-doh" id="2ip-Kt-2yE"/>
+                                                    <outlet property="alddelName" destination="xPm-5N-7GK" id="e50-Vw-yxd"/>
+                                                    <outlet property="onePrice" destination="dDs-iG-lfs" id="MgW-tv-YXB"/>
+                                                    <outlet property="persent" destination="uav-Uh-8lc" id="OPo-RK-XEh"/>
+                                                    <outlet property="price" destination="lbF-Nt-01J" id="Zkf-hV-XZO"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="alddelHeaderView" id="78P-Tb-ZVn">

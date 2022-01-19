@@ -9,8 +9,8 @@ import Foundation
 import Alamofire
 
 struct CartInDataManager {
-    func loadCarts(userIdx: Int, delegate: cartViewController) {
-        let url = "https://prod.kaydenserver.shop/api/carts/?userIdx=\(userIdx)"
+    func loadCarts(cartIdx: Int, delegate: cartViewController) {
+        let url = "https://prod.kaydenserver.shop/api/carts/?userIdx=\(cartIdx)"
         
         AF.request(url, method: .get, parameters: nil, headers: nil).responseDecodable(of: CartsInResponse.self) { (response) in
                 switch response.result {
@@ -24,8 +24,8 @@ struct CartInDataManager {
             }
     }
     
-    func AddCart(userIdx: Int, producIdx: Int, delegate: selectAmountViewController) {
-        AF.request("https://prod.kaydenserver.shop/api/carts/?userIdx=\(userIdx)&productIdx=\(producIdx)", method: .post, parameters: nil, headers: nil).validate()
+    func AddCart(cartIdx: Int, producIdx: Int, delegate: selectAmountViewController) {
+        AF.request("https://prod.kaydenserver.shop/api/carts/?userIdx=\(cartIdx)&productIdx=\(producIdx)", method: .post, parameters: nil, headers: nil).validate()
             .responseDecodable(of: CartsInResponse.self) { response in
                 switch response.result {
                 case .success(let response):
@@ -47,8 +47,31 @@ struct CartInDataManager {
             }
     }
     
-    func DeleateOneNum(userIdx: Int, producIdx: Int, delegate: productListsTableViewCell) {
-        AF.request("https://prod.kaydenserver.shop/api/carts/?userIdx=\(userIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
+    func DeleateOneNum(cartIdx: Int, producIdx: Int, delegate: productListsTableViewCell) {
+        AF.request("https://prod.kaydenserver.shop/api/carts/?userIdx=\(cartIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
+            .responseDecodable(of: CartsInResponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess {
+                        print(response.result)
+                        
+                    } else {
+                        switch response.code {
+                        case 2000:
+                            print("입력값 확인")
+                        case 4000: print("데이터베이스 연결 실패")
+                        default: print("else...")
+                        }
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    
+                }
+        }
+    }
+    
+    func DeleateAll(cartIdx: Int, producIdx: Int, delegate: productListsTableViewCell) {
+        AF.request("https://prod.kaydenserver.shop/api/carts/all/?userIdx=\(cartIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
             .responseDecodable(of: CartsInResponse.self) { response in
                 switch response.result {
                 case .success(let response):

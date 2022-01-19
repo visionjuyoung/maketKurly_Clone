@@ -135,6 +135,11 @@
 		4BBAEE4E2796FC0A0063FFDA /* orderListsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEE4C2796FC0A0063FFDA /* orderListsTableViewCell.xib */; };
 		4BBAEE512796FC3D0063FFDA /* oftensTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEE4F2796FC3D0063FFDA /* oftensTableViewCell.swift */; };
 		4BBAEE522796FC3D0063FFDA /* oftensTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAEE502796FC3D0063FFDA /* oftensTableViewCell.xib */; };
+		4BBAEE562797DA670063FFDA /* Dummys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEE552797DA670063FFDA /* Dummys.swift */; };
+		4BBAEE592797F92F0063FFDA /* HeartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEE582797F92F0063FFDA /* HeartResponse.swift */; };
+		4BBAEE5B2797F97E0063FFDA /* HeartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEE5A2797F97E0063FFDA /* HeartDataManager.swift */; };
+		4BBAEE5D2797F9C10063FFDA /* HeartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEE5C2797F9C10063FFDA /* HeartRequest.swift */; };
+		4BBAEE5F279800530063FFDA /* UsersHeartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAEE5E279800530063FFDA /* UsersHeartResponse.swift */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -271,6 +276,11 @@
 		4BBAEE4C2796FC0A0063FFDA /* orderListsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = orderListsTableViewCell.xib; sourceTree = "<group>"; };
 		4BBAEE4F2796FC3D0063FFDA /* oftensTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oftensTableViewCell.swift; sourceTree = "<group>"; };
 		4BBAEE502796FC3D0063FFDA /* oftensTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = oftensTableViewCell.xib; sourceTree = "<group>"; };
+		4BBAEE552797DA670063FFDA /* Dummys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummys.swift; sourceTree = "<group>"; };
+		4BBAEE582797F92F0063FFDA /* HeartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartResponse.swift; sourceTree = "<group>"; };
+		4BBAEE5A2797F97E0063FFDA /* HeartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartDataManager.swift; sourceTree = "<group>"; };
+		4BBAEE5C2797F9C10063FFDA /* HeartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRequest.swift; sourceTree = "<group>"; };
+		4BBAEE5E279800530063FFDA /* UsersHeartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHeartResponse.swift; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -402,6 +412,7 @@
 				4BBAEDDD279570550063FFDA /* BestProducts.swift */,
 				4BBAEDDF279578210063FFDA /* ProductViewState.swift */,
 				4BBAEE0827968DED0063FFDA /* ProductsTemplate.swift */,
+				4BBAEE552797DA670063FFDA /* Dummys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -442,6 +453,7 @@
 		4BBAED50278D53480063FFDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4BBAEE572797F9160063FFDA /* Heart */,
 				4BBAEE3F2796EC7D0063FFDA /* myKurly */,
 				4BBAEE312796D1C00063FFDA /* Order */,
 				4BBAEDE22795A6E40063FFDA /* Cart */,
@@ -784,6 +796,17 @@
 			path = orderList;
 			sourceTree = "<group>";
 		};
+		4BBAEE572797F9160063FFDA /* Heart */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAEE582797F92F0063FFDA /* HeartResponse.swift */,
+				4BBAEE5C2797F9C10063FFDA /* HeartRequest.swift */,
+				4BBAEE5E279800530063FFDA /* UsersHeartResponse.swift */,
+				4BBAEE5A2797F97E0063FFDA /* HeartDataManager.swift */,
+			);
+			path = Heart;
+			sourceTree = "<group>";
+		};
 		95635DBE9288994EFF6278B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,10 +976,13 @@
 				4B807FAA278C5CE6009650C0 /* bannerTableViewCell.swift in Sources */,
 				4B807FA7278C2746009650C0 /* detailViewController.swift in Sources */,
 				4BBAED5E278DA2050063FFDA /* recommandSearchTableViewCell.swift in Sources */,
+				4BBAEE5B2797F97E0063FFDA /* HeartDataManager.swift in Sources */,
 				4BBAEDC027944F0C0063FFDA /* questionTableViewTableViewCell.swift in Sources */,
 				4BBAED82278F08C70063FFDA /* SignInRequest.swift in Sources */,
 				4BBAEE512796FC3D0063FFDA /* oftensTableViewCell.swift in Sources */,
+				4BBAEE592797F92F0063FFDA /* HeartResponse.swift in Sources */,
 				4BBAEDA32792F1410063FFDA /* LoadProductInfoDataManager.swift in Sources */,
+				4BBAEE562797DA670063FFDA /* Dummys.swift in Sources */,
 				4BBAED6C278ED8D40063FFDA /* cartViewController.swift in Sources */,
 				4BBAEDD427952D660063FFDA /* productInfoOneTableViewCell.swift in Sources */,
 				4BBAEDCC27951C780063FFDA /* productExplainOneTableViewCell.swift in Sources */,
@@ -974,6 +1000,7 @@
 				4BBAED6F278EE9260063FFDA /* productViewController.swift in Sources */,
 				4B807FAE278C5D83009650C0 /* kurlyRecommandTableViewCell.swift in Sources */,
 				4BBAEE0927968DED0063FFDA /* ProductsTemplate.swift in Sources */,
+				4BBAEE5F279800530063FFDA /* UsersHeartResponse.swift in Sources */,
 				4BBAEDE0279578210063FFDA /* ProductViewState.swift in Sources */,
 				4BBAEE2B2796BAF60063FFDA /* orderSevenTableViewCell.swift in Sources */,
 				4BBAEDE62795AB560063FFDA /* CartsInDataManager.swift in Sources */,
@@ -1002,6 +1029,7 @@
 				4BBAEDA12792F12E0063FFDA /* LoadProductInfoResponse.swift in Sources */,
 				4B807FB2278C5E65009650C0 /* productCollectionViewCell.swift in Sources */,
 				4BBAEE1F2796B2340063FFDA /* orderFourTableViewCell.swift in Sources */,
+				4BBAEE5D2797F9C10063FFDA /* HeartRequest.swift in Sources */,
 				4BBAEDD927952E9A0063FFDA /* productInfoTwoTableViewCell.swift in Sources */,
 				4BBAED73278EE9C90063FFDA /* productDetailViewController.swift in Sources */,
 				4BBAED66278DA7E00063FFDA /* recentUpSubTableViewCell.swift in Sources */,

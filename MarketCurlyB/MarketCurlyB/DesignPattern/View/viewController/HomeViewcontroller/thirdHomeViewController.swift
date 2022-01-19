@@ -16,6 +16,9 @@ class thirdHomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let new = NewProducts()
+    var sectionNum: Int = 2
+    
     
     
     override func viewDidLoad() {

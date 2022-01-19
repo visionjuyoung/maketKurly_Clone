@@ -43,6 +43,9 @@
                         <buttonConfiguration key="configuration" style="plain">
                             <imageReference key="image" image="multiply" catalog="system" symbolScale="medium"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="deleteAll:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lrK-pC-OhX"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Iy-77-iPW">
                         <rect key="frame" x="64" y="51" width="286" height="14.5"/>
@@ -57,9 +60,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTe-Vm-WHn">
-                        <rect key="frame" x="152" y="79.5" width="64" height="20.5"/>
+                        <rect key="frame" x="152" y="79.5" width="200" height="20.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="64" id="Wpn-K5-nVH"/>
+                            <constraint firstAttribute="width" constant="200" id="Wpn-K5-nVH"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
@@ -124,6 +127,8 @@
             <connections>
                 <outlet property="amountLabel" destination="giQ-YK-jOl" id="4V0-sf-gbq"/>
                 <outlet property="chooseButton" destination="FvK-Dd-I9U" id="Ely-lJ-v5A"/>
+                <outlet property="deleteAllButton" destination="jlg-4z-AIU" id="ErI-0Z-aij"/>
+                <outlet property="minusButton" destination="iRu-uN-zm7" id="Gqa-qf-Or2"/>
                 <outlet property="numberButton" destination="QWY-k4-PDE" id="XK1-nY-oVL"/>
                 <outlet property="priceLabel" destination="mTe-Vm-WHn" id="3JD-nP-enB"/>
                 <outlet property="productName" destination="lJs-Ek-2ZN" id="a9U-vK-lgE"/>

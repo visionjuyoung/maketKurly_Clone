@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class myKurlyViewController: UIViewController {
+    
+    lazy var heartDataManager: HeartDataManager = HeartDataManager()
 
     @IBOutlet weak var leftBarBtn: UIBarButtonItem!
     @IBOutlet weak var leftBarBtn2: UIBarButtonItem!
@@ -22,9 +25,12 @@ class myKurlyViewController: UIViewController {
     
     let state = LoginState.shared
     
+    var jjimm: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(state.jwt)
+        print("\(state.cartId)카트")
         setButton()
         setTableView()
     }
@@ -32,6 +38,7 @@ class myKurlyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if state.state {
+            heartDataManager.amoutHeart(userIdx: state.Idx, delegate: self)
             testView.isHidden = true
             tableViewHeight.constant = 1050
         } else {
@@ -71,6 +78,17 @@ extension myKurlyViewController {
     func setNavigationBar() {
         leftBarBtn.isSelected = false
         leftBarBtn2.isSelected = false
+    }
+}
+
+extension myKurlyViewController {
+    func didSuccessLoadUserHeart(result: [UsersHeartResult]?) {
+        print("찜개수 : \(result!.count)")
+        guard let arr = result else {
+            return
+        }
+        jjimm = arr.count
+        tableView1.reloadData()
     }
 }
 
@@ -123,6 +141,10 @@ extension myKurlyViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.listNameLabel.text = loginInfo.login.logInSection1[indexPath.row]
             case 1:
                 cell.listNameLabel.text = loginInfo.login.logInSection2[indexPath.row]
+                if indexPath.row == 2 {
+                    cell.subLabel.isHidden = false
+                    cell.subLabel.text = "\(jjimm)개"
+                }
             case 2:
                 cell.listNameLabel.text = loginInfo.login.logInSection3[indexPath.row]
             case 3:
@@ -152,6 +174,9 @@ extension myKurlyViewController: UITableViewDataSource, UITableViewDelegate {
         if state.state == true {
             if indexPath.section == 1 {
                 if indexPath.row == 0 {
+                    guard let vc = storyboard?.instantiateViewController(withIdentifier: "orderListViewController") as? orderListViewController else { return }
+                    present(vc, animated: true, completion: nil)
+                } else if indexPath.row == 2 {
                     guard let vc = storyboard?.instantiateViewController(withIdentifier: "orderListViewController") as? orderListViewController else { return }
                     present(vc, animated: true, completion: nil)
                 }

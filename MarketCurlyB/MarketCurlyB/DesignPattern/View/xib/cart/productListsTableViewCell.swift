@@ -18,15 +18,20 @@ class productListsTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var productsImage: UIImageView!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var deleteAllButton: UIButton!
     
     var userIdx: Int = 0
     var productIdx: Int = 0
+    var cartIdx: Int = 0
+    var amount = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         userIdx = 0
         productIdx = 0
+        cartIdx = 0
         
         numberButton.layer.cornerRadius = 2
         numberButton.layer.borderWidth = 1
@@ -43,12 +48,13 @@ class productListsTableViewCell: UITableViewCell {
     }
     
     @IBAction func minus(_ sender: UIButton) {
-        print(userIdx)
-        print(productIdx)
-        datamanger.DeleateOneNum(userIdx: userIdx, producIdx: productIdx, delegate: self)
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "cartViewController") as! cartViewController
+        datamanger.DeleateOneNum(cartIdx: cartIdx, producIdx: productIdx, delegate: self)
     }
+    
+    @IBAction func deleteAll(_ sender: Any) {
+        datamanger.DeleateAll(cartIdx: cartIdx, producIdx: productIdx, delegate: self)
+    }
+    
     
     func setImage(url: String) {
         print(url)
@@ -56,6 +62,10 @@ class productListsTableViewCell: UITableViewCell {
     }
     
     func successMinusProduct(result: CartsInResult) {
+        print(result)
+    }
+    
+    func successMinusProductAll(result: CartsInResult) {
         print(result)
     }
 }

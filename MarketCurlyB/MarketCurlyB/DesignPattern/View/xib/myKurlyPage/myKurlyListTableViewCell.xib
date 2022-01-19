@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,24 +31,36 @@
                             <constraint firstAttribute="width" secondItem="sAF-CH-zm1" secondAttribute="height" multiplier="1:1" id="oma-JL-upa"/>
                         </constraints>
                     </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr9-7Q-jld">
+                        <rect key="frame" x="230" y="11.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="KurlyColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Rc3-4Q-RvF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="FSL-wA-wu7"/>
                     <constraint firstItem="Rc3-4Q-RvF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gAF-rd-OE0"/>
                     <constraint firstAttribute="trailing" secondItem="sAF-CH-zm1" secondAttribute="trailing" constant="20" id="gRk-mD-FbT"/>
+                    <constraint firstItem="dr9-7Q-jld" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hbr-mY-Sl0"/>
                     <constraint firstItem="sAF-CH-zm1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jJ3-WR-2EM"/>
+                    <constraint firstItem="sAF-CH-zm1" firstAttribute="leading" secondItem="dr9-7Q-jld" secondAttribute="trailing" constant="8" symbolic="YES" id="m8i-vk-iS2"/>
                     <constraint firstItem="sAF-CH-zm1" firstAttribute="width" secondItem="sAF-CH-zm1" secondAttribute="height" multiplier="1:1" id="tnf-iN-8EJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="listNameLabel" destination="Rc3-4Q-RvF" id="hyJ-Tf-uCM"/>
+                <outlet property="subLabel" destination="dr9-7Q-jld" id="cDF-ca-bgW"/>
             </connections>
             <point key="canvasLocation" x="139" y="134"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <namedColor name="KurlyColor">
+            <color red="0.33899998664855957" green="0.043000001460313797" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

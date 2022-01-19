@@ -24,14 +24,14 @@ struct LoadSectionDataManager: Decodable {
             }
     }
     
-    func loadSectionProductAll(section: Int, delegate: productListsTableViewCell) {
+    func loadSectionProductAll(section: Int, delegate: firthHomeViewController) {
         let url = "https://prod.kaydenserver.shop/api/products/category/\(section)"
         
         AF.request(url, method: .get, parameters: nil, headers: nil).responseDecodable(of: LoadSectionResponse.self) { (response) in
                 switch response.result {
                 case .success(let response):
                     //함수
-
+                    delegate.didSuccessLoadAll(result: response.result)
                     print("")
                 case .failure(let error):
                     print(error)

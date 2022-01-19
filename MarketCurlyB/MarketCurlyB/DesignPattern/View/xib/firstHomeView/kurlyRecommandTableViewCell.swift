@@ -12,12 +12,16 @@ class kurlyRecommandTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     @IBOutlet weak var nameLAbel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let dummys = Dummys()
+    let new = NewProducts()
+    var sectionNum = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.register(UINib(nibName: "productCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "productCollectionViewCell")
         collectionView.dataSource = self
         collectionView.delegate = self
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,7 +36,9 @@ class kurlyRecommandTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCollectionViewCell", for: indexPath) as! productCollectionViewCell
-                
+        cell.img.image = UIImage(named: "\(dummys.name[indexPath.row])")
+        cell.nameLabel.text = dummys.name[indexPath.row]
+        cell.priceLabel.text = "\(dummys.sum[indexPath.row])원"
         return cell
     }
     

@@ -12,6 +12,8 @@ import Pageboy
 class productViewController: TabmanViewController {
     
     let loadProductInfoDataManager = LoadProductDataManager()
+    let heatmanager = HeartDataManager()
+    let manager = LoginState.shared
 
     @IBOutlet weak var tempView: UIView!
     @IBOutlet weak var heartButton: UIButton!
@@ -21,6 +23,7 @@ class productViewController: TabmanViewController {
     
     var productIdx: Int = 0
     var productName: String = ""
+    var jjimm: Int = 0
     
     private var viewControllers: Array<UIViewController> = []
     
@@ -30,6 +33,8 @@ class productViewController: TabmanViewController {
         setTabman()
         setTabManBar()
         setButton()
+        print(productIdx)
+        print(manager.jwt)
     }
     
     func setTabman() {
@@ -75,6 +80,10 @@ class productViewController: TabmanViewController {
         present(vc, animated: false, completion: nil)
     }
     
+    @IBAction func addHeart(_ sender: UIButton) {
+        let inputs = HeartRequest(userIdx: manager.Idx, productIdx: productIdx)
+        heatmanager.didHeart(inputs, delegate: self)
+    }
     
     @IBAction func addCart(_ sender: UIButton) {
         performSegue(withIdentifier: "selectSegue", sender: nil)
@@ -84,6 +93,24 @@ class productViewController: TabmanViewController {
         dismiss(animated: false)
     }
     
+}
+
+extension productViewController {
+    func didSuccessHeart(result: HeartResult?) {
+        jjimm = 1
+        let alert = UIAlertController(title: "찜 완료", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: false, completion: nil)
+    }
+    
+    func alredy() {
+        jjimm = 2
+        let alert = UIAlertController(title: "이미 찜한 물품입니다", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: false, completion: nil)
+    }
 }
 
 extension productViewController: PageboyViewControllerDataSource, TMBarDataSource {

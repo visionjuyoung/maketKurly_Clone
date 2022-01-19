@@ -8,12 +8,17 @@
 import UIKit
 
 class firthHomeViewController: UIViewController {
+    
+    let datamanager = LoadSectionDataManager()
+    var data: [LoadSectionResult] = []
+    let dumy = Dummys()
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setInit()
+        datamanager.loadSectionProductAll(section: 1, delegate: self)
     }
     
     func setInit() {
@@ -22,16 +27,29 @@ class firthHomeViewController: UIViewController {
     }
 }
 
+extension firthHomeViewController {
+    func didSuccessLoadAll(result: [LoadSectionResult]) {
+        print(result)
+//        data = result
+//        collectionView.reloadData()
+    }
+}
+
 extension firthHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return dumy.name.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "alddelShopCell", for: indexPath) as? alddelShopCell else {
             return UICollectionViewCell()
         }
+        cell.alddelImage.image = UIImage(named: "\(dumy.name[indexPath.row])")
+        cell.alddelName.text = dumy.name[indexPath.row]
+        cell.persent.text = "\(dumy.sale[indexPath.row])%"
+        cell.price.text = "\(dumy.price[indexPath.row])원"
+        cell.onePrice.text = "\(dumy.sum[indexPath.row])원"
         return cell
     }
     
@@ -54,6 +72,11 @@ extension firthHomeViewController: UICollectionViewDelegate, UICollectionViewDat
 }
 
 class alddelShopCell: UICollectionViewCell {
+    @IBOutlet weak var alddelImage: UIImageView!
+    @IBOutlet weak var alddelName: UILabel!
+    @IBOutlet weak var persent: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var onePrice: UILabel!
     
     
 }
