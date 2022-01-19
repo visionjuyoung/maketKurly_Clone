@@ -148,6 +148,9 @@
 		4BE9457A279819D8005E6269 /* deliverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE94578279819D8005E6269 /* deliverTableViewCell.swift */; };
 		4BE9457B279819D8005E6269 /* deliverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE94579279819D8005E6269 /* deliverTableViewCell.xib */; };
 		4BE9457D27981C76005E6269 /* HeartDeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9457C27981C76005E6269 /* HeartDeleteResponse.swift */; };
+		4BE9457F27983C3E005E6269 /* setAddressLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9457E27983C3E005E6269 /* setAddressLoginViewController.swift */; };
+		4BE94581279843CC005E6269 /* setDeatilAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE94580279843CC005E6269 /* setDeatilAddressViewController.swift */; };
+		4BE9458327984AF4005E6269 /* endOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9458227984AF4005E6269 /* endOrderViewController.swift */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -297,6 +300,9 @@
 		4BE94578279819D8005E6269 /* deliverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deliverTableViewCell.swift; sourceTree = "<group>"; };
 		4BE94579279819D8005E6269 /* deliverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = deliverTableViewCell.xib; sourceTree = "<group>"; };
 		4BE9457C27981C76005E6269 /* HeartDeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartDeleteResponse.swift; sourceTree = "<group>"; };
+		4BE9457E27983C3E005E6269 /* setAddressLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setAddressLoginViewController.swift; sourceTree = "<group>"; };
+		4BE94580279843CC005E6269 /* setDeatilAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setDeatilAddressViewController.swift; sourceTree = "<group>"; };
+		4BE9458227984AF4005E6269 /* endOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endOrderViewController.swift; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -403,6 +409,7 @@
 				4B70A6E8278978CB006EB01A /* myKurlyViewController.swift */,
 				4B70A6FF278B1EBC006EB01A /* logInViewController.swift */,
 				4B70A701278B230A006EB01A /* makeIdViewController.swift */,
+				4BE9457E27983C3E005E6269 /* setAddressLoginViewController.swift */,
 			);
 			path = myKurlyViewController;
 			sourceTree = "<group>";
@@ -508,6 +515,7 @@
 				4BBAED6B278ED8D40063FFDA /* cartViewController.swift */,
 				4BBAEDE72795B0B20063FFDA /* selectAmountViewController.swift */,
 				4BBAEE0E2796AD9C0063FFDA /* orderViewController.swift */,
+				4BE9458227984AF4005E6269 /* endOrderViewController.swift */,
 			);
 			path = buy;
 			sourceTree = "<group>";
@@ -774,6 +782,7 @@
 				4BBAEE3D2796EAA50063FFDA /* secondOrderListViewController.swift */,
 				4BE9456C27980861005E6269 /* jjimmViewController.swift */,
 				4BE9457527981824005E6269 /* deliveryViewController.swift */,
+				4BE94580279843CC005E6269 /* setDeatilAddressViewController.swift */,
 			);
 			path = myKurlyDetailCell;
 			sourceTree = "<group>";
@@ -1007,6 +1016,7 @@
 				4BBAEE232796B4C80063FFDA /* orderFiveTableViewCell.swift in Sources */,
 				4BBAED71278EE9BA0063FFDA /* productExplainViewController.swift in Sources */,
 				4BBAED7C278EFDE50063FFDA /* LoginRequest.swift in Sources */,
+				4BE94581279843CC005E6269 /* setDeatilAddressViewController.swift in Sources */,
 				4BE9457627981824005E6269 /* deliveryViewController.swift in Sources */,
 				4BE9457427980BBD005E6269 /* HeartsResponse.swift in Sources */,
 				4BBAED8B278F0BFA0063FFDA /* SignInResponse.swift in Sources */,
@@ -1028,12 +1038,14 @@
 				4BBAEDA32792F1410063FFDA /* LoadProductInfoDataManager.swift in Sources */,
 				4BBAEE562797DA670063FFDA /* Dummys.swift in Sources */,
 				4BBAED6C278ED8D40063FFDA /* cartViewController.swift in Sources */,
+				4BE9458327984AF4005E6269 /* endOrderViewController.swift in Sources */,
 				4BBAEDD427952D660063FFDA /* productInfoOneTableViewCell.swift in Sources */,
 				4BBAEDCC27951C780063FFDA /* productExplainOneTableViewCell.swift in Sources */,
 				4B70A6E327897630006EB01A /* categoryViewController.swift in Sources */,
 				4BBAEDAE2793095C0063FFDA /* logInedTableViewCell.swift in Sources */,
 				4B70A702278B230A006EB01A /* makeIdViewController.swift in Sources */,
 				4BBAEE472796F6F50063FFDA /* TotalOrderResponse.swift in Sources */,
+				4BE9457F27983C3E005E6269 /* setAddressLoginViewController.swift in Sources */,
 				4B70A6FC278B1550006EB01A /* categoryTableViewCell.swift in Sources */,
 				4BBAEE06279686D00063FFDA /* productListsTableViewCell.swift in Sources */,
 				4BBAED97279189AA0063FFDA /* CheckPhoneResponse.swift in Sources */,

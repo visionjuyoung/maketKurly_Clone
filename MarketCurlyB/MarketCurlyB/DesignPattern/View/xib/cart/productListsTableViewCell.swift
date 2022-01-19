@@ -40,6 +40,13 @@ class productListsTableViewCell: UITableViewCell {
         chooseButton.backgroundColor = .purple
         chooseButton.isSelected = true
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        userIdx = 0
+        productIdx = 0
+        cartIdx = 0
+        amount = 0
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -49,6 +56,8 @@ class productListsTableViewCell: UITableViewCell {
     
     @IBAction func minus(_ sender: UIButton) {
         datamanger.DeleateOneNum(cartIdx: cartIdx, producIdx: productIdx, delegate: self)
+        amount -= 1
+        amountLabel.text = "\(amount)"
     }
     
     @IBAction func deleteAll(_ sender: Any) {

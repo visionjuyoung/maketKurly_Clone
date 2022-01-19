@@ -92,7 +92,6 @@ extension cartViewController {
             return
         }
         names = res.coldProducts[0]!.title
-        print(loginState.cartId = res.cartIdx)
         if res.coldProducts.isEmpty == false {
             num = res.coldProducts.count
             for i in 0...num-1{
@@ -181,12 +180,10 @@ extension cartViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func pressBtn(_button: UIButton) {
-        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     @objc func pressDeleteAllBtn(_button: UIButton) {
-        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
 }

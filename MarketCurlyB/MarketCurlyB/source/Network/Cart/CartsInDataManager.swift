@@ -10,7 +10,7 @@ import Alamofire
 
 struct CartInDataManager {
     func loadCarts(cartIdx: Int, delegate: cartViewController) {
-        let url = "https://prod.kaydenserver.shop/api/carts/?userIdx=\(cartIdx)"
+        let url = "https://prod.kaydenserver.shop/api/carts/?cartIdx=\(cartIdx)"
         
         AF.request(url, method: .get, parameters: nil, headers: nil).responseDecodable(of: CartsInResponse.self) { (response) in
                 switch response.result {
@@ -25,7 +25,7 @@ struct CartInDataManager {
     }
     
     func AddCart(cartIdx: Int, producIdx: Int, delegate: selectAmountViewController) {
-        AF.request("https://prod.kaydenserver.shop/api/carts/?userIdx=\(cartIdx)&productIdx=\(producIdx)", method: .post, parameters: nil, headers: nil).validate()
+        AF.request("https://prod.kaydenserver.shop/api/carts/?cartIdx=\(cartIdx)&productIdx=\(producIdx)", method: .post, parameters: nil, headers: nil).validate()
             .responseDecodable(of: CartsInResponse.self) { response in
                 switch response.result {
                 case .success(let response):
@@ -48,7 +48,7 @@ struct CartInDataManager {
     }
     
     func DeleateOneNum(cartIdx: Int, producIdx: Int, delegate: productListsTableViewCell) {
-        AF.request("https://prod.kaydenserver.shop/api/carts/?userIdx=\(cartIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
+        AF.request("https://prod.kaydenserver.shop/api/carts/?cartIdx=\(cartIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
             .responseDecodable(of: CartsInResponse.self) { response in
                 switch response.result {
                 case .success(let response):
@@ -71,7 +71,7 @@ struct CartInDataManager {
     }
     
     func DeleateAll(cartIdx: Int, producIdx: Int, delegate: productListsTableViewCell) {
-        AF.request("https://prod.kaydenserver.shop/api/carts/all/?userIdx=\(cartIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
+        AF.request("https://prod.kaydenserver.shop/api/carts/all/?cartIdx=\(cartIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
             .responseDecodable(of: CartsInResponse.self) { response in
                 switch response.result {
                 case .success(let response):

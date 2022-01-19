@@ -17,4 +17,5 @@ struct LoginResponse: Decodable {
 struct LogInResult: Decodable {
     var jwt: String
     var userIdx: Int
+    var cartIdx: Int
 }

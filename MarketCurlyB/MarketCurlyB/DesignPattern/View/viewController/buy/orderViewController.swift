@@ -99,7 +99,7 @@ extension orderViewController: UITableViewDataSource, UITableViewDelegate {
             }
             cell.orderPayLabel.text = "\(totalPrice) 원"
             cell.orderpayLabel2.text = "\(totalPrice) 원"
-            cell.totalPayLabel.text = "\(totalPrice) 원"
+            cell.totalPayLabel.text = "\(totalPrice)"
             return cell
         }else{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSevenTableViewCell") as? orderSevenTableViewCell else {
@@ -135,6 +135,8 @@ extension orderViewController: UITableViewDataSource, UITableViewDelegate {
         let input = OrderRequest(userIdx: loginManager.Idx, cartIdx: loginManager.cartId, paymentType: 1, couponUserIdx: 1, productPrice: totalPrice, discountPrice: 0, deliveryPrice: 0, couponDiscount: 0, rewardDiscount: 0, amountOfPayment: totalPrice)
         orderManager.didOrder(input, delegate: self)
         
-        
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "endOrderViewController") as? endOrderViewController else { return }
+        vc.total = totalPrice
+        present(vc, animated: true, completion: nil)
     }
 }

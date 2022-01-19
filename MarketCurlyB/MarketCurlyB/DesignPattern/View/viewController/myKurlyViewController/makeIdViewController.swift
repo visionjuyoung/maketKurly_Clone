@@ -71,6 +71,8 @@ class makeIdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setInit()
+        telNumTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        certAuthTextField.addTarget(self, action: #selector(self.textFieldDidChange2(_:)), for: .editingChanged)
     }
     
     func setInit() {
@@ -127,6 +129,20 @@ class makeIdViewController: UIViewController {
             button.isSelected = false
         }
     }
+
+    @objc func textFieldDidChange(_ sender: Any?) {
+        if self.telNumTextField.text?.count == 11 {
+            messageBtn.layer.borderColor = UIColor.purple.cgColor
+            messageBtn.tintColor = .purple
+        }
+    }
+    
+    @objc func textFieldDidChange2(_ sender: Any?) {
+        if self.certAuthTextField.text?.count == 4 {
+            certCheckButton.layer.borderColor = UIColor.purple.cgColor
+            certCheckButton.tintColor = .purple
+        }
+    }
     
     @IBAction func pressSexButton(_ sender: UIButton) {
         checkSexButton()
@@ -138,13 +154,6 @@ class makeIdViewController: UIViewController {
             genderValue = "M"
         } else if sender.tag == 102 {
             genderValue = nil
-        }
-    }
-    
-    @IBAction func pressTelButton(_ sender: UITextField) {
-        UIView.animate(withDuration: 0.1) {
-            self.messageBtn.tintColor = .purple
-            self.messageBtn.layer.borderColor = UIColor.black.cgColor
         }
     }
     
@@ -160,6 +169,8 @@ class makeIdViewController: UIViewController {
         UIView.animate(withDuration: 0.1) {
             self.view.layoutIfNeeded()
         }
+        messageBtn.tintColor = .systemGray4
+        messageBtn.layer.borderColor = UIColor.systemGray4.cgColor
         certCheckButton.isHidden = false
         certAuthTextField.isHidden = false
     }
@@ -169,6 +180,13 @@ class makeIdViewController: UIViewController {
             cert = true
             loadAlert(notion: "인증번호 확인", message: "인증번호가 확인되었습니다")
         }
+        certCheckButton.tintColor = .systemGray4
+        certCheckButton.layer.borderColor = UIColor.systemGray4.cgColor
+    }
+    
+    @IBAction func pressAddressButton(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "setAddressLoginViewController") as? setAddressLoginViewController else { return }
+        present(vc, animated: false, completion: nil)
     }
     
     @IBAction func pressAddButton(_ sender: UIButton) {

@@ -34,9 +34,12 @@ class selectAmountViewController: UIViewController {
     }
     
     @IBAction func gotoCart(_ sender: UIButton) {
-        print(us.Idx)
+        print(us.cartId)
         print(sta.Idx)
-        cartmanager.AddCart(cartIdx: us.cartId, producIdx: sta.Idx, delegate: self)
+        for i in 1...sta.amount{
+            cartmanager.AddCart(cartIdx: us.cartId, producIdx: sta.Idx, delegate: self)
+            print(i)
+        }
     }
     
     @IBAction func close(_ sender: UIBarButtonItem) {

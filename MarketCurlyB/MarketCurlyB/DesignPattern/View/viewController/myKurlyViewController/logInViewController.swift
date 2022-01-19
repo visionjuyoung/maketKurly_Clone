@@ -73,9 +73,11 @@ extension logInViewController {
     func didsuccessLogIn(_ result: LogInResult) {
         state.Idx = result.userIdx
         state.jwt = result.jwt
+        state.cartId = result.cartIdx
         state.state = true
         print(state.jwt)
         print(state.Idx)
+        print("카트\(state.cartId)")
         print("로그인 성공")
         let userNum = state.Idx - 1
         loadDataManager.loadId(userIdx: userNum, delegate: self)

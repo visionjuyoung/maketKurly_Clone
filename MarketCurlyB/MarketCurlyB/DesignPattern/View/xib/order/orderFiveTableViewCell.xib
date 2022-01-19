@@ -36,7 +36,7 @@
                             <imageReference key="image" image="chevron.up" catalog="system" symbolScale="small"/>
                         </buttonConfiguration>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cacaopay" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-w4-I3h">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ccaa" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-w4-I3h">
                         <rect key="frame" x="20" y="53" width="374" height="53"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="LKe-w4-I3h" secondAttribute="height" multiplier="374:53" id="DYd-7q-YDN"/>
@@ -59,7 +59,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pf-dR-O0h">
                                 <rect key="frame" x="256.5" y="0.0" width="117.5" height="53"/>
-                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" name="KurlyColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="휴대폰"/>
                             </button>
@@ -124,7 +125,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="cacaopay" width="2106" height="288"/>
+        <image name="ccaa" width="754" height="96"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.up" catalog="system" width="128" height="72"/>
         <namedColor name="KurlyColor">
