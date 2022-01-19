@@ -47,6 +47,7 @@ extension secondOrderListViewController: UITableViewDataSource, UITableViewDeleg
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "oftensTableViewCell") as? oftensTableViewCell else {
             return UITableViewCell()
         }
+        cell.productimage.load(urlString: info[indexPath.row].profileImageUrl)
         cell.productName.text = info[indexPath.row].title
         cell.price.text = "\(info[indexPath.row].price)원"
         cell.num.text = "\(info[indexPath.row].count)회"

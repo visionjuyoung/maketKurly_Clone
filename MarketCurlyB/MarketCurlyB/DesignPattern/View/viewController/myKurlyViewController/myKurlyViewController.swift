@@ -82,12 +82,9 @@ extension myKurlyViewController {
 }
 
 extension myKurlyViewController {
-    func didSuccessLoadUserHeart(result: [UsersHeartResult]?) {
-        print("찜개수 : \(result!.count)")
-        guard let arr = result else {
-            return
-        }
-        jjimm = arr.count
+    func didsuccessAmoutHearts(result: HeartsResult) {
+        jjimm = result.counts
+        print(jjimm)
         tableView1.reloadData()
     }
 }
@@ -177,7 +174,8 @@ extension myKurlyViewController: UITableViewDataSource, UITableViewDelegate {
                     guard let vc = storyboard?.instantiateViewController(withIdentifier: "orderListViewController") as? orderListViewController else { return }
                     present(vc, animated: true, completion: nil)
                 } else if indexPath.row == 2 {
-                    guard let vc = storyboard?.instantiateViewController(withIdentifier: "orderListViewController") as? orderListViewController else { return }
+                    guard let vc = storyboard?.instantiateViewController(withIdentifier: "jjimmViewController") as? jjimmViewController else { return }
+                    vc.count = jjimm
                     present(vc, animated: true, completion: nil)
                 }
             }

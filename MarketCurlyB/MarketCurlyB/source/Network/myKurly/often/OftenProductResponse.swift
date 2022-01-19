@@ -15,6 +15,7 @@ struct OftenProductResponse: Decodable {
 }
 
 struct OftenProductResult: Decodable {
+    var profileImageUrl: String
     var productIdx: Int
     var title: String
     var price: Int

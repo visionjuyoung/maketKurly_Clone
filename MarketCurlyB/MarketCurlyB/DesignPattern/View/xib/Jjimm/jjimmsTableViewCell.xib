@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="156" id="KGk-i7-Jjw" customClass="jjimmsTableViewCell" customModule="MarketCurlyB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mL1-Te-XTq">
+                        <rect key="frame" x="20" y="14" width="98" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mL1-Te-XTq" secondAttribute="height" multiplier="49:64" id="eFx-0z-3Cx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpO-je-naK">
+                        <rect key="frame" x="138" y="14" width="256" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-68-7cU">
+                        <rect key="frame" x="138" y="42" width="256" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u5u-6m-Amm">
+                        <rect key="frame" x="138" y="111" width="256" height="31"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qm-v9-okq">
+                                <rect key="frame" x="0.0" y="0.0" width="123" height="31"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="삭제"/>
+                                <connections>
+                                    <action selector="deleteHeart:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ad2-cL-9xT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKK-PU-eM9">
+                                <rect key="frame" x="133" y="0.0" width="123" height="31"/>
+                                <color key="tintColor" name="KurlyColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" 담기">
+                                    <imageReference key="image" image="cart" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hpO-je-naK" firstAttribute="top" secondItem="mL1-Te-XTq" secondAttribute="top" id="D3F-oI-wgP"/>
+                    <constraint firstItem="hpO-je-naK" firstAttribute="leading" secondItem="mL1-Te-XTq" secondAttribute="trailing" constant="20" id="Ier-0M-Hje"/>
+                    <constraint firstItem="ibT-68-7cU" firstAttribute="top" secondItem="hpO-je-naK" secondAttribute="bottom" constant="10" id="Kcr-hP-agq"/>
+                    <constraint firstItem="ibT-68-7cU" firstAttribute="leading" secondItem="hpO-je-naK" secondAttribute="leading" id="Nrs-Cc-DO0"/>
+                    <constraint firstItem="u5u-6m-Amm" firstAttribute="leading" secondItem="hpO-je-naK" secondAttribute="leading" id="UWD-EI-oOg"/>
+                    <constraint firstItem="mL1-Te-XTq" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.236715" id="YQs-cZ-Zsf"/>
+                    <constraint firstItem="mL1-Te-XTq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="c5i-NJ-vOT"/>
+                    <constraint firstItem="mL1-Te-XTq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eBx-zO-0qA"/>
+                    <constraint firstItem="u5u-6m-Amm" firstAttribute="trailing" secondItem="hpO-je-naK" secondAttribute="trailing" id="f9U-6f-nSj"/>
+                    <constraint firstAttribute="trailing" secondItem="hpO-je-naK" secondAttribute="trailing" constant="20" id="imh-Pd-S2X"/>
+                    <constraint firstItem="ibT-68-7cU" firstAttribute="trailing" secondItem="hpO-je-naK" secondAttribute="trailing" id="rmp-U8-wKt"/>
+                    <constraint firstItem="u5u-6m-Amm" firstAttribute="bottom" secondItem="mL1-Te-XTq" secondAttribute="bottom" id="ukl-Tp-mAV"/>
+                    <constraint firstItem="ibT-68-7cU" firstAttribute="leading" secondItem="hpO-je-naK" secondAttribute="leading" id="x3a-U3-17z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="button1" destination="9qm-v9-okq" id="CiH-Vb-g7H"/>
+                <outlet property="button2" destination="hKK-PU-eM9" id="SMx-SI-IFb"/>
+                <outlet property="productImages" destination="mL1-Te-XTq" id="HVQ-9i-F5S"/>
+                <outlet property="productNames" destination="hpO-je-naK" id="uKb-YK-sKJ"/>
+                <outlet property="productPrice" destination="ibT-68-7cU" id="gJA-fl-Zkr"/>
+            </connections>
+            <point key="canvasLocation" x="205.79710144927537" y="171.42857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <namedColor name="KurlyColor">
+            <color red="0.33899998664855957" green="0.043000001460313797" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

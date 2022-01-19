@@ -36,6 +36,25 @@ class HeartDataManager {
     func amoutHeart(userIdx: Int, delegate: myKurlyViewController) {
         let logIndataManager = LoginState.shared
         
+        let url = "https://prod.kaydenserver.shop/api/likes/users/\(userIdx)/counts"
+        
+        let headers : HTTPHeaders = ["x-access-token" : logIndataManager.jwt]
+        
+        AF.request(url, method: .get, parameters: nil, headers: headers).responseDecodable(of: HeartsResponse.self) { (response) in
+                switch response.result {
+                case .success(let response):
+                    //함수
+                    delegate.didsuccessAmoutHearts(result: response.result)
+                    print("")
+                case .failure(let error):
+                    print(error)
+                }
+            }
+    }
+    
+    func LoadHearts(userIdx: Int, delegate: jjimmViewController) {
+        let logIndataManager = LoginState.shared
+        
         let url = "https://prod.kaydenserver.shop/api/likes/users/\(userIdx)"
         
         let headers : HTTPHeaders = ["x-access-token" : logIndataManager.jwt]
@@ -45,6 +64,26 @@ class HeartDataManager {
                 case .success(let response):
                     //함수
                     delegate.didSuccessLoadUserHeart(result: response.result)
+                    print("")
+                case .failure(let error):
+                    print(error)
+                }
+            }
+    }
+    
+    func DeleteHeart(parameter: HeartRequest, delegate: jjimmViewController) {
+        let logIndataManager = LoginState.shared
+        
+        let url = "https://prod.kaydenserver.shop/api/likes/users"
+        
+        let headers : HTTPHeaders = ["x-access-token" : logIndataManager.jwt]
+        
+        AF.request(url, method: .delete, parameters: parameter, headers: headers).responseDecodable(of: HeartDeleteResponse.self) { (response) in
+                switch response.result {
+                case .success(let response):
+                    //함수
+                    print("결과 : \(response.isSuccess)")
+                    delegate.didsuccess()
                     print("")
                 case .failure(let error):
                     print(error)

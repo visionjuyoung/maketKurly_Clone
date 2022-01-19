@@ -967,6 +967,181 @@
             </objects>
             <point key="canvasLocation" x="3388" y="885"/>
         </scene>
+        <!--Jjimm View Controller-->
+        <scene sceneID="NKZ-zc-Rvu">
+            <objects>
+                <viewController storyboardIdentifier="jjimmViewController" modalPresentationStyle="fullScreen" id="atI-gf-PUr" customClass="jjimmViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4DY-mC-KaA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xy-DK-Psz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <items>
+                                    <navigationItem title="찜한 상품" id="h1D-lz-ddJ">
+                                        <leftBarButtonItems>
+                                            <barButtonItem id="ad1-3r-1Ka">
+                                                <imageReference key="image" image="chevron.left" catalog="system" symbolScale="medium"/>
+                                                <connections>
+                                                    <action selector="close:" destination="atI-gf-PUr" id="pvy-tk-xe7"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem enabled="NO" title="Item" id="jjb-08-rAJ">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <rightBarButtonItems>
+                                            <barButtonItem id="gN6-ua-e5T">
+                                                <imageReference key="image" image="cart" catalog="system" symbolScale="medium"/>
+                                            </barButtonItem>
+                                            <barButtonItem image="lo" id="gEu-ft-tcg"/>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDz-Na-Fc2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihk-vC-qQ9">
+                                        <rect key="frame" x="20" y="13" width="26" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2go-Vn-rTA">
+                                        <rect key="frame" x="46" y="13" width="37.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meX-7L-2hJ">
+                                        <rect key="frame" x="83.5" y="13" width="13" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="meX-7L-2hJ" firstAttribute="leading" secondItem="2go-Vn-rTA" secondAttribute="trailing" id="2sj-DW-GFs"/>
+                                    <constraint firstItem="meX-7L-2hJ" firstAttribute="centerY" secondItem="BDz-Na-Fc2" secondAttribute="centerY" id="Mrp-oq-3Tc"/>
+                                    <constraint firstItem="2go-Vn-rTA" firstAttribute="centerY" secondItem="BDz-Na-Fc2" secondAttribute="centerY" id="TuM-rf-Rac"/>
+                                    <constraint firstAttribute="height" constant="44" id="bHs-Mn-ScW"/>
+                                    <constraint firstItem="2go-Vn-rTA" firstAttribute="leading" secondItem="Ihk-vC-qQ9" secondAttribute="trailing" id="mJy-5g-dz5"/>
+                                    <constraint firstItem="Ihk-vC-qQ9" firstAttribute="centerY" secondItem="BDz-Na-Fc2" secondAttribute="centerY" id="x9A-Yh-lmy"/>
+                                    <constraint firstItem="Ihk-vC-qQ9" firstAttribute="leading" secondItem="BDz-Na-Fc2" secondAttribute="leading" constant="20" id="xaA-DW-TNm"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M1Z-Fg-mDP">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uq0-0Z-cW9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BDz-Na-Fc2" firstAttribute="top" secondItem="9Xy-DK-Psz" secondAttribute="bottom" id="ATU-xS-s0W"/>
+                            <constraint firstItem="M1Z-Fg-mDP" firstAttribute="top" secondItem="BDz-Na-Fc2" secondAttribute="bottom" id="Lcf-fH-NWq"/>
+                            <constraint firstItem="9Xy-DK-Psz" firstAttribute="trailing" secondItem="Uq0-0Z-cW9" secondAttribute="trailing" id="Lyc-ZQ-hYw"/>
+                            <constraint firstItem="9Xy-DK-Psz" firstAttribute="top" secondItem="Uq0-0Z-cW9" secondAttribute="top" id="NQC-eE-bZX"/>
+                            <constraint firstItem="Uq0-0Z-cW9" firstAttribute="trailing" secondItem="M1Z-Fg-mDP" secondAttribute="trailing" id="Q4A-Ys-zH7"/>
+                            <constraint firstItem="BDz-Na-Fc2" firstAttribute="leading" secondItem="Uq0-0Z-cW9" secondAttribute="leading" id="RHo-Ob-vBI"/>
+                            <constraint firstItem="9Xy-DK-Psz" firstAttribute="leading" secondItem="Uq0-0Z-cW9" secondAttribute="leading" id="Rtc-Xe-iD7"/>
+                            <constraint firstItem="Uq0-0Z-cW9" firstAttribute="trailing" secondItem="BDz-Na-Fc2" secondAttribute="trailing" id="VD5-cc-thJ"/>
+                            <constraint firstItem="M1Z-Fg-mDP" firstAttribute="leading" secondItem="Uq0-0Z-cW9" secondAttribute="leading" id="Y5B-kJ-wkW"/>
+                            <constraint firstItem="Uq0-0Z-cW9" firstAttribute="bottom" secondItem="M1Z-Fg-mDP" secondAttribute="bottom" id="lei-iT-Hbu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numLabel" destination="2go-Vn-rTA" id="gwe-ja-pOb"/>
+                        <outlet property="tableView" destination="M1Z-Fg-mDP" id="495-Hl-9dy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dai-in-G18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4481" y="1260"/>
+        </scene>
+        <!--Delivery View Controller-->
+        <scene sceneID="0sQ-jB-dMX">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="qke-Li-n5w" customClass="deliveryViewController" customModule="MarketCurlyB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GLs-AQ-dfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ze-v8-g3U">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <items>
+                                    <navigationItem title="배송지 관리" id="q6m-6h-HSD">
+                                        <barButtonItem key="leftBarButtonItem" id="1Bw-O3-EQb">
+                                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="medium"/>
+                                            <connections>
+                                                <action selector="close:" destination="qke-Li-n5w" id="nOd-dC-fzn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="추가" id="vme-4r-fPl">
+                                            <color key="tintColor" name="KurlyColor"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IE2-rw-0Ex">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배송지에 따라 상품정보 및 배송유형이 달라질 수 있습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLS-nc-V3X">
+                                        <rect key="frame" x="50" y="16.5" width="354" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoh-fx-Qgz">
+                                        <rect key="frame" x="5" y="9.5" width="45" height="31"/>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="hoh-fx-Qgz" firstAttribute="centerY" secondItem="IE2-rw-0Ex" secondAttribute="centerY" id="5Bw-go-jR4"/>
+                                    <constraint firstItem="MLS-nc-V3X" firstAttribute="centerY" secondItem="IE2-rw-0Ex" secondAttribute="centerY" id="8hi-F2-Jxh"/>
+                                    <constraint firstAttribute="height" constant="50" id="Khz-9E-Khv"/>
+                                    <constraint firstItem="hoh-fx-Qgz" firstAttribute="leading" secondItem="IE2-rw-0Ex" secondAttribute="leading" constant="5" id="MDV-uN-C6A"/>
+                                    <constraint firstAttribute="trailing" secondItem="MLS-nc-V3X" secondAttribute="trailing" constant="10" id="UTg-RY-nGn"/>
+                                    <constraint firstItem="MLS-nc-V3X" firstAttribute="leading" secondItem="hoh-fx-Qgz" secondAttribute="trailing" id="nnH-qY-pnQ"/>
+                                    <constraint firstItem="hoh-fx-Qgz" firstAttribute="width" secondItem="IE2-rw-0Ex" secondAttribute="width" multiplier="0.108696" id="r0l-wv-3xM"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="er3-UK-LKD">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LZM-zA-fjL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LZM-zA-fjL" firstAttribute="trailing" secondItem="er3-UK-LKD" secondAttribute="trailing" id="GGe-bG-p1O"/>
+                            <constraint firstItem="LZM-zA-fjL" firstAttribute="bottom" secondItem="er3-UK-LKD" secondAttribute="bottom" id="Hc2-lF-mGx"/>
+                            <constraint firstItem="1ze-v8-g3U" firstAttribute="leading" secondItem="GLs-AQ-dfn" secondAttribute="leading" id="NrJ-HQ-XVT"/>
+                            <constraint firstItem="LZM-zA-fjL" firstAttribute="trailing" secondItem="IE2-rw-0Ex" secondAttribute="trailing" id="QPu-O9-g2y"/>
+                            <constraint firstItem="er3-UK-LKD" firstAttribute="top" secondItem="IE2-rw-0Ex" secondAttribute="bottom" id="UA5-bw-hcm"/>
+                            <constraint firstItem="LZM-zA-fjL" firstAttribute="trailing" secondItem="1ze-v8-g3U" secondAttribute="trailing" id="bB7-K9-Jm5"/>
+                            <constraint firstItem="IE2-rw-0Ex" firstAttribute="leading" secondItem="LZM-zA-fjL" secondAttribute="leading" id="cEE-8d-Koq"/>
+                            <constraint firstItem="er3-UK-LKD" firstAttribute="leading" secondItem="LZM-zA-fjL" secondAttribute="leading" id="lF9-pb-mZ6"/>
+                            <constraint firstItem="IE2-rw-0Ex" firstAttribute="top" secondItem="1ze-v8-g3U" secondAttribute="bottom" id="s10-ll-PBO"/>
+                            <constraint firstItem="1ze-v8-g3U" firstAttribute="top" secondItem="LZM-zA-fjL" secondAttribute="top" id="t0o-dd-4oR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="er3-UK-LKD" id="O98-UR-5nk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nD-2E-xKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5239.130434782609" y="1275.6696428571429"/>
+        </scene>
         <!--카테고리-->
         <scene sceneID="GaQ-wO-rFM">
             <objects>
@@ -2871,7 +3046,9 @@
         <image name="firth1" width="1170" height="1331"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
+        <image name="lo" width="20" height="24"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
