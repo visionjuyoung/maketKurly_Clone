@@ -47,14 +47,13 @@ struct CartInDataManager {
             }
     }
     
-    func DeleateOneNum(cartIdx: Int, producIdx: Int, delegate: productListsTableViewCell) {
+    func DeleateOneNum(cartIdx: Int, producIdx: Int, delegate: cartViewController) {
         AF.request("https://prod.kaydenserver.shop/api/carts/?cartIdx=\(cartIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
             .responseDecodable(of: CartsInResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess {
-                        print(response.result)
-                        
+                        delegate.didSuccessdelete()
                     } else {
                         switch response.code {
                         case 2000:
@@ -70,14 +69,13 @@ struct CartInDataManager {
         }
     }
     
-    func DeleateAll(cartIdx: Int, producIdx: Int, delegate: productListsTableViewCell) {
+    func DeleateAll(cartIdx: Int, producIdx: Int, delegate: cartViewController) {
         AF.request("https://prod.kaydenserver.shop/api/carts/all/?cartIdx=\(cartIdx)&productIdx=\(producIdx)", method: .patch, parameters: nil, headers: nil).validate()
             .responseDecodable(of: CartsInResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess {
-                        print(response.result)
-                        
+                        delegate.didSuccessdeleteAll()
                     } else {
                         switch response.code {
                         case 2000:

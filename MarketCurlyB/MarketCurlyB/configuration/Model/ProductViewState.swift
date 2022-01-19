@@ -23,6 +23,8 @@ class ProductViewState {
     var date: String
     var amount: Int
     var deleteHeartProductNum: Int
+    var deleteNum : Int
+    var deleteAllNum: Int
     
     private init() {
         Idx = 0
@@ -38,5 +40,7 @@ class ProductViewState {
         date = "수령일 포함 최소 6일 남은 제품을 보내 드립니다"
         amount = 0
         deleteHeartProductNum = 0
+        deleteNum = 0
+        deleteAllNum = 0
     }
 }

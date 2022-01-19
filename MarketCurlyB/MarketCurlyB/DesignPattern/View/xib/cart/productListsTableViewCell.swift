@@ -21,6 +21,8 @@ class productListsTableViewCell: UITableViewCell {
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var deleteAllButton: UIButton!
     
+    let prosta = ProductViewState.shared
+    
     var userIdx: Int = 0
     var productIdx: Int = 0
     var cartIdx: Int = 0
@@ -55,13 +57,13 @@ class productListsTableViewCell: UITableViewCell {
     }
     
     @IBAction func minus(_ sender: UIButton) {
-        datamanger.DeleateOneNum(cartIdx: cartIdx, producIdx: productIdx, delegate: self)
-        amount -= 1
-        amountLabel.text = "\(amount)"
+        prosta.deleteNum = productIdx
+        print(prosta.deleteNum)
+        print("111111111")
     }
     
     @IBAction func deleteAll(_ sender: Any) {
-        datamanger.DeleateAll(cartIdx: cartIdx, producIdx: productIdx, delegate: self)
+        prosta.deleteAllNum = productIdx
     }
     
     
@@ -71,7 +73,7 @@ class productListsTableViewCell: UITableViewCell {
     }
     
     func successMinusProduct(result: CartsInResult) {
-        print(result)
+        
     }
     
     func successMinusProductAll(result: CartsInResult) {

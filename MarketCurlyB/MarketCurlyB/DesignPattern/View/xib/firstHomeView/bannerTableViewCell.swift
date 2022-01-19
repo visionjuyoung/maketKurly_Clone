@@ -17,6 +17,11 @@ class bannerTableViewCell: UITableViewCell {
         // Initialization code
         setImages()
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        setImages()
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

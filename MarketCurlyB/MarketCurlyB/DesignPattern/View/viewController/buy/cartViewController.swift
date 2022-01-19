@@ -27,17 +27,18 @@ class cartViewController: UIViewController {
     
     var totalPrice = 0
     let loginState = LoginState.shared
+    let productstate = ProductViewState.shared
     var amount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAddressDataManager.loadAddress(userIdx: loginState.Idx, delegate: self)
+        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
         setInit()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
     }
     
     @IBAction func goToOrder(_ sender: UIButton) {
@@ -126,6 +127,18 @@ extension cartViewController {
         addressLabel.text = result.address
         loginState.address = result.address
     }
+    
+    func didSuccessdeleteAll() {
+        totalPrice = 0
+        colds = []
+        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
+    }
+    
+    func didSuccessdelete() {
+        totalPrice = 0
+        colds = []
+        cartsInDataManager.loadCarts(cartIdx: loginState.cartId, delegate: self)
+    }
 }
 
 extension cartViewController: UITableViewDataSource, UITableViewDelegate {
@@ -180,10 +193,10 @@ extension cartViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func pressBtn(_button: UIButton) {
-        tableView.reloadData()
+        cartsInDataManager.DeleateOneNum(cartIdx: loginState.cartId, producIdx: productstate.deleteNum, delegate: self)
     }
     
     @objc func pressDeleteAllBtn(_button: UIButton) {
-        tableView.reloadData()
+        cartsInDataManager.DeleateAll(cartIdx: loginState.cartId, producIdx: productstate.deleteAllNum, delegate: self)
     }
 }
