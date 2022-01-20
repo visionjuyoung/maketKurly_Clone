@@ -162,6 +162,9 @@
 		4BE9459827996F93005E6269 /* LoadAskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459727996F93005E6269 /* LoadAskResponse.swift */; };
 		4BE9459A27997092005E6269 /* LoadAskDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459927997092005E6269 /* LoadAskDataManager.swift */; };
 		4BE9459C27997552005E6269 /* makeAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459B27997552005E6269 /* makeAskViewController.swift */; };
+		4BE9459E279979BA005E6269 /* AddAskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459D279979BA005E6269 /* AddAskResponse.swift */; };
+		4BE945A0279979FD005E6269 /* AddAskRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459F279979FD005E6269 /* AddAskRequest.swift */; };
+		4BE945A227997A64005E6269 /* AddAskDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE945A127997A64005E6269 /* AddAskDataManager.swift */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -325,6 +328,9 @@
 		4BE9459727996F93005E6269 /* LoadAskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAskResponse.swift; sourceTree = "<group>"; };
 		4BE9459927997092005E6269 /* LoadAskDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAskDataManager.swift; sourceTree = "<group>"; };
 		4BE9459B27997552005E6269 /* makeAskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeAskViewController.swift; sourceTree = "<group>"; };
+		4BE9459D279979BA005E6269 /* AddAskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAskResponse.swift; sourceTree = "<group>"; };
+		4BE9459F279979FD005E6269 /* AddAskRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAskRequest.swift; sourceTree = "<group>"; };
+		4BE945A127997A64005E6269 /* AddAskDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAskDataManager.swift; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -909,6 +915,9 @@
 			children = (
 				4BE9459727996F93005E6269 /* LoadAskResponse.swift */,
 				4BE9459927997092005E6269 /* LoadAskDataManager.swift */,
+				4BE9459D279979BA005E6269 /* AddAskResponse.swift */,
+				4BE9459F279979FD005E6269 /* AddAskRequest.swift */,
+				4BE945A127997A64005E6269 /* AddAskDataManager.swift */,
 			);
 			path = Ask;
 			sourceTree = "<group>";
@@ -1135,6 +1144,7 @@
 				4BBAEE2F2796BE7E0063FFDA /* orderOnesTableViewCell.swift in Sources */,
 				4BBAEE372796D1EA0063FFDA /* OrderDataManager.swift in Sources */,
 				4BBAED77278EE9E50063FFDA /* askViewController.swift in Sources */,
+				4BE9459E279979BA005E6269 /* AddAskResponse.swift in Sources */,
 				4BBAEDFA2795C5750063FFDA /* LoadAddressResponse.swift in Sources */,
 				4B70683127893A4E006BB008 /* AppDelegate.swift in Sources */,
 				4BBAED9C279190740063FFDA /* LoadUserInfoResponse.swift in Sources */,
@@ -1156,6 +1166,7 @@
 				4B807FB2278C5E65009650C0 /* productCollectionViewCell.swift in Sources */,
 				4BBAEE1F2796B2340063FFDA /* orderFourTableViewCell.swift in Sources */,
 				4BBAEE5D2797F9C10063FFDA /* HeartRequest.swift in Sources */,
+				4BE945A227997A64005E6269 /* AddAskDataManager.swift in Sources */,
 				4BBAEDD927952E9A0063FFDA /* productInfoTwoTableViewCell.swift in Sources */,
 				4BBAED73278EE9C90063FFDA /* productDetailViewController.swift in Sources */,
 				4BBAED66278DA7E00063FFDA /* recentUpSubTableViewCell.swift in Sources */,
@@ -1165,6 +1176,7 @@
 				4B70A700278B1EBC006EB01A /* logInViewController.swift in Sources */,
 				4BBAEE442796ECE90063FFDA /* OftenProductResponse.swift in Sources */,
 				4BBAEDFC2795C5810063FFDA /* LoadAddressDataManager.swift in Sources */,
+				4BE945A0279979FD005E6269 /* AddAskRequest.swift in Sources */,
 				4BBAEE4D2796FC0A0063FFDA /* orderListsTableViewCell.swift in Sources */,
 				4B70A6D32789406F006EB01A /* HomeViewController.swift in Sources */,
 				4BBAEE492796F7B10063FFDA /* TotalOrderDataManager.swift in Sources */,

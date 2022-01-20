@@ -15,7 +15,7 @@ class askViewController: UIViewController {
     @IBOutlet weak var productInquiry: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    let names:[String] = ["김*영", "곽*형" ,"김*범"]
+    let names:[String] = ["김*영", "곽*형" ,"김*범", "윤*범", "조*연", "박*수", "유*석", "명*만"]
     
     var info:[LoadAskResult] = []
     
@@ -23,6 +23,11 @@ class askViewController: UIViewController {
         super.viewDidLoad()
         setButton()
         setTableView()
+        loadAskDataManager.loadAsk(productIdx: productViewInfo.Idx, delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadAskDataManager.loadAsk(productIdx: productViewInfo.Idx, delegate: self)
     }
     
@@ -82,7 +87,7 @@ extension askViewController: UITableViewDataSource, UITableViewDelegate {
             }
             cell.questionTitle.text = info[indexPath.row].title
             cell.questionDate.text = info[indexPath.row].createDate
-            cell.questionName.text = names[indexPath.row]
+            cell.questionName.text = names[(info.count-1)-indexPath.row]
             return cell
         }
     }

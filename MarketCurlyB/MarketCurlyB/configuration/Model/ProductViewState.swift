@@ -25,6 +25,7 @@ class ProductViewState {
     var deleteHeartProductNum: Int
     var deleteNum : Int
     var deleteAllNum: Int
+    var askProductName: String
     
     private init() {
         Idx = 0
@@ -42,5 +43,6 @@ class ProductViewState {
         deleteHeartProductNum = 0
         deleteNum = 0
         deleteAllNum = 0
+        askProductName = ""
     }
 }

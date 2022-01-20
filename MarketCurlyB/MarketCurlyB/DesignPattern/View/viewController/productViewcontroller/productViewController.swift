@@ -14,6 +14,7 @@ class productViewController: TabmanViewController {
     let loadProductInfoDataManager = LoadProductDataManager()
     let heatmanager = HeartDataManager()
     let manager = LoginState.shared
+    let productState = ProductViewState.shared
 
     @IBOutlet weak var tempView: UIView!
     @IBOutlet weak var heartButton: UIButton!
@@ -30,6 +31,7 @@ class productViewController: TabmanViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         naviBar.topItem?.title = productName
+        productState.askProductName = productName
         setTabman()
         setTabManBar()
         setButton()
