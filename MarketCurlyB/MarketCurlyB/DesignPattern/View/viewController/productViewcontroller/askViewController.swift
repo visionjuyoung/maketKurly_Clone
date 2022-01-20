@@ -9,14 +9,21 @@ import UIKit
 
 class askViewController: UIViewController {
     
+    lazy var loadAskDataManager = LoadAskDataManager()
+    let productViewInfo = ProductViewState.shared
+    
     @IBOutlet weak var productInquiry: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    let names:[String] = ["김*영", "곽*형" ,"김*범"]
+    
+    var info:[LoadAskResult] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setButton()
         setTableView()
+        loadAskDataManager.loadAsk(productIdx: productViewInfo.Idx, delegate: self)
     }
     
     func setButton() {
@@ -31,6 +38,20 @@ class askViewController: UIViewController {
         tableView.register(UINib(nibName: "questionTableViewCell", bundle: nil), forCellReuseIdentifier: "questionTableViewCell")
         tableView.register(UINib(nibName: "questionTableViewTableViewCell", bundle: nil), forCellReuseIdentifier: "questionTableViewTableViewCell")
     }
+    
+    @IBAction func goToAsk(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "makeAskViewController") as? makeAskViewController else { return }
+        present(vc, animated: true, completion: nil)
+    }
+    
+}
+
+extension askViewController {
+    func didSuccessLoadAsk(result: [LoadAskResult]) {
+        info = result
+        print(result)
+        self.tableView.reloadData()
+    }
 }
 
 extension askViewController: UITableViewDataSource, UITableViewDelegate {
@@ -43,7 +64,7 @@ extension askViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             return 1
         case 1:
-            return 20
+            return info.count
         default:
             return 0
         }
@@ -59,6 +80,9 @@ extension askViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "questionTableViewTableViewCell") as? questionTableViewTableViewCell else {
                 return UITableViewCell()
             }
+            cell.questionTitle.text = info[indexPath.row].title
+            cell.questionDate.text = info[indexPath.row].createDate
+            cell.questionName.text = names[indexPath.row]
             return cell
         }
     }

@@ -13,6 +13,8 @@ class makeIdViewController: UIViewController {
     lazy var checkIdDataManager: CheckIdDataManager = CheckIdDataManager()
     lazy var checkPhoneDateManager: CheckPhoneDataManager = CheckPhoneDataManager()
     
+    let addressDataManager = AddAddressModel.shared
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var checkPasswordTextField: UITextField!
@@ -65,6 +67,8 @@ class makeIdViewController: UIViewController {
     var agree5: String = "N"
     var cert: Bool = false
     var certmessage: String = ""
+    var address1: String = ""
+    var address2: String = ""
     
     var message: String = ""
     
@@ -73,6 +77,10 @@ class makeIdViewController: UIViewController {
         setInit()
         telNumTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         certAuthTextField.addTarget(self, action: #selector(self.textFieldDidChange2(_:)), for: .editingChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     func setInit() {
@@ -338,7 +346,7 @@ class makeIdViewController: UIViewController {
             return
         }
         
-        let input = SignInRequest(name: name, id: id, pwd: password, email: email, phone: telNum, adress: "서울시", extraAdress: "개포동", birthDate: birth, gender: genderValue, recommender: addValue1, eventName: addValue2, isTermsOfUseAgree: agree1, isPersonalInfoCollectAgree: agree2, isPersonalInfoUsageAgree: agree3, isSmsReceiveAgree: smsAgree, isEmailReceiveAgree: emailAgree, isAgeAboveForteen: agree5)
+        let input = SignInRequest(name: name, id: id, pwd: password, email: email, phone: telNum, adress: addressDataManager.address1, extraAdress: addressDataManager.address2, birthDate: birth, gender: genderValue, recommender: addValue1, eventName: addValue2, isTermsOfUseAgree: agree1, isPersonalInfoCollectAgree: agree2, isPersonalInfoUsageAgree: agree3, isSmsReceiveAgree: smsAgree, isEmailReceiveAgree: emailAgree, isAgeAboveForteen: agree5)
         dataManager.postSignIn(input, delegate: self)
         print("터치됨")
     }

@@ -37,6 +37,7 @@ class firstHomeViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: "bannerTableViewCell", bundle: nil), forCellReuseIdentifier: "bannerTableViewCell")
         tableView.register(UINib(nibName: "kurlyRecommandTableViewCell", bundle: nil), forCellReuseIdentifier: "kurlyRecommandTableViewCell")
+        tableView.register(UINib(nibName: "middlesTableViewCell", bundle: nil), forCellReuseIdentifier: "middlesTableViewCell")
         tableView.separatorStyle = .none
     }
 }
@@ -73,18 +74,34 @@ extension firstHomeViewController: UITableViewDataSource, UITableViewDelegate{
             }
             
             return cell
-        } else if indexPath.section == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "kurlyRecommandTableViewCell") as? kurlyRecommandTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.nameLAbel.text = picks[indexPath.row]
-            return cell
         } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "kurlyRecommandTableViewCell") as? kurlyRecommandTableViewCell else {
-                return UITableViewCell()
+            if indexPath.row == 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "kurlyRecommandTableViewCell") as? kurlyRecommandTableViewCell else {
+                    return UITableViewCell()
+                }
+                cell.nameLAbel.text = picks[indexPath.row]
+                cell.sectionNum = 0
+                return cell
+            } else if indexPath.row == 1 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "kurlyRecommandTableViewCell") as? kurlyRecommandTableViewCell else {
+                    return UITableViewCell()
+                }
+                cell.nameLAbel.text = picks[indexPath.row]
+                cell.sectionNum = 1
+                return cell
+            } else if indexPath.row == 2 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "kurlyRecommandTableViewCell") as? kurlyRecommandTableViewCell else {
+                    return UITableViewCell()
+                }
+                cell.nameLAbel.text = picks[indexPath.row]
+                cell.sectionNum = 2
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "middlesTableViewCell") as? middlesTableViewCell else {
+                    return UITableViewCell()
+                }
+                return cell
             }
-            cell.nameLAbel.text = picks[indexPath.row]
-            return cell
         }
     }
     
@@ -92,7 +109,11 @@ extension firstHomeViewController: UITableViewDataSource, UITableViewDelegate{
         if indexPath.section == 0 {
             return 350
         } else {
-            return 320
+            if indexPath.row == 3 {
+                return 660
+            } else {
+            return 330
+            }
         }
     }
 }

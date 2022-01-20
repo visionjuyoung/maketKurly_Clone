@@ -151,6 +151,17 @@
 		4BE9457F27983C3E005E6269 /* setAddressLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9457E27983C3E005E6269 /* setAddressLoginViewController.swift */; };
 		4BE94581279843CC005E6269 /* setDeatilAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE94580279843CC005E6269 /* setDeatilAddressViewController.swift */; };
 		4BE9458327984AF4005E6269 /* endOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9458227984AF4005E6269 /* endOrderViewController.swift */; };
+		4BE9458527992AD7005E6269 /* AddAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9458427992AD7005E6269 /* AddAddressModel.swift */; };
+		4BE945872799386B005E6269 /* searchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE945862799386B005E6269 /* searchAddressViewController.swift */; };
+		4BE94589279950C6005E6269 /* AddAddressDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE94588279950C6005E6269 /* AddAddressDataManager.swift */; };
+		4BE9458B279950D1005E6269 /* AddAddressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9458A279950D1005E6269 /* AddAddressResponse.swift */; };
+		4BE9458D279950DE005E6269 /* AddAddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9458C279950DE005E6269 /* AddAddressRequest.swift */; };
+		4BE9459127995462005E6269 /* AddDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459027995462005E6269 /* AddDeliveryViewController.swift */; };
+		4BE9459427995C6C005E6269 /* middlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459227995C6C005E6269 /* middlesTableViewCell.swift */; };
+		4BE9459527995C6C005E6269 /* middlesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE9459327995C6C005E6269 /* middlesTableViewCell.xib */; };
+		4BE9459827996F93005E6269 /* LoadAskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459727996F93005E6269 /* LoadAskResponse.swift */; };
+		4BE9459A27997092005E6269 /* LoadAskDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459927997092005E6269 /* LoadAskDataManager.swift */; };
+		4BE9459C27997552005E6269 /* makeAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459B27997552005E6269 /* makeAskViewController.swift */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -303,6 +314,17 @@
 		4BE9457E27983C3E005E6269 /* setAddressLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setAddressLoginViewController.swift; sourceTree = "<group>"; };
 		4BE94580279843CC005E6269 /* setDeatilAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setDeatilAddressViewController.swift; sourceTree = "<group>"; };
 		4BE9458227984AF4005E6269 /* endOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endOrderViewController.swift; sourceTree = "<group>"; };
+		4BE9458427992AD7005E6269 /* AddAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressModel.swift; sourceTree = "<group>"; };
+		4BE945862799386B005E6269 /* searchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchAddressViewController.swift; sourceTree = "<group>"; };
+		4BE94588279950C6005E6269 /* AddAddressDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressDataManager.swift; sourceTree = "<group>"; };
+		4BE9458A279950D1005E6269 /* AddAddressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressResponse.swift; sourceTree = "<group>"; };
+		4BE9458C279950DE005E6269 /* AddAddressRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressRequest.swift; sourceTree = "<group>"; };
+		4BE9459027995462005E6269 /* AddDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeliveryViewController.swift; sourceTree = "<group>"; };
+		4BE9459227995C6C005E6269 /* middlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = middlesTableViewCell.swift; sourceTree = "<group>"; };
+		4BE9459327995C6C005E6269 /* middlesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = middlesTableViewCell.xib; sourceTree = "<group>"; };
+		4BE9459727996F93005E6269 /* LoadAskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAskResponse.swift; sourceTree = "<group>"; };
+		4BE9459927997092005E6269 /* LoadAskDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAskDataManager.swift; sourceTree = "<group>"; };
+		4BE9459B27997552005E6269 /* makeAskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeAskViewController.swift; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -436,6 +458,7 @@
 				4BBAEDDF279578210063FFDA /* ProductViewState.swift */,
 				4BBAEE0827968DED0063FFDA /* ProductsTemplate.swift */,
 				4BBAEE552797DA670063FFDA /* Dummys.swift */,
+				4BE9458427992AD7005E6269 /* AddAddressModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,6 +501,8 @@
 		4BBAED50278D53480063FFDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4BE9459627996F7F005E6269 /* Ask */,
+				4BE9458E2799519E005E6269 /* Address */,
 				4BBAEE572797F9160063FFDA /* Heart */,
 				4BBAEE3F2796EC7D0063FFDA /* myKurly */,
 				4BBAEE312796D1C00063FFDA /* Order */,
@@ -528,6 +553,7 @@
 				4BBAED72278EE9C90063FFDA /* productDetailViewController.swift */,
 				4BBAED74278EE9D10063FFDA /* reviewViewController.swift */,
 				4BBAED76278EE9E50063FFDA /* askViewController.swift */,
+				4BE9459B27997552005E6269 /* makeAskViewController.swift */,
 			);
 			path = productViewcontroller;
 			sourceTree = "<group>";
@@ -634,6 +660,8 @@
 				4B807FAD278C5D83009650C0 /* kurlyRecommandTableViewCell.xib */,
 				4B807FB0278C5E65009650C0 /* productCollectionViewCell.swift */,
 				4B807FB1278C5E65009650C0 /* productCollectionViewCell.xib */,
+				4BE9459227995C6C005E6269 /* middlesTableViewCell.swift */,
+				4BE9459327995C6C005E6269 /* middlesTableViewCell.xib */,
 			);
 			path = firstHomeView;
 			sourceTree = "<group>";
@@ -704,7 +732,6 @@
 		4BBAEDE22795A6E40063FFDA /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				4BBAEDF82795C5630063FFDA /* LoadAddress */,
 				4BBAEDE32795A77C0063FFDA /* CartsInResponse.swift */,
 				4BBAEDE52795AB560063FFDA /* CartsInDataManager.swift */,
 			);
@@ -783,6 +810,8 @@
 				4BE9456C27980861005E6269 /* jjimmViewController.swift */,
 				4BE9457527981824005E6269 /* deliveryViewController.swift */,
 				4BE94580279843CC005E6269 /* setDeatilAddressViewController.swift */,
+				4BE945862799386B005E6269 /* searchAddressViewController.swift */,
+				4BE9459027995462005E6269 /* AddDeliveryViewController.swift */,
 			);
 			path = myKurlyDetailCell;
 			sourceTree = "<group>";
@@ -854,6 +883,34 @@
 				4BE94579279819D8005E6269 /* deliverTableViewCell.xib */,
 			);
 			path = delivery;
+			sourceTree = "<group>";
+		};
+		4BE9458E2799519E005E6269 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				4BE9458F279951A8005E6269 /* AddAddress */,
+				4BBAEDF82795C5630063FFDA /* LoadAddress */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		4BE9458F279951A8005E6269 /* AddAddress */ = {
+			isa = PBXGroup;
+			children = (
+				4BE9458A279950D1005E6269 /* AddAddressResponse.swift */,
+				4BE9458C279950DE005E6269 /* AddAddressRequest.swift */,
+				4BE94588279950C6005E6269 /* AddAddressDataManager.swift */,
+			);
+			path = AddAddress;
+			sourceTree = "<group>";
+		};
+		4BE9459627996F7F005E6269 /* Ask */ = {
+			isa = PBXGroup;
+			children = (
+				4BE9459727996F93005E6269 /* LoadAskResponse.swift */,
+				4BE9459927997092005E6269 /* LoadAskDataManager.swift */,
+			);
+			path = Ask;
 			sourceTree = "<group>";
 		};
 		95635DBE9288994EFF6278B3 /* Pods */ = {
@@ -951,6 +1008,7 @@
 				4BBAEDDA27952E9A0063FFDA /* productInfoTwoTableViewCell.xib in Resources */,
 				4B70A6FD278B1550006EB01A /* categoryTableViewCell.xib in Resources */,
 				4BE94572279808FF005E6269 /* jjimmsTableViewCell.xib in Resources */,
+				4BE9459527995C6C005E6269 /* middlesTableViewCell.xib in Resources */,
 				4BBAEE282796B72C0063FFDA /* orderSixTableViewCell.xib in Resources */,
 				4BBAED5F278DA2050063FFDA /* recommandSearchTableViewCell.xib in Resources */,
 				4BBAED63278DA70A0063FFDA /* recentUpTableViewCell.xib in Resources */,
@@ -1024,6 +1082,8 @@
 				4B70A6D527895C3E006EB01A /* firstHomeViewController.swift in Sources */,
 				4BBAEE032795CA720063FFDA /* LoadSectionDataManager.swift in Sources */,
 				4BBAED8F278FE88F0063FFDA /* LoginState.swift in Sources */,
+				4BE9458527992AD7005E6269 /* AddAddressModel.swift in Sources */,
+				4BE9459A27997092005E6269 /* LoadAskDataManager.swift in Sources */,
 				4BBAEE0F2796AD9C0063FFDA /* orderViewController.swift in Sources */,
 				4BBAEE3E2796EAA50063FFDA /* secondOrderListViewController.swift in Sources */,
 				4BBAEDC42794514A0063FFDA /* productReviewOneTableViewCell.swift in Sources */,
@@ -1032,6 +1092,8 @@
 				4BBAED5E278DA2050063FFDA /* recommandSearchTableViewCell.swift in Sources */,
 				4BBAEE5B2797F97E0063FFDA /* HeartDataManager.swift in Sources */,
 				4BBAEDC027944F0C0063FFDA /* questionTableViewTableViewCell.swift in Sources */,
+				4BE9459427995C6C005E6269 /* middlesTableViewCell.swift in Sources */,
+				4BE9459C27997552005E6269 /* makeAskViewController.swift in Sources */,
 				4BBAED82278F08C70063FFDA /* SignInRequest.swift in Sources */,
 				4BBAEE512796FC3D0063FFDA /* oftensTableViewCell.swift in Sources */,
 				4BBAEE592797F92F0063FFDA /* HeartResponse.swift in Sources */,
@@ -1053,6 +1115,7 @@
 				4BBAED99279189B90063FFDA /* CheckPhoneDataManager.swift in Sources */,
 				4BBAEDE42795A77C0063FFDA /* CartsInResponse.swift in Sources */,
 				4BE9456D27980861005E6269 /* jjimmViewController.swift in Sources */,
+				4BE9458D279950DE005E6269 /* AddAddressRequest.swift in Sources */,
 				4B70A6DD27895C7B006EB01A /* fifthHomeViewController.swift in Sources */,
 				4BBAED6F278EE9260063FFDA /* productViewController.swift in Sources */,
 				4B807FAE278C5D83009650C0 /* kurlyRecommandTableViewCell.swift in Sources */,
@@ -1061,6 +1124,7 @@
 				4BBAEDE0279578210063FFDA /* ProductViewState.swift in Sources */,
 				4BBAEE2B2796BAF60063FFDA /* orderSevenTableViewCell.swift in Sources */,
 				4BBAEDE62795AB560063FFDA /* CartsInDataManager.swift in Sources */,
+				4BE9458B279950D1005E6269 /* AddAddressResponse.swift in Sources */,
 				4B70A6D727895C48006EB01A /* secondHomeViewController.swift in Sources */,
 				4BBAEDFE2795C7050063FFDA /* LoadAddressRequest.swift in Sources */,
 				4BBAED62278DA70A0063FFDA /* recentUpTableViewCell.swift in Sources */,
@@ -1078,9 +1142,13 @@
 				4B70A6E627897841006EB01A /* searchViewController.swift in Sources */,
 				4BBAED93279045A70063FFDA /* CheckIdResponse.swift in Sources */,
 				4BBAEE172796B0880063FFDA /* orderTwoTableViewCell.swift in Sources */,
+				4BE9459127995462005E6269 /* AddDeliveryViewController.swift in Sources */,
 				4BBAED9E279190880063FFDA /* LoadUserInfoDataManger.swift in Sources */,
+				4BE945872799386B005E6269 /* searchAddressViewController.swift in Sources */,
 				4BBAED7A278EFD350063FFDA /* LoginResponse.swift in Sources */,
 				4B70A6D927895C53006EB01A /* thirdHomeViewController.swift in Sources */,
+				4BE9459827996F93005E6269 /* LoadAskResponse.swift in Sources */,
+				4BE94589279950C6005E6269 /* AddAddressDataManager.swift in Sources */,
 				4BBAED87278F08EC0063FFDA /* SignInDataManager.swift in Sources */,
 				4B70A6F12789C6AE006EB01A /* CategoryList.swift in Sources */,
 				4B70683327893A4E006BB008 /* SceneDelegate.swift in Sources */,

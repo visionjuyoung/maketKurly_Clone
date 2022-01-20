@@ -74,17 +74,24 @@ class HeartDataManager {
     func DeleteHeart(parameter: HeartRequest, delegate: jjimmViewController) {
         let logIndataManager = LoginState.shared
         
-        let url = "https://prod.kaydenserver.shop/api/likes/users"
+        let url = "https://prod.kaydenserver.shop/api/likes/status"
         
         let headers : HTTPHeaders = ["x-access-token" : logIndataManager.jwt]
         
-        AF.request(url, method: .delete, parameters: parameter, headers: headers).responseDecodable(of: HeartDeleteResponse.self) { (response) in
+        AF.request(url, method: .patch, parameters: parameter, headers: headers).responseDecodable(of: HeartDeleteResponse.self) { (response) in
                 switch response.result {
                 case .success(let response):
-                    //함수
-                    print("결과 : \(response.isSuccess)")
-                    delegate.didsuccess()
-                    print("")
+                    guard let check = response.isSuccess else { return }
+                    if check {
+                        delegate.didsuccess()
+                    } else {
+                        switch response.code {
+                        case 2000:
+                            print("입력값 확인")
+                        case 4000: print("데이터베이스 연결 실패")
+                        default: print("else...")
+                        }
+                    }
                 case .failure(let error):
                     print(error)
                 }

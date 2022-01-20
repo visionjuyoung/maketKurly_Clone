@@ -10,12 +10,14 @@ struct LoadAddressResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: LoadAddressResult
+    var result: [LoadAddressResult]
 }
 
 struct LoadAddressResult: Decodable {
+    var deliveryInfoIdx: Int
+    var isDefaultAddress: String
     var address: String
     var receiver: String?
-    var receiverPhone: String
+    var receiverPhone: String?
     var deliveryType: String
 }

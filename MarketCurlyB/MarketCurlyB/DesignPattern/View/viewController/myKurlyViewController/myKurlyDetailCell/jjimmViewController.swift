@@ -48,11 +48,14 @@ extension jjimmViewController {
         guard let lists = result else {
             return
         }
+        print("찜목록 : \(lists)")
         arr = lists
         tableView.reloadData()
     }
     
     func didsuccess() {
+        heartDataManager.LoadHearts(userIdx: state.Idx, delegate: self)
+        tableView.reloadData()
         print("지우기 성공")
     }
 }
@@ -79,8 +82,9 @@ extension jjimmViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func pressDeleteButton(_ button: UIButton) {
+        print("유저번호 : \(state.Idx)")
+        print("유저번호 : \(productstate.deleteHeartProductNum)")
         let input = HeartRequest(userIdx: state.Idx, productIdx: productstate.deleteHeartProductNum)
         heartDataManager.DeleteHeart(parameter: input, delegate: self)
-        tableView.reloadData()
     }
 }

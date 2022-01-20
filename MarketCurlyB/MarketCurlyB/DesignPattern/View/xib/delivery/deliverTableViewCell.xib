@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,21 +18,60 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l98-KK-9gB">
-                        <rect key="frame" x="354" y="38.5" width="60" height="53"/>
+                        <rect key="frame" x="372.5" y="38.5" width="41.5" height="53"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="스크린샷 2022-01-19 오후 7.07.08"/>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmH-Tq-vkM">
+                        <rect key="frame" x="20" y="50" width="30" height="30"/>
+                        <color key="backgroundColor" name="KurlyColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xmH-Tq-vkM" secondAttribute="height" multiplier="1:1" id="gVr-hp-gQa"/>
+                            <constraint firstAttribute="width" constant="30" id="wH8-LR-09I"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="샛별배송" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bop-qr-ewD">
+                        <rect key="frame" x="70" y="75.5" width="45" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" name="KurlyColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4j-KP-JaX">
+                        <rect key="frame" x="70" y="45" width="252.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="xmH-Tq-vkM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ejz-i2-sgI"/>
+                    <constraint firstItem="bop-qr-ewD" firstAttribute="leading" secondItem="g4j-KP-JaX" secondAttribute="leading" id="JQZ-rX-DUI"/>
+                    <constraint firstItem="l98-KK-9gB" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="KNh-vy-afy"/>
+                    <constraint firstItem="bop-qr-ewD" firstAttribute="top" secondItem="g4j-KP-JaX" secondAttribute="bottom" constant="10" id="Vw9-05-v9z"/>
                     <constraint firstAttribute="trailing" secondItem="l98-KK-9gB" secondAttribute="trailing" id="WKY-bv-AdS"/>
+                    <constraint firstItem="g4j-KP-JaX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-10" id="ezW-t7-ar3"/>
+                    <constraint firstItem="xmH-Tq-vkM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jCX-wJ-Xrw"/>
+                    <constraint firstItem="l98-KK-9gB" firstAttribute="leading" secondItem="g4j-KP-JaX" secondAttribute="trailing" constant="50" id="mSa-3j-c5D"/>
+                    <constraint firstItem="g4j-KP-JaX" firstAttribute="leading" secondItem="xmH-Tq-vkM" secondAttribute="trailing" constant="20" id="wc8-M6-mFw"/>
                     <constraint firstItem="l98-KK-9gB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xSy-vB-8u5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="g4j-KP-JaX" id="jLh-UD-GWU"/>
+                <outlet property="button" destination="xmH-Tq-vkM" id="j0R-og-BXB"/>
+            </connections>
             <point key="canvasLocation" x="205.79710144927537" y="162.72321428571428"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="스크린샷 2022-01-19 오후 7.07.08" width="36" height="39"/>
+        <namedColor name="KurlyColor">
+            <color red="0.33899998664855957" green="0.043000001460313797" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

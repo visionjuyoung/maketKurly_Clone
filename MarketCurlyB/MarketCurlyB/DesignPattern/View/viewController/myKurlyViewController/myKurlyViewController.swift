@@ -178,6 +178,11 @@ extension myKurlyViewController: UITableViewDataSource, UITableViewDelegate {
                     vc.count = jjimm
                     present(vc, animated: true, completion: nil)
                 }
+            } else if indexPath.section == 2 {
+                if indexPath.row == 0 {
+                    guard let vc = storyboard?.instantiateViewController(withIdentifier: "deliveryViewController") as? deliveryViewController else { return }
+                    present(vc, animated: true, completion: nil)
+                }
             }
         }
     }

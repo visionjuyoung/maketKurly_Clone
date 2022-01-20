@@ -14,6 +14,7 @@ class kurlyRecommandTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     
     let dummys = Dummys()
     let new = NewProducts()
+    let best = BestProducts()
     var sectionNum = 0
     
     override func awakeFromNib() {
@@ -22,6 +23,11 @@ class kurlyRecommandTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         collectionView.dataSource = self
         collectionView.delegate = self
         
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        var sectionNum = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,9 +42,19 @@ class kurlyRecommandTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCollectionViewCell", for: indexPath) as! productCollectionViewCell
-        cell.img.image = UIImage(named: "\(dummys.name[indexPath.row])")
-        cell.nameLabel.text = dummys.name[indexPath.row]
-        cell.priceLabel.text = "\(dummys.sum[indexPath.row])원"
+        if sectionNum == 0 {
+            cell.img.image = UIImage(named: "\(dummys.name[indexPath.row])")
+            cell.nameLabel.text = dummys.name[indexPath.row]
+            cell.priceLabel.text = "\(dummys.sum[indexPath.row])원"
+        } else if sectionNum == 1 {
+            cell.img.image = UIImage(named: "\(new.name[indexPath.row])")
+            cell.nameLabel.text = new.productName[indexPath.row]
+            cell.priceLabel.text = "\(new.price[indexPath.row])원"
+        } else {
+            cell.img.image = UIImage(named: "\(best.name[indexPath.row])")
+            cell.nameLabel.text = best.productName[indexPath.row]
+            cell.priceLabel.text = "\(best.price[indexPath.row])원"
+        }
         return cell
     }
     

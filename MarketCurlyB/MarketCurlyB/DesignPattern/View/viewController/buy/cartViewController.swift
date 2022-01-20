@@ -92,6 +92,7 @@ extension cartViewController {
         guard let res: CartsInResult = result else {
             return
         }
+        print("장바구니 : \(result?.coldProducts)")
         names = res.coldProducts[0]!.title
         if res.coldProducts.isEmpty == false {
             num = res.coldProducts.count
@@ -123,9 +124,13 @@ extension cartViewController {
         tableView.reloadData()
     }
     
-    func didSuccessLoadAddress(result: LoadAddressResult) {
-        addressLabel.text = result.address
-        loginState.address = result.address
+    func didSuccessLoadAddress(result: [LoadAddressResult]) {
+        for i in 0...result.count-1 {
+            if result[i].isDefaultAddress == "T" {
+                addressLabel.text = result[i].address
+                loginState.address = result[i].address
+            }
+        }
     }
     
     func didSuccessdeleteAll() {

@@ -10,9 +10,17 @@ import UIKit
 class setAddressLoginViewController: UIViewController {
 
     @IBOutlet weak var textf: UITextField!
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var addressViewlabel: UITextField!
+    @IBOutlet weak var detailAddress: UITextField!
+    
+    let addressmanager = AddAddressModel.shared
+    
+    var status: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -21,10 +29,20 @@ class setAddressLoginViewController: UIViewController {
     }
     
     @IBAction func searchDetail(_ sender: Any) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "setDeatilAddressViewController") as? setDeatilAddressViewController else { return }
-        vc.big = textf.text!
-        present(vc, animated: false, completion: nil)
+        secondView.isHidden = false
+        addressViewlabel.placeholder = textf.text
     }
     
-
+    @IBAction func pressEnd(_ sender: Any) {
+        guard let firstAddress = addressViewlabel.placeholder else {
+            return
+        }
+        addressmanager.address1 = firstAddress
+        guard let secondAddress = detailAddress.text else {
+            return
+        }
+        addressmanager.address2 = secondAddress
+        dismiss(animated: false, completion: nil)
+    }
+    
 }
