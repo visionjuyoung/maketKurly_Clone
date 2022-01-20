@@ -165,6 +165,8 @@
 		4BE9459E279979BA005E6269 /* AddAskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459D279979BA005E6269 /* AddAskResponse.swift */; };
 		4BE945A0279979FD005E6269 /* AddAskRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9459F279979FD005E6269 /* AddAskRequest.swift */; };
 		4BE945A227997A64005E6269 /* AddAskDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE945A127997A64005E6269 /* AddAskDataManager.swift */; };
+		4BE945A527999180005E6269 /* LoadReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE945A427999180005E6269 /* LoadReviewResponse.swift */; };
+		4BE945A727999195005E6269 /* LoadReviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE945A627999195005E6269 /* LoadReviewDataManager.swift */; };
 		682FA94E4EE72210718F56D7 /* Pods_MarketCurlyB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822ACB295FE620599F72DE0 /* Pods_MarketCurlyB.framework */; };
 /* End PBXBuildFile section */
 
@@ -331,6 +333,8 @@
 		4BE9459D279979BA005E6269 /* AddAskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAskResponse.swift; sourceTree = "<group>"; };
 		4BE9459F279979FD005E6269 /* AddAskRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAskRequest.swift; sourceTree = "<group>"; };
 		4BE945A127997A64005E6269 /* AddAskDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAskDataManager.swift; sourceTree = "<group>"; };
+		4BE945A427999180005E6269 /* LoadReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReviewResponse.swift; sourceTree = "<group>"; };
+		4BE945A627999195005E6269 /* LoadReviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReviewDataManager.swift; sourceTree = "<group>"; };
 		F7CCEFED7EF07DDD74E1E0EB /* Pods-MarketCurlyB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketCurlyB.release.xcconfig"; path = "Target Support Files/Pods-MarketCurlyB/Pods-MarketCurlyB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -507,6 +511,7 @@
 		4BBAED50278D53480063FFDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4BE945A32799916D005E6269 /* Review */,
 				4BE9459627996F7F005E6269 /* Ask */,
 				4BE9458E2799519E005E6269 /* Address */,
 				4BBAEE572797F9160063FFDA /* Heart */,
@@ -922,6 +927,15 @@
 			path = Ask;
 			sourceTree = "<group>";
 		};
+		4BE945A32799916D005E6269 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				4BE945A427999180005E6269 /* LoadReviewResponse.swift */,
+				4BE945A627999195005E6269 /* LoadReviewDataManager.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
 		95635DBE9288994EFF6278B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1114,6 +1128,7 @@
 				4BBAEDCC27951C780063FFDA /* productExplainOneTableViewCell.swift in Sources */,
 				4B70A6E327897630006EB01A /* categoryViewController.swift in Sources */,
 				4BBAEDAE2793095C0063FFDA /* logInedTableViewCell.swift in Sources */,
+				4BE945A727999195005E6269 /* LoadReviewDataManager.swift in Sources */,
 				4B70A702278B230A006EB01A /* makeIdViewController.swift in Sources */,
 				4BBAEE472796F6F50063FFDA /* TotalOrderResponse.swift in Sources */,
 				4BE9457F27983C3E005E6269 /* setAddressLoginViewController.swift in Sources */,
@@ -1168,6 +1183,7 @@
 				4BBAEE5D2797F9C10063FFDA /* HeartRequest.swift in Sources */,
 				4BE945A227997A64005E6269 /* AddAskDataManager.swift in Sources */,
 				4BBAEDD927952E9A0063FFDA /* productInfoTwoTableViewCell.swift in Sources */,
+				4BE945A527999180005E6269 /* LoadReviewResponse.swift in Sources */,
 				4BBAED73278EE9C90063FFDA /* productDetailViewController.swift in Sources */,
 				4BBAED66278DA7E00063FFDA /* recentUpSubTableViewCell.swift in Sources */,
 				4BBAEDDC279569AD0063FFDA /* NewProducts.swift in Sources */,

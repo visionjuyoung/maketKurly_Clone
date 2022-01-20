@@ -11,7 +11,7 @@ struct LoadUserInfoResponse : Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: [LoadInfoResult]
+    var result: LoadInfoResult?
 }
 
 struct LoadInfoResult: Decodable {

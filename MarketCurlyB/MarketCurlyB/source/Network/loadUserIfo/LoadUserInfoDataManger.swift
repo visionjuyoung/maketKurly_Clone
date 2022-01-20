@@ -11,15 +11,18 @@ import Alamofire
 
 class LoadUserInfoDataManager {
     func loadId(userIdx: Int, delegate: logInViewController) {
-        let url = "https://prod.kaydenserver.shop/api/users"
+        let logIndataManager = LoginState.shared
         
-        AF.request(url, method: .get, parameters: nil, headers: nil).responseDecodable(of: LoadUserInfoResponse.self) { (response) in
+        let url = "https://prod.kaydenserver.shop/api/users/\(userIdx)"
+        
+        let headers : HTTPHeaders = ["x-access-token" : logIndataManager.jwt]
+        
+        AF.request(url, method: .get, parameters: nil, headers: headers).responseDecodable(of: LoadUserInfoResponse.self) { (response) in
                 switch response.result {
                 case .success(let response):
-                    delegate.didSuccessLoadId(response.result[userIdx])
+                    delegate.didSuccessLoadId(response.result)
                 case .failure(let error):
                     print(error)
-                    //delegate.checkIdFail()
                 }
             }
     }

@@ -16,4 +16,5 @@ struct OrderResponse: Decodable {
 
 struct OrderResult: Decodable {
     var orderIdx: Int
+    var cartIdx: Int
 }

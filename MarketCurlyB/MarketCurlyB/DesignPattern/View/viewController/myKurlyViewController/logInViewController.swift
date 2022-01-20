@@ -79,17 +79,20 @@ extension logInViewController {
         print(state.Idx)
         print("카트\(state.cartId)")
         print("로그인 성공")
-        let userNum = state.Idx - 1
-        loadDataManager.loadId(userIdx: userNum, delegate: self)
+        loadDataManager.loadId(userIdx: state.Idx, delegate: self)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "myKurlyViewController") as? myKurlyViewController else { return }
         //vc.nameLabel.text = state.name
+        print("--------------------")
         dismiss(animated: true, completion: nil)
     }
     
-    func didSuccessLoadId(_ result: LoadInfoResult) {
-        state.name = result.name
-        state.phone = result.phone
-        print(state.name)
+    func didSuccessLoadId(_ result: LoadInfoResult?) {
+        guard let asd: LoadInfoResult = result else {
+            return
+        }
+        state.name = asd.name
+        state.phone = asd.phone
+        print("로그인 결과 : \(state.name)")
     }
     
     func failedToRequest(message: String) {

@@ -32,7 +32,7 @@ class firstOrderListViewController: UIViewController {
 
 extension firstOrderListViewController {
     func didSuccessLoadTotals(result: [TotalOrderResult]) {
-        print(result)
+        print("주문내역 : \(result)")
         info = result
         tableView.reloadData()
     }

@@ -51,7 +51,7 @@ class orderViewController: UIViewController {
 
 extension orderViewController {
     func didSuccessOrder(result: OrderResult?) {
-        print(result?.orderIdx)
+        print("주문결과 \(result)")
     }
 }
 
@@ -81,7 +81,7 @@ extension orderViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderThreeTableViewCell") as? orderThreeTableViewCell else {
                 return UITableViewCell()
             }
-            cell.addressLabel.text = addres
+            cell.addressLabel.text = loginManager.address
             return cell
         }else if indexPath.section == 3 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderFourTableViewCell") as? orderFourTableViewCell else {
@@ -132,7 +132,8 @@ extension orderViewController: UITableViewDataSource, UITableViewDelegate {
     
     @objc func pressButton(_ button: UIButton) {
         print("Button with tag: \(button.tag) clicked in cell!")
-        let input = OrderRequest(userIdx: loginManager.Idx, cartIdx: loginManager.cartId, paymentType: 1, couponUserIdx: 1, productPrice: totalPrice, discountPrice: 0, deliveryPrice: 0, couponDiscount: 0, rewardDiscount: 0, amountOfPayment: totalPrice)
+        let input = OrderRequest(userIdx: loginManager.Idx, cartIdx: loginManager.cartId, paymentType: 1, couponUserIdx: 0, productPrice: totalPrice, discountPrice: 0, deliveryPrice: 0, couponDiscount: 0, rewardDiscount: 0, amountOfPayment: totalPrice)
+        print(input)
         orderManager.didOrder(input, delegate: self)
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "endOrderViewController") as? endOrderViewController else { return }
