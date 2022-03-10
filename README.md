@@ -1,6 +1,8 @@
 # MarketKurly_Test_iOS_Young
 
 ## 본 템플릿의 저작권은 (주) 소프트스퀘어드에 있습니다. 무단 배포를 금합니다.
+* 제작기간 : 1/8 - 1/19 
+* 시연영상 : https://www.youtube.com/watch?v=yAX2Sd0ckuM&t=252s
 
 ## 01/08
 ##### 작업 활동
